@@ -3,7 +3,7 @@
 Based on [`@lunarhq/rosetta-ts-client`][rosetta-ts-client], with additional
 helper functions to derive keys/accounts and perform transfers.
 
-基于[`@lunarhq/rosetta-ts-client`][rosetta-ts-client]，并提供生成新的私钥/账户地
+基于 [`@lunarhq/rosetta-ts-client`][rosetta-ts-client]，并提供生成新的私钥/账户地
 址和执行转账的高层函数接口。
 
 ## Usage
@@ -65,7 +65,20 @@ console.log(await session.suggested_fee);
 console.log(
   await session.transfer(key, hex_decode(other_address_string), 123n)
 );
-
 ```
 
 [rosetta-ts-client]: https://github.com/lunarhq/rosetta-ts-client
+
+## TODO
+
+- [ ] Given a transaction hash, query the transfer status and confirm if it
+      reached the chain or is rejected. Since `ic-rosetta-api` doesn't implement
+      [`/search/transactions`][search_transactions] yet, the JavaScript SDK may need
+      to workaround this by polling all blocks and doing its own indexing.
+- [ ] Other high-level Rosetta API wrappers (or redirect underlying
+  `RosettaClient` method calls so to avoid some boilerplates in the request,
+  e.g. `network_identifier`).
+- [ ] Proper license & packaging.
+- [ ] Better names.
+
+[search_transactions]: https://www.rosetta-api.org/docs/SearchApi.html#searchtransactions
