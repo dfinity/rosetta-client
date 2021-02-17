@@ -1,14 +1,4 @@
-# `dfinity-rosetta-api-js-sdk`
-
-Based on [`@lunarhq/rosetta-ts-client`][rosetta-ts-client], with additional
-helper functions to derive keys/accounts and perform transfers.
-
-基于 [`@lunarhq/rosetta-ts-client`][rosetta-ts-client]，并提供生成新的私钥/账户地
-址和执行转账的高层函数接口。
-
-## Usage
-
-```javascript
+import { Chain } from "./lib/chain.mjs";
 import { hex_decode, hex_encode, key_new, key_to_address } from "./lib/key.mjs";
 import { Session } from "./lib/session.mjs";
 
@@ -33,6 +23,14 @@ console.log(hex_encode(address));
 // Session 是 RosettaClient 的子类，可以调用 RosettaClient 的方法使用 Rosetta
 // API。
 const session = new Session({ baseUrl: "http://localhost:8080" });
+
+// A Chain is a service which polls for recent blocks, and can be used to
+// confirm if a transaction actually hit the chain given the transaction hash.
+// It's not required for performing transfers.
+//
+// Chain 类实现了轮询最近新增的区块的逻辑，给定转账事务的 hash 值，可用于确认该
+// 事务成功上链。转账操作本身并不需要此类对象。
+const chain = new Chain(session);
 
 // The network_identifier value used in requests.
 //
@@ -62,25 +60,19 @@ console.log(await session.suggested_fee);
 // /construction/submit 调用结果。
 //
 // 划入账户将收到参数指定的转账数额。划出账户将额外扣除交易费用。
-console.log(
-  await session.transfer(key, hex_decode(other_address_string), 123n)
-);
-```
+const submit_result = await session.transfer(key, hex_decode(other_address_string), 123n);
+console.log(submit_result);
 
-[rosetta-ts-client]: https://github.com/lunarhq/rosetta-ts-client
+// Before confirming if the transaction actually reached the chain, wait for a
+// bit of time.
+//
+// 确认转账事务上链之前，等待片刻时间。
+await new Promise((res) => setTimeout(res, 10000));
 
-## TODO
-
-- [ ] Watch out for the next test net deployment, set appropriate default fee.
-- [x] Given a transaction hash, query the transfer status and confirm if it
-      reached the chain or is rejected. Since `ic-rosetta-api` doesn't implement
-      [`/search/transactions`][search_transactions] yet, the JavaScript SDK may need
-      to workaround this by polling all blocks and doing its own indexing.
-- [ ] Error handling in the polling logic.
-- [ ] Other high-level Rosetta API wrappers (or redirect underlying
-  `RosettaClient` method calls so to avoid some boilerplates in the request,
-  e.g. `network_identifier`).
-- [ ] Proper license & packaging.
-- [ ] Better names.
-
-[search_transactions]: https://www.rosetta-api.org/docs/SearchApi.html#searchtransactions
+// Lookup a transaction in recent blocks given its hash value. If the result is
+// not undefined, the transaction has actually reached the chain.
+//
+// 在最近新增的区块中检索转账事务的 hash。若返回值非 undefined，则该事务确认上
+// 链。
+const transaction = chain.get_transaction(submit_result.transaction_identifier.hash);
+console.log(transaction);
