@@ -71,6 +71,7 @@ console.log(
 
 ## TODO
 
+- [ ] Watch out for the next test net deployment, set appropriate default fee.
 - [ ] Given a transaction hash, query the transfer status and confirm if it
       reached the chain or is rejected. Since `ic-rosetta-api` doesn't implement
       [`/search/transactions`][search_transactions] yet, the JavaScript SDK may need
