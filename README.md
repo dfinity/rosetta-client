@@ -1,4 +1,4 @@
-# `dfinity-rosetta-api-js-sdk`
+# `dfinity-js-sdk`
 
 Based on [`@lunarhq/rosetta-ts-client`][rosetta-ts-client], with additional
 helper functions to derive keys/accounts and perform transfers.

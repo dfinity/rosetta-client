@@ -1,4 +1,16 @@
 {
+  "name": "dfinity-js-sdk",
+  "version": "0.0.1",
+  "main": "./index.mjs",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dfinity-lab/dfinity-js-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dfinity-lab/dfinity-js-sdk/issues"
+  },
+  "homepage": "https://github.com/dfinity-lab/dfinity-js-sdk",
   "dependencies": {
     "@lunarhq/rosetta-ts-client": "^1.4.8-rc3",
     "node-forge": "^0.10.0",
