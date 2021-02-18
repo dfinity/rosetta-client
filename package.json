@@ -1,8 +1,8 @@
 {
   "name": "dfinity-js-sdk",
   "version": "0.0.1",
-  "main": "./index.mjs",
-  "type": "module",
+  "main": "./index.js",
+  "type": "commonjs",
   "repository": {
     "type": "git",
     "url": "https://github.com/dfinity-lab/dfinity-js-sdk.git"

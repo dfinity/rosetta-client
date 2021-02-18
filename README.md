@@ -9,9 +9,14 @@ helper functions to derive keys/accounts and perform transfers.
 ## Usage
 
 ```javascript
-import { Chain } from "./lib/chain.mjs";
-import { hex_decode, hex_encode, key_new, key_to_address } from "./lib/key.mjs";
-import { Session } from "./lib/session.mjs";
+const {
+  hex_decode,
+  hex_encode,
+  key_new,
+  key_to_address,
+  Chain,
+  Session,
+} = require("dfinity-js-sdk");
 
 // Generate a new private key. A private key is a Buffer and can be used to
 // generate the public account address and perform transfers.
