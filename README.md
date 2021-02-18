@@ -35,9 +35,9 @@ console.log(hex_encode(address));
 // API。
 const session = new Session({ baseUrl: "http://localhost:8080" });
 
-// A Chain is a service which polls for recent blocks, and can be used to
-// confirm if a transaction actually hit the chain given the transaction hash.
-// It's not required for performing transfers.
+// A Chain is a service which polls recent blocks, and can be used to confirm if
+// a transaction actually hit the chain given the transaction hash. It's not
+// required for performing transfers.
 //
 // Chain 类实现了轮询最近新增的区块的逻辑，给定转账事务的 hash 值，可用于确认该
 // 事务成功上链。转账操作本身并不需要此类对象。
@@ -87,6 +87,11 @@ await new Promise((res) => setTimeout(res, 10000));
 // 链。
 const transaction = chain.get_transaction(submit_result.transaction_identifier.hash);
 console.log(transaction);
+
+// Stop polling recent blocks.
+//
+// 停止轮询最近新增的区块。
+chain.close();
 ```
 
 [rosetta-ts-client]: https://github.com/lunarhq/rosetta-ts-client
