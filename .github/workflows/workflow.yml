@@ -1,0 +1,36 @@
+name: workflow
+
+on:
+  - push
+  - pull_request
+
+jobs:
+
+  test:
+    name: test-${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-20.04
+    steps:
+
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: setup-nix
+        uses: cachix/install-nix-action@v12
+
+      - name: test
+        run: |
+          nix-shell \
+            --pure \
+            --keep GITHUB_WORKSPACE \
+            --run "./test.sh"
+
+      - name: upload-artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: tarball
+          path: "*.tgz"
