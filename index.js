@@ -1,3 +1,6 @@
-["./lib/chain.js", "./lib/key.js", "./lib/session.js"].forEach((src) =>
-  Object.assign(exports, require(src))
-);
+// Use specific export syntax to allow bundlers and IDEs to properly load dependencies.
+module.exports = {
+  ...require('./lib/chain'),
+  ...require('./lib/key'),
+  ...require('./lib/session'),
+}

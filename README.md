@@ -1,4 +1,4 @@
-# `dfinity-js-sdk`
+# `@dfinity/rosetta-client`
 
 Based on [`@lunarhq/rosetta-ts-client`][rosetta-ts-client], with additional
 helper functions to derive keys/accounts and perform transfers.
@@ -16,7 +16,7 @@ const {
   key_to_address,
   Chain,
   Session,
-} = require("dfinity-js-sdk");
+} = require("@dfinity/rosetta-client");
 
 // Generate a new private key. A private key is a Buffer and can be used to
 // generate the public account address and perform transfers.
@@ -101,6 +101,7 @@ chain.close();
 
 [rosetta-ts-client]: https://github.com/lunarhq/rosetta-ts-client
 
+<!--
 ## TODO
 
 - [ ] Watch out for the next test net deployment, set appropriate default fee.
@@ -116,3 +117,4 @@ chain.close();
 - [ ] Better names.
 
 [search_transactions]: https://www.rosetta-api.org/docs/SearchApi.html#searchtransactions
+-->
