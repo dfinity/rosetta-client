@@ -1,8 +1,15 @@
 {
-  "name": "dfinity-js-sdk",
+  "name": "@dfinity/rosetta-client",
   "version": "0.0.1",
   "main": "./index.js",
   "type": "commonjs",
+  "license": "Apache-2.0",
+  "author": "DFINITY Stiftung <sdk@dfinity.org>",
+  "keywords": [
+    "rosetta",
+    "dfinity",
+    "internet-computer"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/dfinity-lab/dfinity-js-sdk.git"

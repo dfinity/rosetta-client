@@ -8,6 +8,6 @@ pushd $(mktemp -d)
 
 npm install $GITHUB_WORKSPACE/*.tgz
 
-node -e 'console.log(require("dfinity-js-sdk"))'
+node -e 'console.log(require("@dfinity/rosetta-client"))'
 
 popd
