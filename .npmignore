@@ -1,2 +1,8 @@
 shell.nix
 nix/
+
+.github
+
+.idea/
+.vscode/
+
