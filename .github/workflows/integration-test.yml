@@ -42,4 +42,4 @@ jobs:
           docker run -i --rm --publish 8080:8080 dfinity &
           sleep 60
 
-          nix-shell --pure --run "npm install & node ./test/test.js"
+          nix-shell --pure --run "npm install && node ./test/test.js"
