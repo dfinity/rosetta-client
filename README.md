@@ -13,7 +13,8 @@ const {
   hex_decode,
   hex_encode,
   key_new,
-  key_to_address,
+  key_to_pub_key,
+  pub_key_to_address,
   Chain,
   Session,
 } = require("@dfinity/rosetta-client");
@@ -30,7 +31,7 @@ const key = key_new();
 //
 // 从私钥生成公开的账户地址。账户地址类型为 Buffer，用 hex_encode() 可以将其编码
 // 为在请求的 address 一栏中所用的地址字符串。
-const address = key_to_address(key);
+const address = pub_key_to_address(key_to_pub_key(key));
 console.log(hex_encode(address));
 
 // A Session is a subclass of RosettaClient, and you can use methods of
