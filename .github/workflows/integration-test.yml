@@ -13,6 +13,9 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
+      - name: setup-nix
+        uses: cachix/install-nix-action@v12
+
       - name: integration-test
         run: |
           export DFINITY_REV=$(curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" -L https://api.github.com/repos/dfinity-lab/dfinity/branches/master | jq -r .commit.sha)
@@ -37,7 +40,6 @@ jobs:
           popd
 
           docker run -i --rm --publish 8080:8080 dfinity &
-          sleep 30
+          sleep 60
 
-          npm install
-          node ./test/test.js
+          nix-shell --pure --run "npm install & node ./test/test.js"
