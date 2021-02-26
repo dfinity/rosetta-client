@@ -1,4 +1,4 @@
-const { hex_decode, Chain, Session } = require("./index.js");
+const { hex_decode, Chain, Session } = require("../index.js");
 const { inspect } = require("util");
 
 (async () => {

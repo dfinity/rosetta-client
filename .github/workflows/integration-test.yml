@@ -24,7 +24,7 @@ jobs:
 
           pushd rs/rosetta-api/docker
 
-          podman build \
+          docker build \
             --file local-deployment.Dockerfile \
             --build-arg GITHUB_TOKEN=${{ secrets.GH_TOKEN }} \
             --build-arg RELEASE=$DFINITY_REV \
@@ -36,7 +36,7 @@ jobs:
 
           popd
 
-          podman run -it --rm --publish 8080:8080 dfinity &
+          docker run -it --rm --publish 8080:8080 dfinity &
           sleep 30
 
           npm install
