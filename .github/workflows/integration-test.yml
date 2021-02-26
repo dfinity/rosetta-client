@@ -1,0 +1,48 @@
+name: integration-test
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 * * * *"
+
+jobs:
+
+  integration-test:
+    name: integration-test
+    runs-on: ubuntu-20.04
+    steps:
+
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: setup-nix
+        uses: cachix/install-nix-action@v12
+
+      - name: integration-test
+        run: |
+          export DFINITY_REV=$(curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" -L https://api.github.com/repos/dfinity-lab/dfinity/branches/master | jq -r .commit.sha)
+          echo "dfinity-lab/dfinity rev: $DFINITY_REV"
+
+          pushd $(mktemp -d)
+
+          curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" -L https://api.github.com/repos/dfinity-lab/dfinity/tarball/$DFINITY_REV | tar xz --strip-components=1
+
+          pushd rs/rosetta-api/docker
+
+          docker build \
+            --file local-deployment.Dockerfile \
+            --build-arg GITHUB_TOKEN=${{ secrets.GH_TOKEN }} \
+            --build-arg RELEASE=$DFINITY_REV \
+            --pull \
+            --tag dfinity \
+            .
+
+          popd
+
+          popd
+
+          docker run -i --rm --publish 8080:8080 dfinity &
+          sleep 60
+
+          nix-shell --pure --run "npm install && node ./test/test.js"
