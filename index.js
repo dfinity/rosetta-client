@@ -3,4 +3,5 @@ module.exports = {
   ...require('./lib/chain'),
   ...require('./lib/key'),
   ...require('./lib/session'),
+  ...require('./lib/stats'),
 }
