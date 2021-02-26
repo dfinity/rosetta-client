@@ -15,20 +15,18 @@ jobs:
 
       - name: build-image
         run: |
-          curl -H "Authorization: token ${{ github.token }}" -L https://api.github.com/repos/dfinity-lab/dfinity/branches/master
-
-          export DFINITY_REV=$(curl -H "Authorization: token ${{ github.token }}" -L https://api.github.com/repos/dfinity-lab/dfinity/branches/master | jq -r .commit.sha)
+          export DFINITY_REV=$(curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" -L https://api.github.com/repos/dfinity-lab/dfinity/branches/master | jq -r .commit.sha)
           echo "dfinity-lab/dfinity rev: $DFINITY_REV"
 
           pushd $(mktemp -d)
 
-          curl -H "Authorization: token ${{ github.token }}" -L https://api.github.com/repos/dfinity-lab/dfinity/tarball/$DFINITY_REV | tar xz --strip-components=1
+          curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" -L https://api.github.com/repos/dfinity-lab/dfinity/tarball/$DFINITY_REV | tar xz --strip-components=1
 
           pushd rs/rosetta-api/docker
 
           podman build \
             --file local-deployment.Dockerfile \
-            --build-arg GITHUB_TOKEN=${{ github.token }} \
+            --build-arg GITHUB_TOKEN=${{ secrets.GH_TOKEN }} \
             --build-arg RELEASE=$DFINITY_REV \
             --pull \
             --tag dfinity \
