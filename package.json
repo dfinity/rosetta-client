@@ -1,6 +1,6 @@
 {
   "name": "@dfinity/rosetta-client",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "./index.js",
   "type": "commonjs",
   "license": "Apache-2.0",
