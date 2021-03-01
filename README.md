@@ -105,7 +105,7 @@ chain.close();
 <!--
 ## TODO
 
-- [ ] Watch out for the next test net deployment, set appropriate default fee.
+- [x] Watch out for the next test net deployment, set appropriate default fee.
 - [x] Given a transaction hash, query the transfer status and confirm if it
       reached the chain or is rejected. Since `ic-rosetta-api` doesn't implement
       [`/search/transactions`][search_transactions] yet, the JavaScript SDK may need
@@ -114,7 +114,7 @@ chain.close();
 - [ ] Other high-level Rosetta API wrappers (or redirect underlying
   `RosettaClient` method calls so to avoid some boilerplates in the request,
   e.g. `network_identifier`).
-- [ ] Proper license & packaging.
+- [x] Proper license & packaging.
 - [ ] Better names.
 
 [search_transactions]: https://www.rosetta-api.org/docs/SearchApi.html#searchtransactions
