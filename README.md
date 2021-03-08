@@ -17,13 +17,23 @@ const {
   pub_key_to_address,
   Chain,
   Session,
+  transfer_combine,
 } = require("@dfinity/rosetta-client");
 
 // Generate a new private key. A private key is a Buffer and can be used to
 // generate the public account address and perform transfers.
 //
 // 生成新的私钥。私钥类型为 Buffer，用于生成公开的账户地址、进行转账。
-const key = key_new();
+let key = key_new();
+
+// Generate a private key given a 32-byte binary seed. This is the preferred way
+// of generating private keys, since the seed can be stored and it can be used
+// by other languages/frameworks as well.
+//
+// 使用 32 字节的随机数种子生成私钥。我们推荐使用本方式生成私钥，因为可以存储随
+// 机数种子，且该种子可在其他语言/框架中重新构造相同的密钥。
+const seed = Buffer.allocUnsafe(32);
+key = key_new({seed: seed});
 
 // Generate the public account address from a private key. The result is a
 // Buffer. Use hex_encode() to generate the string representation used in the
@@ -77,7 +87,11 @@ console.log(await session.suggested_fee);
 // /construction/submit 调用结果。
 //
 // 划入账户将收到参数指定的转账数额。划出账户将额外扣除交易费用。
-const submit_result = await session.transfer(key, hex_decode(other_address_string), 123n);
+const submit_result = await session.transfer(
+  key,
+  hex_decode(destination_address_hex_string),
+  123n
+);
 console.log(submit_result);
 
 // Before confirming if the transaction actually reached the chain, wait for a
@@ -91,13 +105,36 @@ await new Promise((res) => setTimeout(res, 10000));
 //
 // 在最近新增的区块中检索转账事务的 hash。若返回值非 undefined，则该事务确认上
 // 链。
-const transaction = chain.get_transaction(submit_result.transaction_identifier.hash);
+const transaction = chain.get_transaction(
+  submit_result.transaction_identifier.hash
+);
 console.log(transaction);
 
 // Stop polling recent blocks.
 //
 // 停止轮询最近新增的区块。
 chain.close();
+
+// Due to security concerns, you may wish to avoid calling transfer() which
+// consumes the private key and performs network calls. We support using the
+// private key only in a fully isolated environment while performing a transfer,
+// here's an example.
+//
+// 出于安全考虑，您也许希望避免调用 transfer() 方法，因为它需要传入私钥参数，并
+// 且会执行网络调用。我们支持在转账时，仅在完全隔离的环境中使用私钥，用例如下。
+
+const payloads_result = await session.transfer_pre_combine(
+  source_address,
+  destination_address,
+  123n
+);
+
+// This step can be executed in a fully isolated environment.
+//
+// 该步骤可在完全隔离的环境中执行。
+const combine_result = transfer_combine(source_private_key, payloads_result);
+
+const submit_result = await session.transfer_post_combine(combine_result);
 ```
 
 [rosetta-ts-client]: https://github.com/lunarhq/rosetta-ts-client
