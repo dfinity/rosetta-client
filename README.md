@@ -33,7 +33,7 @@ let key = key_new();
 // 使用 32 字节的随机数种子生成私钥。我们推荐使用本方式生成私钥，因为可以存储随
 // 机数种子，且该种子可在其他语言/框架中重新构造相同的密钥。
 const seed = Buffer.allocUnsafe(32);
-key = key_new(seed);
+key = key_new({seed: seed});
 
 // Generate the public account address from a private key. The result is a
 // Buffer. Use hex_encode() to generate the string representation used in the
