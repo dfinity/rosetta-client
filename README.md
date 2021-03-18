@@ -17,6 +17,7 @@ const {
   address_to_hex,
   Chain,
   Session,
+  transaction_hash,
   transfer_combine,
 } = require("@dfinity/rosetta-client");
 
@@ -135,6 +136,16 @@ const payloads_result = await session.transfer_pre_combine(
 const combine_result = transfer_combine(source_private_key, payloads_result);
 
 const submit_result = await session.transfer_post_combine(combine_result);
+
+// There are two ways to obtain a transaction hash. One is reading the result of
+// /construction/submit call, another is using transaction_hash() to calculate
+// it locally.
+//
+// 有两种计算 transaction hash 的方法。第一种是从 /construction/submit 调用的结
+// 果读取，第二种是调用 transaction_hash() 函数离线计算。
+
+const tx_hash = transaction_hash(payloads_result);
+assert(hex_encode(tx_hash) === submit_result.transaction_identifier.hash);
 ```
 
 [rosetta-ts-client]: https://github.com/lunarhq/rosetta-ts-client
