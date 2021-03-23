@@ -8,18 +8,15 @@ on:
 
 jobs:
 
-  integration-test:
-    name: integration-test
-    runs-on: ubuntu-20.04
+  image-build:
+    name: image-build
+    runs-on: ubuntu-latest
     steps:
 
       - name: checkout
         uses: actions/checkout@v2
 
-      - name: setup-nix
-        uses: cachix/install-nix-action@v12
-
-      - name: integration-test
+      - name: build
         run: |
           export DFINITY_REV=$(curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" -L https://api.github.com/repos/dfinity-lab/dfinity/branches/master | jq -r .commit.sha)
           echo "dfinity-lab/dfinity rev: $DFINITY_REV"
@@ -28,21 +25,62 @@ jobs:
 
           curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" -L https://api.github.com/repos/dfinity-lab/dfinity/tarball/$DFINITY_REV | tar xz --strip-components=1
 
-          pushd rs/rosetta-api/docker
-
           docker build \
-            --file local-deployment.Dockerfile \
+            --file rs/rosetta-api/docker/local-deployment.Dockerfile \
             --build-arg GITHUB_TOKEN=${{ secrets.GH_TOKEN }} \
             --build-arg RELEASE=$DFINITY_REV \
             --pull \
             --tag dfinity \
-            .
+            rs/rosetta-api/docker
 
           popd
 
-          popd
+          docker save dfinity | zstd -T2 -8 -o dfinity.tar.zst
+
+      - name: cache-upload
+        uses: actions/cache@v2
+        with:
+          key: cache-${{ github.run_id }}
+          path: |
+            dfinity.tar.zst
+
+  integration-test:
+    name: integration-test-node-${{ matrix.node }}
+    needs: image-build
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node:
+          - 15
+          - 14
+          - 13
+          - 12
+    steps:
+
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: setup-node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+          check-latest: true
+
+      - name: cache-download
+        uses: actions/cache@v2
+        with:
+          key: cache-${{ github.run_id }}
+          path: |
+            dfinity.tar.zst
+
+      - name: test
+        run: |
+          unzstd -c dfinity.tar.zst | docker load
+          rm dfinity.tar.zst
 
           docker run -i --rm --publish 8080:8080 dfinity &
           sleep 60
 
-          nix-shell --pure --run "npm install && node ./test/test.js"
+          npm install
+          node --unhandled-rejections=strict ./test/test.js

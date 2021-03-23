@@ -1,3 +1,16 @@
+# `0.3.0`
+
+- Update address logic to match upstream. Breaking change. (#14)
+- Add `address_from_hex`/`address_to_hex` to handle hex encoding of addresses.
+  Breaking change. (#14)
+- `transfer_pre_combine` now requires source account's public key. Breaking
+  change. (#14)
+- Update `/construction/payloads` logic to match upstream. Breaking change.
+  (#14)
+- Update offline `/construction/combine` implementation to match upstream.
+  Breaking change. (#13)
+- Test against multiple Node.js major versions. (#15)
+
 # `0.2.0`
 
 - Use explicit `FEE` operations in `/construction/payloads` requests to

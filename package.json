@@ -1,6 +1,6 @@
 {
   "name": "@dfinity/rosetta-client",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "./index.js",
   "type": "commonjs",
   "license": "Apache-2.0",
@@ -12,12 +12,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dfinity-lab/dfinity-js-sdk.git"
+    "url": "https://github.com/dfinity-lab/rosetta-client.git"
   },
   "bugs": {
-    "url": "https://github.com/dfinity-lab/dfinity-js-sdk/issues"
+    "url": "https://github.com/dfinity-lab/rosetta-client/issues"
   },
-  "homepage": "https://github.com/dfinity-lab/dfinity-js-sdk",
+  "homepage": "https://github.com/dfinity-lab/rosetta-client",
   "dependencies": {
     "@dfinity/agent": "^0.6.25",
     "@lunarhq/rosetta-ts-client": "^1.4.8-rc3",
