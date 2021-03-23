@@ -3,6 +3,7 @@ module.exports = {
   ...require("./lib/chain"),
   ...require("./lib/construction_combine"),
   ...require("./lib/key"),
+  ...require("./lib/patch"),
   ...require("./lib/session"),
   ...require("./lib/stats"),
   ...require("./lib/transaction_hash"),
