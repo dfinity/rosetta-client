@@ -1,8 +1,14 @@
-const { hex_decode, Chain, Session, transfer_combine } = require("../index.js");
+const {
+  hex_decode,
+  address_from_hex,
+  Chain,
+  Session,
+  transfer_combine,
+} = require("../index.js");
 const { inspect } = require("util");
 
 (async () => {
-  const session = new Session({ baseUrl: "http://localhost:8080" });
+  const session = new Session({ baseUrl: "http://localhost:2054" });
   const chain = new Chain(session);
 
   try {
@@ -10,7 +16,9 @@ const { inspect } = require("util");
       hex_decode(
         "093c3e2191be336f246259769041dd75b326143746b2ca97cb0f66273a366ba5ae7c3e96d49d7e5b1f74ce1e8ff640957c3ba4d7199f463a9fcff4c68b19f5e3"
       ),
-      hex_decode("df11fdc42d372cea555c5b1c0e73c67ea103d1e8a4d0e669a0b9d4ac02"),
+      address_from_hex(
+        "1e1838071cb875e59c1da64af5e04951bb3c1e94c1285bf9ff7480a645e1aa56"
+      ),
       1000000n
     );
 
@@ -23,8 +31,12 @@ const { inspect } = require("util");
     );
 
     let payloads_res = await session.transfer_pre_combine(
-      hex_decode("89b481c08f663adc356d99f6651082e84408302c97da41a02a70991002"),
-      hex_decode("df11fdc42d372cea555c5b1c0e73c67ea103d1e8a4d0e669a0b9d4ac02"),
+      hex_decode(
+        "ae7c3e96d49d7e5b1f74ce1e8ff640957c3ba4d7199f463a9fcff4c68b19f5e3"
+      ),
+      address_from_hex(
+        "1e1838071cb875e59c1da64af5e04951bb3c1e94c1285bf9ff7480a645e1aa56"
+      ),
       1000000n
     );
     let combine_res = transfer_combine(

@@ -125,7 +125,7 @@ chain.close();
 // 且会执行网络调用。我们支持在转账时，仅在完全隔离的环境中使用私钥，用例如下。
 
 const payloads_result = await session.transfer_pre_combine(
-  source_address,
+  source_pub_key,
   destination_address,
   123n
 );
