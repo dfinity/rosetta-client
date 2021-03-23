@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/dfinity-lab/rosetta-client",
   "dependencies": {
-    "@dfinity/agent": "^0.6.25",
+    "@dfinity/agent": "^0.6.26",
+    "@dfinity/authentication": "^0.6.24-lerna.0",
     "@lunarhq/rosetta-ts-client": "^1.4.8-rc3",
     "cbor": "^7.0.4",
     "crc": "^3.8.0",
