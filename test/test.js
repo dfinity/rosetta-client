@@ -8,7 +8,7 @@ const {
 const { inspect } = require("util");
 
 (async () => {
-  const session = new Session({ baseUrl: "http://localhost:2054" });
+  const session = new Session({ baseUrl: "http://localhost:8080" });
   const chain = new Chain(session);
 
   try {
