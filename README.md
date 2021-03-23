@@ -10,13 +10,14 @@ helper functions to derive keys/accounts and perform transfers.
 
 ```javascript
 const {
-  hex_decode,
-  hex_encode,
   key_new,
   key_to_pub_key,
   pub_key_to_address,
+  address_from_hex,
+  address_to_hex,
   Chain,
   Session,
+  transaction_hash,
   transfer_combine,
 } = require("@dfinity/rosetta-client");
 
@@ -33,16 +34,16 @@ let key = key_new();
 // 使用 32 字节的随机数种子生成私钥。我们推荐使用本方式生成私钥，因为可以存储随
 // 机数种子，且该种子可在其他语言/框架中重新构造相同的密钥。
 const seed = Buffer.allocUnsafe(32);
-key = key_new({seed: seed});
+key = key_new({ seed: seed });
 
 // Generate the public account address from a private key. The result is a
-// Buffer. Use hex_encode() to generate the string representation used in the
-// address field of requests.
+// Buffer. Use address_to_hex() to generate the string representation used in
+// the address field of requests.
 //
-// 从私钥生成公开的账户地址。账户地址类型为 Buffer，用 hex_encode() 可以将其编码
-// 为在请求的 address 一栏中所用的地址字符串。
+// 从私钥生成公开的账户地址。账户地址类型为 Buffer，用 address_to_hex() 可以将其
+// 编码为在请求的 address 一栏中所用的地址字符串。
 const address = pub_key_to_address(key_to_pub_key(key));
-console.log(hex_encode(address));
+console.log(address_to_hex(address));
 
 // A Session is a subclass of RosettaClient, and you can use methods of
 // RosettaClient to invoke the Rosetta API.
@@ -89,7 +90,7 @@ console.log(await session.suggested_fee);
 // 划入账户将收到参数指定的转账数额。划出账户将额外扣除交易费用。
 const submit_result = await session.transfer(
   key,
-  hex_decode(destination_address_hex_string),
+  address_from_hex(destination_address_hex_string),
   123n
 );
 console.log(submit_result);
@@ -124,7 +125,7 @@ chain.close();
 // 且会执行网络调用。我们支持在转账时，仅在完全隔离的环境中使用私钥，用例如下。
 
 const payloads_result = await session.transfer_pre_combine(
-  source_address,
+  source_pub_key,
   destination_address,
   123n
 );
@@ -135,6 +136,16 @@ const payloads_result = await session.transfer_pre_combine(
 const combine_result = transfer_combine(source_private_key, payloads_result);
 
 const submit_result = await session.transfer_post_combine(combine_result);
+
+// There are two ways to obtain a transaction hash. One is reading the result of
+// /construction/submit call, another is using transaction_hash() to calculate
+// it locally.
+//
+// 有两种计算 transaction hash 的方法。第一种是从 /construction/submit 调用的结
+// 果读取，第二种是调用 transaction_hash() 函数离线计算。
+
+const tx_hash = transaction_hash(payloads_result);
+assert(hex_encode(tx_hash) === submit_result.transaction_identifier.hash);
 ```
 
 [rosetta-ts-client]: https://github.com/lunarhq/rosetta-ts-client
