@@ -135,7 +135,7 @@ const payloads_result = await session.transfer_pre_combine(
 // This step can be executed in a fully isolated environment.
 //
 // 该步骤可在完全隔离的环境中执行。
-const combine_result = transfer_combine(source_private_key, payloads_result);
+const combine_result = await transfer_combine(source_private_key, payloads_result);
 
 const submit_result = await session.transfer_post_combine(combine_result);
 
