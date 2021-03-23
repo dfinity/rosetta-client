@@ -1,5 +1,7 @@
 # `@dfinity/rosetta-client`
 
+[![GitHub Actions](https://github.com/dfinity/rosetta-client/workflows/integration-test/badge.svg?branch=master)](https://github.com/dfinity/rosetta-client/actions?query=branch%3Amaster)
+
 Based on [`@lunarhq/rosetta-ts-client`][rosetta-ts-client], with additional
 helper functions to derive keys/accounts and perform transfers.
 
@@ -147,6 +149,10 @@ const submit_result = await session.transfer_post_combine(combine_result);
 const tx_hash = transaction_hash(payloads_result);
 assert(hex_encode(tx_hash) === submit_result.transaction_identifier.hash);
 ```
+
+## Supported Node.js versions
+
+This package is tested against latest versions of Node.js v12/v13/v14/v15.
 
 [rosetta-ts-client]: https://github.com/lunarhq/rosetta-ts-client
 
