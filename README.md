@@ -10,57 +10,112 @@ helper functions to derive keys/accounts and perform transfers.
 
 ## Usage
 
+### Working with ED25519 keys
+
 ```javascript
-const {
-  key_new,
-  key_to_pub_key,
+let {
+  // The class for ED25519 public key objects
+  //
+  // ED25519 公钥类型
+  Ed25519PublicKey,
+
+  // The class for ED25519 private key objects
+  //
+  // ED25519 私钥类型
+  Ed25519KeyIdentity,
+} = require("@dfinity/rosetta-client");
+
+// Derive an ED25519 private key from a system random seed.
+//
+// 从系统生成的随机种子生成一个 ED25519 私钥。
+let privateKey = Ed25519KeyIdentity.generate();
+
+// Derive an ED25519 private key from a user-specified 32-byte random seed. This
+// is the preferred way of generating private keys, since the seed can be stored
+// and be used by other ED25519 implementations as well.
+//
+// 从用户指定的 32 字节随机数种子生成一个 ED25519 私钥。我们推荐使用本方式生成私
+// 钥，因为可以存储随机数种子，且该种子可用于在其他 ED25519 实现中生成同一个私
+// 钥。
+let seed = Buffer.allocUnsafe(32);
+privateKey = Ed25519KeyIdentity.generate(seed);
+
+// Ed25519KeyIdentity supports serialization via JSON.
+//
+// Ed25519KeyIdentity 类型支持 JSON 序列化。
+privateKey = Ed25519KeyIdentity.fromJSON(JSON.stringify(privateKey));
+
+// The getKeyPair() method returns an object with two fields: publicKey &
+// secretKey. The publicKey field is an Ed25519PublicKey object, while the
+// secretKey field is a Buffer.
+//
+// getKeyPair() 方法返回的对象包含 publicKey 和 secretKey 属性。publicKey 是
+// Ed25519PublicKey 类的对象，secretKey 是 Buffer。
+let keyPair = privateKey.getKeyPair();
+
+// Ed25519KeyIdentity can also be deserialized by providing the keyPair's
+// Buffers or the secretKey buffer alone.
+//
+// Ed25519KeyIdentity 类型也可通过提供 keyPair 中的一对 Buffer 或仅提供
+// secretKey 的 Buffer，进行反序列化。
+privateKey = Ed25519KeyIdentity.fromKeyPair(
+  keyPair.publicKey.toRaw(),
+  keyPair.secretKey
+);
+privateKey = Ed25519KeyIdentity.fromSecretKey(keyPair.secretKey);
+
+// The getPublicKey() method returns an Ed25519PublicKey object.
+//
+// getPublicKey() 方法返回一个 Ed25519PublicKey 对象。
+let publicKey = privateKey.getPublicKey();
+
+// The toRaw() method of the Ed25519PublicKey class returns a Buffer, which can
+// be used to deserialize the public key via Ed25519PublicKey.fromRaw().
+//
+// Ed25519PublicKey 类的 toRaw() 方法返回一个 Buffer，可用于调用
+// Ed25519PublicKey.fromRaw() 进行反序列化。
+publicKey = Ed25519PublicKey.fromRaw(publicKey.toRaw());
+```
+
+### Working with account addresses
+
+```javascript
+let {
   pub_key_to_address,
   address_from_hex,
   address_to_hex,
-  Chain,
-  Session,
-  transaction_hash,
-  transfer_combine,
 } = require("@dfinity/rosetta-client");
 
-// Generate a new private key. A private key is a Buffer and can be used to
-// generate the public account address and perform transfers.
+// pub_key_to_address() derives an address from an Ed25519PublicKey object. The
+// address type is Buffer.
 //
-// 生成新的私钥。私钥类型为 Buffer，用于生成公开的账户地址、进行转账。
-let key = key_new();
+// pub_key_to_address() 函数从 Ed25519PublicKey 对象生成账户地址。地址类型是
+// Buffer。
+let address = pub_key_to_address(publicKey);
 
-// Generate a private key given a 32-byte binary seed. This is the preferred way
-// of generating private keys, since the seed can be stored and it can be used
-// by other languages/frameworks as well.
+// address_from_hex() & address_to_hex() converts between the address Buffer and
+// the hex address string used in Rosetta API requests. This is not a simple
+// base16 encoding, since the hex string will also contain a CRC32 checksum.
+// address_from_hex() will throw if the checksum doesn't match.
 //
-// 使用 32 字节的随机数种子生成私钥。我们推荐使用本方式生成私钥，因为可以存储随
-// 机数种子，且该种子可在其他语言/框架中重新构造相同的密钥。
-const seed = Buffer.allocUnsafe(32);
-key = key_new({ seed: seed });
+// address_from_hex() 和 address_to_hex() 函数用于在地址的 Buffer 和用于 Rosetta
+// API 请求中的十六进制字符串之间进行转换。转换过程并非简单的 base16 编码，因为
+// 十六进制字符串中还会包含一个 CRC32 校验码。address_from_hex() 在校验码错误时
+// 会抛出异常。
+address = address_from_hex(address_to_hex(address));
+```
 
-// Generate the public account address from a private key. The result is a
-// Buffer. Use address_to_hex() to generate the string representation used in
-// the address field of requests.
-//
-// 从私钥生成公开的账户地址。账户地址类型为 Buffer，用 address_to_hex() 可以将其
-// 编码为在请求的 address 一栏中所用的地址字符串。
-const address = pub_key_to_address(key_to_pub_key(key));
-console.log(address_to_hex(address));
+### Calling Rosetta API and performing transfers
+
+```javascript
+let { Session } = require("@dfinity/rosetta-client");
 
 // A Session is a subclass of RosettaClient, and you can use methods of
 // RosettaClient to invoke the Rosetta API.
 //
 // Session 是 RosettaClient 的子类，可以调用 RosettaClient 的方法使用 Rosetta
 // API。
-const session = new Session({ baseUrl: "http://localhost:8080" });
-
-// A Chain is a service which polls recent blocks, and can be used to confirm if
-// a transaction actually hit the chain given the transaction hash. It's not
-// required for performing transfers.
-//
-// Chain 类实现了轮询最近新增的区块的逻辑，给定转账事务的 hash 值，可用于确认该
-// 事务成功上链。转账操作本身并不需要此类对象。
-const chain = new Chain(session);
+let session = new Session({ baseUrl: "http://localhost:8080" });
 
 // The network_identifier value used in requests.
 //
@@ -79,44 +134,25 @@ console.log(await session.currency);
 // 强制的。
 console.log(await session.suggested_fee);
 
-// Given the source account's private key, the destination account's address and
-// the amount, perform a transfer and return the result of the
-// /construction/submit call.
+// Given the source account private key as an Ed25519KeyIdentity object, the
+// destination account as a Buffer, the transfer amount as a BigInt, perform a
+// transfer and return the result of the /construction/submit call.
 //
 // The destination account will receive the specified amount. An additional fee
-// will be debited from the source account.
+// will be charged from the source account.
 //
-// 给定划出账户的私钥、划入账户的地址和转账数额，发起一次转账，并返回该事务的
-// /construction/submit 调用结果。
+// 给定划出账户私钥的 Ed25519KeyIdentity 对象、划入账户地址的 Buffer 对象和划转
+// 金额的 BigInt 值，发起一次转账，并返回 /construction/submit 调用的结果。
 //
-// 划入账户将收到参数指定的转账数额。划出账户将额外扣除交易费用。
-const submit_result = await session.transfer(
-  key,
-  address_from_hex(destination_address_hex_string),
-  123n
-);
+// 划入账户将收到指定金额，划出账户则将额外扣除交易费用。
+let submit_result = await session.transfer(src_private_key, dest_addr, 123n);
 console.log(submit_result);
+```
 
-// Before confirming if the transaction actually reached the chain, wait for a
-// bit of time.
-//
-// 确认转账事务上链之前，等待片刻时间。
-await new Promise((res) => setTimeout(res, 10000));
+### Performing transfers while keeping the private keys in an isolated environment
 
-// Lookup a transaction in recent blocks given its hash value. If the result is
-// not undefined, the transaction has actually reached the chain.
-//
-// 在最近新增的区块中检索转账事务的 hash。若返回值非 undefined，则该事务确认上
-// 链。
-const transaction = chain.get_transaction(
-  submit_result.transaction_identifier.hash
-);
-console.log(transaction);
-
-// Stop polling recent blocks.
-//
-// 停止轮询最近新增的区块。
-chain.close();
+```javascript
+let { transfer_combine } = require("@dfinity/rosetta-client");
 
 // Due to security concerns, you may wish to avoid calling transfer() which
 // consumes the private key and performs network calls. We support using the
@@ -125,29 +161,18 @@ chain.close();
 //
 // 出于安全考虑，您也许希望避免调用 transfer() 方法，因为它需要传入私钥参数，并
 // 且会执行网络调用。我们支持在转账时，仅在完全隔离的环境中使用私钥，用例如下。
-
-const payloads_result = await session.transfer_pre_combine(
-  source_pub_key,
-  destination_address,
+let payloads_result = await session.transfer_pre_combine(
+  src_public_key,
+  dest_addr,
   123n
 );
 
 // This step can be executed in a fully isolated environment.
 //
 // 该步骤可在完全隔离的环境中执行。
-const combine_result = transfer_combine(source_private_key, payloads_result);
+let combine_result = await transfer_combine(src_private_key, payloads_result);
 
-const submit_result = await session.transfer_post_combine(combine_result);
-
-// There are two ways to obtain a transaction hash. One is reading the result of
-// /construction/submit call, another is using transaction_hash() to calculate
-// it locally.
-//
-// 有两种计算 transaction hash 的方法。第一种是从 /construction/submit 调用的结
-// 果读取，第二种是调用 transaction_hash() 函数离线计算。
-
-const tx_hash = transaction_hash(payloads_result);
-assert(hex_encode(tx_hash) === submit_result.transaction_identifier.hash);
+submit_result = await session.transfer_post_combine(combine_result);
 ```
 
 ## Supported Node.js versions
