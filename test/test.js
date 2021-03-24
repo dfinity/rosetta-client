@@ -1,7 +1,11 @@
 const { inspect } = require("util");
-const { blobFromHex } = require("@dfinity/agent");
-const { Ed25519KeyIdentity } = require("@dfinity/authentication");
-const { address_from_hex, Chain, Session } = require("../index.js");
+const {
+  Ed25519KeyIdentity,
+  blobFromHex,
+  address_from_hex,
+  Chain,
+  Session,
+} = require("../index.js");
 
 (async () => {
   const session = new Session({ baseUrl: "http://localhost:8080" });
