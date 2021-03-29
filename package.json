@@ -18,6 +18,9 @@
     "url": "https://github.com/dfinity-lab/rosetta-client/issues"
   },
   "homepage": "https://github.com/dfinity-lab/rosetta-client",
+  "scripts": {
+    "build": "webpack --entry ./index.js --mode none --output-library-type commonjs --progress --target node"
+  },
   "dependencies": {
     "@dfinity/agent": "0.6.28",
     "@lunarhq/rosetta-ts-client": "^1.4.8-rc3",
@@ -25,5 +28,10 @@
     "crc": "^3.8.0",
     "js-sha256": "^0.9.0",
     "tweetnacl": "^1.0.3"
+  },
+  "devDependencies": {
+    "node-inspect-extracted": "^1.0.4",
+    "webpack": "^5.28.0",
+    "webpack-cli": "^4.5.0"
   }
 }

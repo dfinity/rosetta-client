@@ -4,7 +4,7 @@ const {
   address_from_hex,
   Chain,
   Session,
-} = require("../index");
+} = require("../dist/main");
 
 (async () => {
   const session = new Session({ baseUrl: "http://localhost:8080" });
