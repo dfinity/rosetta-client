@@ -83,4 +83,12 @@ jobs:
           sleep 60
 
           npm install
+          npm run-script build
           node --unhandled-rejections=strict ./test/test.js
+
+      - name: artifact-upload
+        uses: actions/upload-artifact@v2
+        if: ${{ matrix.node == 15 }}
+        with:
+          name: dist
+          path: dist

@@ -13,7 +13,7 @@ helper functions to derive keys/accounts and perform transfers.
 ### Working with ED25519 keys
 
 ```javascript
-let { key_new, key_to_pub_key } = require("./index");
+let { key_new, key_to_pub_key } = require("@dfinity/rosetta-api");
 
 // Derive an ED25519 private key from a system random seed. The private key's
 // type is Buffer.
@@ -134,6 +134,23 @@ let combine_result = transfer_combine(src_private_key, payloads_result);
 
 submit_result = await session.transfer_post_combine(combine_result);
 ```
+
+### Creating & using a JS bundle
+
+You can bundle this package and its dependencies into a single JS file, and use
+it as a regular CommonJS module.
+
+您可以将本库及其依赖库打包成单个 JS 文件，像普通的 CommonJS 模块一样使用它。
+
+```sh
+$ npm install
+$ npm run-script build
+$ node --eval "console.log(require('./dist/main.js'))"
+```
+
+The bundled JS file is also available as the `dist` artifact on CI.
+
+打包好的 JS 文件也可从 CI 上生成的 `dist` 文件直接下载。
 
 ## Supported Node.js versions
 
