@@ -9,5 +9,4 @@ module.exports = {
   ...require("./lib/key"),
   ...require("./lib/session"),
   ...require("./lib/stats"),
-  ...require("./lib/transaction_hash"),
 };
