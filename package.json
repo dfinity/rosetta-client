@@ -21,6 +21,9 @@
   "scripts": {
     "build": "webpack --entry ./index.js --mode none --output-library-type commonjs --progress --target node"
   },
+  "files": [
+    "lib"
+  ],
   "dependencies": {
     "@dfinity/agent": "0.6.28",
     "@lunarhq/rosetta-ts-client": "^1.4.8-rc3",
