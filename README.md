@@ -13,22 +13,13 @@ helper functions to derive keys/accounts and perform transfers.
 ### Working with ED25519 keys
 
 ```javascript
-let {
-  // The class for ED25519 public key objects
-  //
-  // ED25519 公钥类型
-  Ed25519PublicKey,
+let { key_new, key_to_pub_key } = require("./index");
 
-  // The class for ED25519 private key objects
-  //
-  // ED25519 私钥类型
-  Ed25519KeyIdentity,
-} = require("@dfinity/rosetta-client");
-
-// Derive an ED25519 private key from a system random seed.
+// Derive an ED25519 private key from a system random seed. The private key's
+// type is Buffer.
 //
-// 从系统生成的随机种子生成一个 ED25519 私钥。
-let privateKey = Ed25519KeyIdentity.generate();
+// 从系统生成的随机种子生成一个 ED25519 私钥。私钥类型为 Buffer。
+let privateKey = key_new();
 
 // Derive an ED25519 private key from a user-specified 32-byte random seed. This
 // is the preferred way of generating private keys, since the seed can be stored
@@ -38,43 +29,13 @@ let privateKey = Ed25519KeyIdentity.generate();
 // 钥，因为可以存储随机数种子，且该种子可用于在其他 ED25519 实现中生成同一个私
 // 钥。
 let seed = Buffer.allocUnsafe(32);
-privateKey = Ed25519KeyIdentity.generate(seed);
+privateKey = key_new(seed);
 
-// Ed25519KeyIdentity supports serialization via JSON.
+// Use key_to_pub_key() to derive a public key from a private key. The public
+// key's type is Buffer.
 //
-// Ed25519KeyIdentity 类型支持 JSON 序列化。
-privateKey = Ed25519KeyIdentity.fromJSON(JSON.stringify(privateKey));
-
-// The getKeyPair() method returns an object with two fields: publicKey &
-// secretKey. The publicKey field is an Ed25519PublicKey object, while the
-// secretKey field is a Buffer.
-//
-// getKeyPair() 方法返回的对象包含 publicKey 和 secretKey 属性。publicKey 是
-// Ed25519PublicKey 类的对象，secretKey 是 Buffer。
-let keyPair = privateKey.getKeyPair();
-
-// Ed25519KeyIdentity can also be deserialized by providing the keyPair's
-// Buffers or the secretKey buffer alone.
-//
-// Ed25519KeyIdentity 类型也可通过提供 keyPair 中的一对 Buffer 或仅提供
-// secretKey 的 Buffer，进行反序列化。
-privateKey = Ed25519KeyIdentity.fromKeyPair(
-  keyPair.publicKey.toRaw(),
-  keyPair.secretKey
-);
-privateKey = Ed25519KeyIdentity.fromSecretKey(keyPair.secretKey);
-
-// The getPublicKey() method returns an Ed25519PublicKey object.
-//
-// getPublicKey() 方法返回一个 Ed25519PublicKey 对象。
-let publicKey = privateKey.getPublicKey();
-
-// The toRaw() method of the Ed25519PublicKey class returns a Buffer, which can
-// be used to deserialize the public key via Ed25519PublicKey.fromRaw().
-//
-// Ed25519PublicKey 类的 toRaw() 方法返回一个 Buffer，可用于调用
-// Ed25519PublicKey.fromRaw() 进行反序列化。
-publicKey = Ed25519PublicKey.fromRaw(publicKey.toRaw());
+// 调用 key_to_pub_key() 函数，从私钥生成公钥。公钥类型是 Buffer。
+let publicKey = key_to_pub_key(privateKey);
 ```
 
 ### Working with account addresses
@@ -86,11 +47,10 @@ let {
   address_to_hex,
 } = require("@dfinity/rosetta-client");
 
-// pub_key_to_address() derives an address from an Ed25519PublicKey object. The
-// address type is Buffer.
+// pub_key_to_address() derives an address from a public key. The address type
+// is Buffer.
 //
-// pub_key_to_address() 函数从 Ed25519PublicKey 对象生成账户地址。地址类型是
-// Buffer。
+// pub_key_to_address() 函数从公钥生成账户地址。地址类型是Buffer。
 let address = pub_key_to_address(publicKey);
 
 // address_from_hex() & address_to_hex() converts between the address Buffer and
@@ -134,15 +94,15 @@ console.log(await session.currency);
 // 强制的。
 console.log(await session.suggested_fee);
 
-// Given the source account private key as an Ed25519KeyIdentity object, the
-// destination account as a Buffer, the transfer amount as a BigInt, perform a
-// transfer and return the result of the /construction/submit call.
+// Given the source account private key as a Buffer, the destination account as
+// a Buffer, the transfer amount as a BigInt, perform a transfer and return the
+// result of the /construction/submit call.
 //
 // The destination account will receive the specified amount. An additional fee
 // will be charged from the source account.
 //
-// 给定划出账户私钥的 Ed25519KeyIdentity 对象、划入账户地址的 Buffer 对象和划转
-// 金额的 BigInt 值，发起一次转账，并返回 /construction/submit 调用的结果。
+// 给定划出账户私钥的 Buffer 对象、划入账户地址的 Buffer 对象和划转金额的 BigInt
+// 值，发起一次转账，并返回 /construction/submit 调用的结果。
 //
 // 划入账户将收到指定金额，划出账户则将额外扣除交易费用。
 let submit_result = await session.transfer(src_private_key, dest_addr, 123n);
@@ -170,7 +130,7 @@ let payloads_result = await session.transfer_pre_combine(
 // This step can be executed in a fully isolated environment.
 //
 // 该步骤可在完全隔离的环境中执行。
-let combine_result = await transfer_combine(src_private_key, payloads_result);
+let combine_result = transfer_combine(src_private_key, payloads_result);
 
 submit_result = await session.transfer_post_combine(combine_result);
 ```
