@@ -8,5 +8,6 @@ module.exports = {
   ...require("./lib/construction_combine"),
   ...require("./lib/key"),
   ...require("./lib/session"),
+  ...require("./lib/signed_transaction_decode"),
   ...require("./lib/stats"),
 };
