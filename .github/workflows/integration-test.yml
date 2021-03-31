@@ -8,45 +8,56 @@ on:
 
 jobs:
 
-  image-build:
-    name: image-build
+  cargo-build:
+    name: cargo-build
     runs-on: ubuntu-latest
     steps:
 
       - name: checkout
         uses: actions/checkout@v2
 
+      - name: checkout-dfinity
+        uses: actions/checkout@v2
+        with:
+          repository: dfinity-lab/dfinity
+          token: ${{ secrets.GH_TOKEN }}
+          path: dfinity
+
+      - name: setup-binaryen
+        run: |
+          curl \
+            -o ${{ runner.temp }}/binaryen.deb \
+            http://archive.ubuntu.com/ubuntu/pool/universe/b/binaryen/binaryen_99-3_amd64.deb
+          sudo dpkg -i ${{ runner.temp }}/binaryen.deb
+          rm ${{ runner.temp }}/binaryen.deb
+
+      - name: cache
+        uses: actions/cache@v2
+        with:
+          key: cargo-cache-${{ github.run_id }}
+          restore-keys: cargo-cache-
+          path: |
+            ~/.cargo
+            dfinity/rs/target
+
       - name: build
         run: |
-          export DFINITY_REV=$(curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" -L https://api.github.com/repos/dfinity-lab/dfinity/branches/master | jq -r .commit.sha)
-          echo "dfinity-lab/dfinity rev: $DFINITY_REV"
+          pushd dfinity/rs/rosetta-api
 
-          pushd $(mktemp -d)
-
-          curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" -L https://api.github.com/repos/dfinity-lab/dfinity/tarball/$DFINITY_REV | tar xz --strip-components=1
-
-          docker build \
-            --file rs/rosetta-api/docker/local-deployment.Dockerfile \
-            --build-arg GITHUB_TOKEN=${{ secrets.GH_TOKEN }} \
-            --build-arg RELEASE=$DFINITY_REV \
-            --pull \
-            --tag dfinity \
-            rs/rosetta-api/docker
+          rustup target add wasm32-unknown-unknown
+          cargo build --release --package ic-rosetta-api --bin ic-rosetta-api
+          cargo build --target wasm32-unknown-unknown --release --package ledger-canister --bin ledger-canister
+          wasm-opt \
+            -Oz \
+            --strip-debug \
+            ../target/wasm32-unknown-unknown/release/ledger-canister.wasm \
+            -o ../target/wasm32-unknown-unknown/release/ledger-canister.wasm
 
           popd
 
-          docker save dfinity | zstd -T2 -8 -o dfinity.tar.zst
-
-      - name: cache-upload
-        uses: actions/cache@v2
-        with:
-          key: cache-${{ github.run_id }}
-          path: |
-            dfinity.tar.zst
-
   integration-test:
-    name: integration-test-node-${{ matrix.node }}
-    needs: image-build
+    name: integration-test-node-${{ matrix.node }}-sdk-${{ matrix.sdk_ver }}
+    needs: cargo-build
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -56,10 +67,19 @@ jobs:
           - 14
           - 13
           - 12
+        sdk_ver:
+          - 0.7.0-beta.0
     steps:
 
       - name: checkout
         uses: actions/checkout@v2
+
+      - name: checkout-dfinity
+        uses: actions/checkout@v2
+        with:
+          repository: dfinity-lab/dfinity
+          token: ${{ secrets.GH_TOKEN }}
+          path: dfinity
 
       - name: setup-node
         uses: actions/setup-node@v2
@@ -67,20 +87,50 @@ jobs:
           node-version: ${{ matrix.node }}
           check-latest: true
 
-      - name: cache-download
+      - name: setup-dfx
+        run: |
+          curl -L https://sdk.dfinity.org/downloads/dfx/${{ matrix.sdk_ver }}/x86_64-linux/dfx-${{ matrix.sdk_ver }}.tar.gz | sudo tar xz --strip-components 1 -C /usr/local/bin
+
+      - name: cache
         uses: actions/cache@v2
         with:
-          key: cache-${{ github.run_id }}
+          key: cargo-cache-${{ github.run_id }}
+          restore-keys: cargo-cache-
           path: |
-            dfinity.tar.zst
+            ~/.cargo
+            dfinity/rs/target
 
       - name: test
         run: |
-          unzstd -c dfinity.tar.zst | docker load
-          rm dfinity.tar.zst
+          sudo cp dfinity/rs/target/release/ic-rosetta-api /usr/local/bin
+          cp \
+            dfinity/rs/rosetta-api/docker/dfx.json \
+            dfinity/rs/rosetta-api/ledger.did \
+            dfinity/rs/rosetta-api/log_config.yml \
+            dfinity/rs/target/wasm32-unknown-unknown/release/ledger-canister.wasm \
+            ${{ runner.temp }}
 
-          docker run -i --rm --publish 8080:8080 dfinity &
-          sleep 60
+          pushd ${{ runner.temp }}
+
+          dfx start \
+            --background \
+            --clean \
+            --host 127.0.0.1:8000
+
+          dfx deploy \
+            --argument "record { minting_account = \"807077e900000000000000000000000000000000000000000000000000000000\"; initial_values = vec { record { \"ea7161aa15fd1f1ab8ead80c5f2556a449b42eeadbb7be94d450df1ec1ecf0cd\"; record { doms = 18446744073709551615 } } }; archive_canister = null; max_message_size_bytes = null}" \
+            --network=local \
+            ledger
+
+          ic-rosetta-api \
+            --canister-id $(jq -r .ledger.local .dfx/local/canister_ids.json) \
+            --ic-url http://127.0.0.1:8000 \
+            --address 127.0.0.1 \
+            --port 8080 &
+
+          popd
+
+          sleep 10
 
           npm install
           npm run-script build
