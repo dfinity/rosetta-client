@@ -127,12 +127,51 @@ let payloads_result = await session.transfer_pre_combine(
   123n
 );
 
-// This step can be executed in a fully isolated environment.
+// This step can be executed in a fully isolated environment. The result is the
+// same of calling /construction/combine with session.combine().
 //
-// 该步骤可在完全隔离的环境中执行。
+// 该步骤可在完全隔离的环境中执行。与通过 session.combine() 调用 /construction/combine 的结果相同。
 let combine_result = transfer_combine(src_private_key, payloads_result);
 
 submit_result = await session.transfer_post_combine(combine_result);
+```
+
+### Decoding a signed transaction
+
+```javascript
+const { signed_transaction_decode } = require("@dfinity/rosetta-client");
+
+// You may wish to decode a signed transaction and verify the content before
+// actually submitting it. Here's how.
+//
+// 您也许想要在提交已签名的事务前，先将其反序列化并校验其内容。示例如下。
+
+// The signed_transaction field is a hex-encoded string. Pass it directly to
+// signed_transaction_decode().
+//
+// signed_transaction 是十六进制编码的字符串。直接将其传给
+// signed_transaction_decode() 即可。
+const tx = signed_transaction_decode(combine_result.signed_transaction);
+
+// The source account as a Buffer.
+//
+// 转出账户的 Buffer 值。
+console.log(address_to_hex(tx.from));
+
+// The destination account as a Buffer.
+//
+// 转入账户的 Buffer 值。
+console.log(address_to_hex(tx.to));
+
+// The transfer amount as a BigInt.
+//
+// 转账金额的 BigInt 值。
+console.log(tx.amount);
+
+// The additional transaction fee as a BigInt.
+//
+// 额外的交易费用的 BigInt 值。
+console.log(tx.fee);
 ```
 
 ### Creating & using a JS bundle
