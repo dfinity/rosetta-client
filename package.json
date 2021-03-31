@@ -22,6 +22,7 @@
     "build": "webpack --entry ./index.js --mode none --output-library-type commonjs --progress --target node"
   },
   "files": [
+    "autogen",
     "lib"
   ],
   "dependencies": {
@@ -29,12 +30,13 @@
     "@lunarhq/rosetta-ts-client": "^1.4.8-rc3",
     "cbor": "^7.0.4",
     "crc": "^3.8.0",
+    "google-protobuf": "^3.15.6",
     "js-sha256": "^0.9.0",
     "tweetnacl": "^1.0.3"
   },
   "devDependencies": {
-    "node-inspect-extracted": "^1.0.4",
+    "node-inspect-extracted": "^1.0.5",
     "webpack": "^5.28.0",
-    "webpack-cli": "^4.5.0"
+    "webpack-cli": "^4.6.0"
   }
 }
