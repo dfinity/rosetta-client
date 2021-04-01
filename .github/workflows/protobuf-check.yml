@@ -25,14 +25,18 @@ jobs:
 
       - name: setup-protoc
         run: |
+          mkdir -p ~/.local/bin
+
           pushd ${{ runner.temp }}
           curl -L -o protoc.zip https://github.com/protocolbuffers/protobuf/releases/download/v3.13.0/protoc-3.13.0-linux-x86_64.zip
           unzip protoc.zip
-          sudo cp bin/protoc /usr/bin
+          cp bin/protoc ~/.local/bin
           popd
 
       - name: check
         run: |
+          export PATH=~/.local/bin:$PATH
+
           pushd dfinity/rs/rosetta-api/canister
 
           protoc \
