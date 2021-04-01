@@ -24,7 +24,7 @@ jobs:
           path: dfinity
 
       - name: setup-protoc
-        runs: |
+        run: |
           sudo apt install -y \
             protobuf-compiler
 
