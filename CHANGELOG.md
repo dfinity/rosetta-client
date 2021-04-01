@@ -9,6 +9,10 @@
   (#14)
 - Update offline `/construction/combine` implementation to match upstream.
   Breaking change. (#13)
+- Support decoding `signed_transaction`. (#22)
+- Support bundling for NodeJS. (#18)
+- Replace some internal utils by using `@dfinity/agent`, and use `tweetnacl` for
+  ed25519 logic. (#16) (#17)
 - Test against multiple Node.js major versions. (#15)
 
 # `0.2.0`
