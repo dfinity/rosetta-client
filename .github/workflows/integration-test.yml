@@ -89,7 +89,8 @@ jobs:
 
       - name: setup-dfx
         run: |
-          curl -L https://sdk.dfinity.org/downloads/dfx/${{ matrix.sdk_ver }}/x86_64-linux/dfx-${{ matrix.sdk_ver }}.tar.gz | sudo tar xz --strip-components 1 -C /usr/local/bin
+          mkdir -p ~/.local/bin
+          curl -L https://sdk.dfinity.org/downloads/dfx/${{ matrix.sdk_ver }}/x86_64-linux/dfx-${{ matrix.sdk_ver }}.tar.gz | tar xz --strip-components 1 -C ~/.local/bin
 
       - name: cache
         uses: actions/cache@v2
@@ -102,7 +103,9 @@ jobs:
 
       - name: test
         run: |
-          sudo cp dfinity/rs/target/release/ic-rosetta-api /usr/local/bin
+          export PATH=~/.local/bin:$PATH
+
+          cp dfinity/rs/target/release/ic-rosetta-api ~/.local/bin
           cp \
             dfinity/rs/rosetta-api/docker/dfx.json \
             dfinity/rs/rosetta-api/ledger.did \
