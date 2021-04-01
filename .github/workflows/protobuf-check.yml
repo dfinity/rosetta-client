@@ -25,8 +25,11 @@ jobs:
 
       - name: setup-protoc
         run: |
-          sudo apt install -y \
-            protobuf-compiler
+          pushd ${{ runner.temp }}
+          curl -L -o protoc.zip https://github.com/protocolbuffers/protobuf/releases/download/v3.13.0/protoc-3.13.0-linux-x86_64.zip
+          unzip protoc.zip
+          sudo cp bin/protoc /usr/local/bin
+          popd
 
       - name: check
         run: |
