@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/dfinity-lab/rosetta-client",
   "scripts": {
-    "build": "webpack --entry ./index.js --mode none --output-library-type commonjs --progress --target node"
+    "build": "webpack --entry ./index.js --mode production --no-optimization-minimize --no-output-iife --output-library-type commonjs --progress --target node"
   },
   "files": [
     "autogen",
