@@ -26,7 +26,7 @@
     "lib"
   ],
   "dependencies": {
-    "@dfinity/agent": "0.6.28",
+    "@dfinity/agent": "^0.6.28",
     "@lunarhq/rosetta-ts-client": "^1.4.8-rc3",
     "cbor": "^7.0.4",
     "crc": "^3.8.0",
