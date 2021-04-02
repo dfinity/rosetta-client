@@ -13,7 +13,7 @@ helper functions to derive keys/accounts and perform transfers.
 ### Working with ED25519 keys
 
 ```javascript
-let { key_new, key_to_pub_key } = require("@dfinity/rosetta-api");
+let { key_new, key_to_pub_key } = require("@dfinity/rosetta-client");
 
 // Derive an ED25519 private key from a system random seed. The private key's
 // type is Buffer.
