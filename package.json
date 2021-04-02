@@ -19,14 +19,14 @@
   },
   "homepage": "https://github.com/dfinity-lab/rosetta-client",
   "scripts": {
-    "build": "webpack --entry ./index.js --mode none --output-library-type commonjs --progress --target node"
+    "build": "webpack --entry ./index.js --mode production --no-optimization-minimize --no-output-iife --output-library-type commonjs --progress --target node"
   },
   "files": [
     "autogen",
     "lib"
   ],
   "dependencies": {
-    "@dfinity/agent": "0.6.28",
+    "@dfinity/agent": "^0.6.28",
     "@lunarhq/rosetta-ts-client": "^1.4.8-rc3",
     "cbor": "^7.0.4",
     "crc": "^3.8.0",

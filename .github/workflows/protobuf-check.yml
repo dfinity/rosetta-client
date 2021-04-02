@@ -1,0 +1,52 @@
+name: protobuf-check
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 * * * *"
+
+jobs:
+
+  protobuf-check:
+    name: protobuf-check
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: checkout-dfinity
+        uses: actions/checkout@v2
+        with:
+          repository: dfinity-lab/dfinity
+          token: ${{ secrets.GH_TOKEN }}
+          path: dfinity
+
+      - name: setup-protoc
+        run: |
+          mkdir -p ~/.local/bin
+
+          pushd ${{ runner.temp }}
+          curl -L -o protoc.zip https://github.com/protocolbuffers/protobuf/releases/download/v3.13.0/protoc-3.13.0-linux-x86_64.zip
+          unzip protoc.zip
+          cp bin/protoc ~/.local/bin
+          popd
+
+      - name: check
+        run: |
+          export PATH=~/.local/bin:$PATH
+
+          pushd dfinity/rs/rosetta-api/canister
+
+          protoc \
+            --js_out \
+            import_style=commonjs,binary:${{ github.workspace }}/autogen \
+            --proto_path proto \
+            --proto_path ../../types/base_types/proto \
+            proto/types.proto \
+            ../../types/base_types/proto/ic_base_types/pb/v1/types.proto
+
+          popd
+
+          git diff --exit-code
