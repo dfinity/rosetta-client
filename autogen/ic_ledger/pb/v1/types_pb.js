@@ -1,4 +1,4 @@
-// source: types.proto
+// source: ic_ledger/pb/v1/types.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -12,44 +12,44 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
-var ic_base_types_pb_v1_types_pb = require('./ic_base_types/pb/v1/types_pb.js');
+var ic_base_types_pb_v1_types_pb = require('../../../ic_base_types/pb/v1/types_pb.js');
 goog.object.extend(proto, ic_base_types_pb_v1_types_pb);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.Account', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.AccountBalanceRequest', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.AccountBalanceResponse', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.AccountIdentifier', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.ArchiveAddRequest', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.ArchiveAddResponse', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.ArchiveInit', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.Block', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.BlockHeight', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.Burn', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.Certification', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.GetBlocksRequest', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.GetBlocksResponse', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.GetNodesRequest', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.GetNodesResponse', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.Hash', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.ICPTs', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.LedgerArchiveRequest', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.LedgerInit', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.LedgerUpgrade', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.Memo', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.Mint', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.NotifyRequest', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.NotifyResponse', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.Payment', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.Send', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.SendRequest', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.SendResponse', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.Subaccount', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.TimeStamp', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.TipOfChainRequest', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.TipOfChainResponse', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.TotalSupplyRequest', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.TotalSupplyResponse', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.Transaction', null, global);
-goog.exportSymbol('proto.ic_ledger.pb.types.v1.Transaction.TransferCase', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.Account', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.AccountBalanceRequest', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.AccountBalanceResponse', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.AccountIdentifier', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.ArchiveAddRequest', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.ArchiveAddResponse', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.ArchiveInit', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.Block', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.BlockHeight', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.Burn', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.Certification', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.GetBlocksRequest', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.GetBlocksResponse', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.GetNodesRequest', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.GetNodesResponse', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.Hash', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.ICPTs', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.LedgerArchiveRequest', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.LedgerInit', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.LedgerUpgrade', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.Memo', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.Mint', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.NotifyRequest', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.NotifyResponse', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.Payment', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.Send', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.SendRequest', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.SendResponse', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.Subaccount', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.TimeStamp', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.TipOfChainRequest', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.TipOfChainResponse', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.TotalSupplyRequest', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.TotalSupplyResponse', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.Transaction', null, global);
+goog.exportSymbol('proto.ic_ledger.pb.v1.Transaction.TransferCase', null, global);
 /**
  * Generated by JsPbCodeGenerator.
  * @param {Array=} opt_data Optional initial data array, typically from a
@@ -60,16 +60,16 @@ goog.exportSymbol('proto.ic_ledger.pb.types.v1.Transaction.TransferCase', null, 
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.LedgerInit = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.ic_ledger.pb.types.v1.LedgerInit.repeatedFields_, null);
+proto.ic_ledger.pb.v1.LedgerInit = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.ic_ledger.pb.v1.LedgerInit.repeatedFields_, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.LedgerInit, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.LedgerInit, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.LedgerInit.displayName = 'proto.ic_ledger.pb.types.v1.LedgerInit';
+  proto.ic_ledger.pb.v1.LedgerInit.displayName = 'proto.ic_ledger.pb.v1.LedgerInit';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -81,16 +81,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.LedgerUpgrade = function(opt_data) {
+proto.ic_ledger.pb.v1.LedgerUpgrade = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.LedgerUpgrade, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.LedgerUpgrade, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.LedgerUpgrade.displayName = 'proto.ic_ledger.pb.types.v1.LedgerUpgrade';
+  proto.ic_ledger.pb.v1.LedgerUpgrade.displayName = 'proto.ic_ledger.pb.v1.LedgerUpgrade';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -102,16 +102,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.SendRequest = function(opt_data) {
+proto.ic_ledger.pb.v1.SendRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.SendRequest, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.SendRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.SendRequest.displayName = 'proto.ic_ledger.pb.types.v1.SendRequest';
+  proto.ic_ledger.pb.v1.SendRequest.displayName = 'proto.ic_ledger.pb.v1.SendRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -123,16 +123,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.SendResponse = function(opt_data) {
+proto.ic_ledger.pb.v1.SendResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.SendResponse, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.SendResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.SendResponse.displayName = 'proto.ic_ledger.pb.types.v1.SendResponse';
+  proto.ic_ledger.pb.v1.SendResponse.displayName = 'proto.ic_ledger.pb.v1.SendResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -144,16 +144,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.NotifyRequest = function(opt_data) {
+proto.ic_ledger.pb.v1.NotifyRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.NotifyRequest, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.NotifyRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.NotifyRequest.displayName = 'proto.ic_ledger.pb.types.v1.NotifyRequest';
+  proto.ic_ledger.pb.v1.NotifyRequest.displayName = 'proto.ic_ledger.pb.v1.NotifyRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -165,16 +165,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.NotifyResponse = function(opt_data) {
+proto.ic_ledger.pb.v1.NotifyResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.NotifyResponse, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.NotifyResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.NotifyResponse.displayName = 'proto.ic_ledger.pb.types.v1.NotifyResponse';
+  proto.ic_ledger.pb.v1.NotifyResponse.displayName = 'proto.ic_ledger.pb.v1.NotifyResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -186,16 +186,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.AccountBalanceRequest = function(opt_data) {
+proto.ic_ledger.pb.v1.AccountBalanceRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.AccountBalanceRequest, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.AccountBalanceRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.AccountBalanceRequest.displayName = 'proto.ic_ledger.pb.types.v1.AccountBalanceRequest';
+  proto.ic_ledger.pb.v1.AccountBalanceRequest.displayName = 'proto.ic_ledger.pb.v1.AccountBalanceRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -207,16 +207,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.AccountBalanceResponse = function(opt_data) {
+proto.ic_ledger.pb.v1.AccountBalanceResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.AccountBalanceResponse, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.AccountBalanceResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.AccountBalanceResponse.displayName = 'proto.ic_ledger.pb.types.v1.AccountBalanceResponse';
+  proto.ic_ledger.pb.v1.AccountBalanceResponse.displayName = 'proto.ic_ledger.pb.v1.AccountBalanceResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -228,16 +228,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.TipOfChainRequest = function(opt_data) {
+proto.ic_ledger.pb.v1.TipOfChainRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.TipOfChainRequest, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.TipOfChainRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.TipOfChainRequest.displayName = 'proto.ic_ledger.pb.types.v1.TipOfChainRequest';
+  proto.ic_ledger.pb.v1.TipOfChainRequest.displayName = 'proto.ic_ledger.pb.v1.TipOfChainRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -249,16 +249,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.TipOfChainResponse = function(opt_data) {
+proto.ic_ledger.pb.v1.TipOfChainResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.TipOfChainResponse, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.TipOfChainResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.TipOfChainResponse.displayName = 'proto.ic_ledger.pb.types.v1.TipOfChainResponse';
+  proto.ic_ledger.pb.v1.TipOfChainResponse.displayName = 'proto.ic_ledger.pb.v1.TipOfChainResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -270,16 +270,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.TotalSupplyRequest = function(opt_data) {
+proto.ic_ledger.pb.v1.TotalSupplyRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.TotalSupplyRequest, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.TotalSupplyRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.TotalSupplyRequest.displayName = 'proto.ic_ledger.pb.types.v1.TotalSupplyRequest';
+  proto.ic_ledger.pb.v1.TotalSupplyRequest.displayName = 'proto.ic_ledger.pb.v1.TotalSupplyRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -291,16 +291,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.TotalSupplyResponse = function(opt_data) {
+proto.ic_ledger.pb.v1.TotalSupplyResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.TotalSupplyResponse, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.TotalSupplyResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.TotalSupplyResponse.displayName = 'proto.ic_ledger.pb.types.v1.TotalSupplyResponse';
+  proto.ic_ledger.pb.v1.TotalSupplyResponse.displayName = 'proto.ic_ledger.pb.v1.TotalSupplyResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -312,16 +312,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.LedgerArchiveRequest = function(opt_data) {
+proto.ic_ledger.pb.v1.LedgerArchiveRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.LedgerArchiveRequest, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.LedgerArchiveRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.LedgerArchiveRequest.displayName = 'proto.ic_ledger.pb.types.v1.LedgerArchiveRequest';
+  proto.ic_ledger.pb.v1.LedgerArchiveRequest.displayName = 'proto.ic_ledger.pb.v1.LedgerArchiveRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -333,16 +333,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.GetBlocksRequest = function(opt_data) {
+proto.ic_ledger.pb.v1.GetBlocksRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.GetBlocksRequest, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.GetBlocksRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.GetBlocksRequest.displayName = 'proto.ic_ledger.pb.types.v1.GetBlocksRequest';
+  proto.ic_ledger.pb.v1.GetBlocksRequest.displayName = 'proto.ic_ledger.pb.v1.GetBlocksRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -354,16 +354,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.GetBlocksResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.ic_ledger.pb.types.v1.GetBlocksResponse.repeatedFields_, null);
+proto.ic_ledger.pb.v1.GetBlocksResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.ic_ledger.pb.v1.GetBlocksResponse.repeatedFields_, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.GetBlocksResponse, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.GetBlocksResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.GetBlocksResponse.displayName = 'proto.ic_ledger.pb.types.v1.GetBlocksResponse';
+  proto.ic_ledger.pb.v1.GetBlocksResponse.displayName = 'proto.ic_ledger.pb.v1.GetBlocksResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -375,16 +375,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.ArchiveInit = function(opt_data) {
+proto.ic_ledger.pb.v1.ArchiveInit = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.ArchiveInit, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.ArchiveInit, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.ArchiveInit.displayName = 'proto.ic_ledger.pb.types.v1.ArchiveInit';
+  proto.ic_ledger.pb.v1.ArchiveInit.displayName = 'proto.ic_ledger.pb.v1.ArchiveInit';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -396,16 +396,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.ArchiveAddRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.ic_ledger.pb.types.v1.ArchiveAddRequest.repeatedFields_, null);
+proto.ic_ledger.pb.v1.ArchiveAddRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.ic_ledger.pb.v1.ArchiveAddRequest.repeatedFields_, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.ArchiveAddRequest, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.ArchiveAddRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.ArchiveAddRequest.displayName = 'proto.ic_ledger.pb.types.v1.ArchiveAddRequest';
+  proto.ic_ledger.pb.v1.ArchiveAddRequest.displayName = 'proto.ic_ledger.pb.v1.ArchiveAddRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -417,16 +417,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.ArchiveAddResponse = function(opt_data) {
+proto.ic_ledger.pb.v1.ArchiveAddResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.ArchiveAddResponse, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.ArchiveAddResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.ArchiveAddResponse.displayName = 'proto.ic_ledger.pb.types.v1.ArchiveAddResponse';
+  proto.ic_ledger.pb.v1.ArchiveAddResponse.displayName = 'proto.ic_ledger.pb.v1.ArchiveAddResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -438,16 +438,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.GetNodesRequest = function(opt_data) {
+proto.ic_ledger.pb.v1.GetNodesRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.GetNodesRequest, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.GetNodesRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.GetNodesRequest.displayName = 'proto.ic_ledger.pb.types.v1.GetNodesRequest';
+  proto.ic_ledger.pb.v1.GetNodesRequest.displayName = 'proto.ic_ledger.pb.v1.GetNodesRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -459,16 +459,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.GetNodesResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.ic_ledger.pb.types.v1.GetNodesResponse.repeatedFields_, null);
+proto.ic_ledger.pb.v1.GetNodesResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.ic_ledger.pb.v1.GetNodesResponse.repeatedFields_, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.GetNodesResponse, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.GetNodesResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.GetNodesResponse.displayName = 'proto.ic_ledger.pb.types.v1.GetNodesResponse';
+  proto.ic_ledger.pb.v1.GetNodesResponse.displayName = 'proto.ic_ledger.pb.v1.GetNodesResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -480,16 +480,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.ICPTs = function(opt_data) {
+proto.ic_ledger.pb.v1.ICPTs = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.ICPTs, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.ICPTs, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.ICPTs.displayName = 'proto.ic_ledger.pb.types.v1.ICPTs';
+  proto.ic_ledger.pb.v1.ICPTs.displayName = 'proto.ic_ledger.pb.v1.ICPTs';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -501,16 +501,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.Payment = function(opt_data) {
+proto.ic_ledger.pb.v1.Payment = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.Payment, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.Payment, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.Payment.displayName = 'proto.ic_ledger.pb.types.v1.Payment';
+  proto.ic_ledger.pb.v1.Payment.displayName = 'proto.ic_ledger.pb.v1.Payment';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -522,16 +522,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.BlockHeight = function(opt_data) {
+proto.ic_ledger.pb.v1.BlockHeight = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.BlockHeight, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.BlockHeight, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.BlockHeight.displayName = 'proto.ic_ledger.pb.types.v1.BlockHeight';
+  proto.ic_ledger.pb.v1.BlockHeight.displayName = 'proto.ic_ledger.pb.v1.BlockHeight';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -543,16 +543,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.Block = function(opt_data) {
+proto.ic_ledger.pb.v1.Block = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.Block, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.Block, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.Block.displayName = 'proto.ic_ledger.pb.types.v1.Block';
+  proto.ic_ledger.pb.v1.Block.displayName = 'proto.ic_ledger.pb.v1.Block';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -564,16 +564,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.Hash = function(opt_data) {
+proto.ic_ledger.pb.v1.Hash = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.Hash, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.Hash, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.Hash.displayName = 'proto.ic_ledger.pb.types.v1.Hash';
+  proto.ic_ledger.pb.v1.Hash.displayName = 'proto.ic_ledger.pb.v1.Hash';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -585,16 +585,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.Account = function(opt_data) {
+proto.ic_ledger.pb.v1.Account = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.Account, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.Account, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.Account.displayName = 'proto.ic_ledger.pb.types.v1.Account';
+  proto.ic_ledger.pb.v1.Account.displayName = 'proto.ic_ledger.pb.v1.Account';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -606,16 +606,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.Transaction = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.ic_ledger.pb.types.v1.Transaction.oneofGroups_);
+proto.ic_ledger.pb.v1.Transaction = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.ic_ledger.pb.v1.Transaction.oneofGroups_);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.Transaction, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.Transaction, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.Transaction.displayName = 'proto.ic_ledger.pb.types.v1.Transaction';
+  proto.ic_ledger.pb.v1.Transaction.displayName = 'proto.ic_ledger.pb.v1.Transaction';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -627,16 +627,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.Send = function(opt_data) {
+proto.ic_ledger.pb.v1.Send = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.Send, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.Send, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.Send.displayName = 'proto.ic_ledger.pb.types.v1.Send';
+  proto.ic_ledger.pb.v1.Send.displayName = 'proto.ic_ledger.pb.v1.Send';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -648,16 +648,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.Mint = function(opt_data) {
+proto.ic_ledger.pb.v1.Mint = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.Mint, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.Mint, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.Mint.displayName = 'proto.ic_ledger.pb.types.v1.Mint';
+  proto.ic_ledger.pb.v1.Mint.displayName = 'proto.ic_ledger.pb.v1.Mint';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -669,16 +669,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.Burn = function(opt_data) {
+proto.ic_ledger.pb.v1.Burn = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.Burn, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.Burn, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.Burn.displayName = 'proto.ic_ledger.pb.types.v1.Burn';
+  proto.ic_ledger.pb.v1.Burn.displayName = 'proto.ic_ledger.pb.v1.Burn';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -690,16 +690,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.AccountIdentifier = function(opt_data) {
+proto.ic_ledger.pb.v1.AccountIdentifier = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.AccountIdentifier, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.AccountIdentifier, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.AccountIdentifier.displayName = 'proto.ic_ledger.pb.types.v1.AccountIdentifier';
+  proto.ic_ledger.pb.v1.AccountIdentifier.displayName = 'proto.ic_ledger.pb.v1.AccountIdentifier';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -711,16 +711,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.Subaccount = function(opt_data) {
+proto.ic_ledger.pb.v1.Subaccount = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.Subaccount, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.Subaccount, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.Subaccount.displayName = 'proto.ic_ledger.pb.types.v1.Subaccount';
+  proto.ic_ledger.pb.v1.Subaccount.displayName = 'proto.ic_ledger.pb.v1.Subaccount';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -732,16 +732,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.Memo = function(opt_data) {
+proto.ic_ledger.pb.v1.Memo = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.Memo, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.Memo, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.Memo.displayName = 'proto.ic_ledger.pb.types.v1.Memo';
+  proto.ic_ledger.pb.v1.Memo.displayName = 'proto.ic_ledger.pb.v1.Memo';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -753,16 +753,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.TimeStamp = function(opt_data) {
+proto.ic_ledger.pb.v1.TimeStamp = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.TimeStamp, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.TimeStamp, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.TimeStamp.displayName = 'proto.ic_ledger.pb.types.v1.TimeStamp';
+  proto.ic_ledger.pb.v1.TimeStamp.displayName = 'proto.ic_ledger.pb.v1.TimeStamp';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -774,16 +774,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ic_ledger.pb.types.v1.Certification = function(opt_data) {
+proto.ic_ledger.pb.v1.Certification = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ic_ledger.pb.types.v1.Certification, jspb.Message);
+goog.inherits(proto.ic_ledger.pb.v1.Certification, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ic_ledger.pb.types.v1.Certification.displayName = 'proto.ic_ledger.pb.types.v1.Certification';
+  proto.ic_ledger.pb.v1.Certification.displayName = 'proto.ic_ledger.pb.v1.Certification';
 }
 
 /**
@@ -791,7 +791,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.ic_ledger.pb.types.v1.LedgerInit.repeatedFields_ = [2];
+proto.ic_ledger.pb.v1.LedgerInit.repeatedFields_ = [2];
 
 
 
@@ -808,8 +808,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.LedgerInit.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.LedgerInit.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.LedgerInit.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.LedgerInit.toObject(opt_includeInstance, this);
 };
 
 
@@ -818,15 +818,15 @@ proto.ic_ledger.pb.types.v1.LedgerInit.prototype.toObject = function(opt_include
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.LedgerInit} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.LedgerInit} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.LedgerInit.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.LedgerInit.toObject = function(includeInstance, msg) {
   var f, obj = {
-    mintingAccount: (f = msg.getMintingAccount()) && proto.ic_ledger.pb.types.v1.AccountIdentifier.toObject(includeInstance, f),
+    mintingAccount: (f = msg.getMintingAccount()) && proto.ic_ledger.pb.v1.AccountIdentifier.toObject(includeInstance, f),
     initialValuesList: jspb.Message.toObjectList(msg.getInitialValuesList(),
-    proto.ic_ledger.pb.types.v1.Account.toObject, includeInstance),
+    proto.ic_ledger.pb.v1.Account.toObject, includeInstance),
     archiveCanister: (f = msg.getArchiveCanister()) && ic_base_types_pb_v1_types_pb.PrincipalId.toObject(includeInstance, f),
     maxMessageSizeBytes: jspb.Message.getFieldWithDefault(msg, 4, 0)
   };
@@ -842,23 +842,23 @@ proto.ic_ledger.pb.types.v1.LedgerInit.toObject = function(includeInstance, msg)
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.LedgerInit}
+ * @return {!proto.ic_ledger.pb.v1.LedgerInit}
  */
-proto.ic_ledger.pb.types.v1.LedgerInit.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.LedgerInit.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.LedgerInit;
-  return proto.ic_ledger.pb.types.v1.LedgerInit.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.LedgerInit;
+  return proto.ic_ledger.pb.v1.LedgerInit.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.LedgerInit} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.LedgerInit} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.LedgerInit}
+ * @return {!proto.ic_ledger.pb.v1.LedgerInit}
  */
-proto.ic_ledger.pb.types.v1.LedgerInit.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.LedgerInit.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -866,13 +866,13 @@ proto.ic_ledger.pb.types.v1.LedgerInit.deserializeBinaryFromReader = function(ms
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.ic_ledger.pb.types.v1.AccountIdentifier;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.AccountIdentifier.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.AccountIdentifier;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.AccountIdentifier.deserializeBinaryFromReader);
       msg.setMintingAccount(value);
       break;
     case 2:
-      var value = new proto.ic_ledger.pb.types.v1.Account;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.Account.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.Account;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.Account.deserializeBinaryFromReader);
       msg.addInitialValues(value);
       break;
     case 3:
@@ -897,9 +897,9 @@ proto.ic_ledger.pb.types.v1.LedgerInit.deserializeBinaryFromReader = function(ms
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.LedgerInit.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.LedgerInit.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.LedgerInit.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.LedgerInit.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -907,18 +907,18 @@ proto.ic_ledger.pb.types.v1.LedgerInit.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.LedgerInit} message
+ * @param {!proto.ic_ledger.pb.v1.LedgerInit} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.LedgerInit.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.LedgerInit.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getMintingAccount();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.ic_ledger.pb.types.v1.AccountIdentifier.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.AccountIdentifier.serializeBinaryToWriter
     );
   }
   f = message.getInitialValuesList();
@@ -926,7 +926,7 @@ proto.ic_ledger.pb.types.v1.LedgerInit.serializeBinaryToWriter = function(messag
     writer.writeRepeatedMessage(
       2,
       f,
-      proto.ic_ledger.pb.types.v1.Account.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.Account.serializeBinaryToWriter
     );
   }
   f = message.getArchiveCanister();
@@ -949,28 +949,28 @@ proto.ic_ledger.pb.types.v1.LedgerInit.serializeBinaryToWriter = function(messag
 
 /**
  * optional AccountIdentifier minting_account = 1;
- * @return {?proto.ic_ledger.pb.types.v1.AccountIdentifier}
+ * @return {?proto.ic_ledger.pb.v1.AccountIdentifier}
  */
-proto.ic_ledger.pb.types.v1.LedgerInit.prototype.getMintingAccount = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.AccountIdentifier} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.AccountIdentifier, 1));
+proto.ic_ledger.pb.v1.LedgerInit.prototype.getMintingAccount = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.AccountIdentifier} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.AccountIdentifier, 1));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.AccountIdentifier|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.LedgerInit} returns this
+ * @param {?proto.ic_ledger.pb.v1.AccountIdentifier|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.LedgerInit} returns this
 */
-proto.ic_ledger.pb.types.v1.LedgerInit.prototype.setMintingAccount = function(value) {
+proto.ic_ledger.pb.v1.LedgerInit.prototype.setMintingAccount = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.LedgerInit} returns this
+ * @return {!proto.ic_ledger.pb.v1.LedgerInit} returns this
  */
-proto.ic_ledger.pb.types.v1.LedgerInit.prototype.clearMintingAccount = function() {
+proto.ic_ledger.pb.v1.LedgerInit.prototype.clearMintingAccount = function() {
   return this.setMintingAccount(undefined);
 };
 
@@ -979,45 +979,45 @@ proto.ic_ledger.pb.types.v1.LedgerInit.prototype.clearMintingAccount = function(
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.LedgerInit.prototype.hasMintingAccount = function() {
+proto.ic_ledger.pb.v1.LedgerInit.prototype.hasMintingAccount = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
 
 /**
  * repeated Account initial_values = 2;
- * @return {!Array<!proto.ic_ledger.pb.types.v1.Account>}
+ * @return {!Array<!proto.ic_ledger.pb.v1.Account>}
  */
-proto.ic_ledger.pb.types.v1.LedgerInit.prototype.getInitialValuesList = function() {
-  return /** @type{!Array<!proto.ic_ledger.pb.types.v1.Account>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.ic_ledger.pb.types.v1.Account, 2));
+proto.ic_ledger.pb.v1.LedgerInit.prototype.getInitialValuesList = function() {
+  return /** @type{!Array<!proto.ic_ledger.pb.v1.Account>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ic_ledger.pb.v1.Account, 2));
 };
 
 
 /**
- * @param {!Array<!proto.ic_ledger.pb.types.v1.Account>} value
- * @return {!proto.ic_ledger.pb.types.v1.LedgerInit} returns this
+ * @param {!Array<!proto.ic_ledger.pb.v1.Account>} value
+ * @return {!proto.ic_ledger.pb.v1.LedgerInit} returns this
 */
-proto.ic_ledger.pb.types.v1.LedgerInit.prototype.setInitialValuesList = function(value) {
+proto.ic_ledger.pb.v1.LedgerInit.prototype.setInitialValuesList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
 
 
 /**
- * @param {!proto.ic_ledger.pb.types.v1.Account=} opt_value
+ * @param {!proto.ic_ledger.pb.v1.Account=} opt_value
  * @param {number=} opt_index
- * @return {!proto.ic_ledger.pb.types.v1.Account}
+ * @return {!proto.ic_ledger.pb.v1.Account}
  */
-proto.ic_ledger.pb.types.v1.LedgerInit.prototype.addInitialValues = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.ic_ledger.pb.types.v1.Account, opt_index);
+proto.ic_ledger.pb.v1.LedgerInit.prototype.addInitialValues = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.ic_ledger.pb.v1.Account, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.ic_ledger.pb.types.v1.LedgerInit} returns this
+ * @return {!proto.ic_ledger.pb.v1.LedgerInit} returns this
  */
-proto.ic_ledger.pb.types.v1.LedgerInit.prototype.clearInitialValuesList = function() {
+proto.ic_ledger.pb.v1.LedgerInit.prototype.clearInitialValuesList = function() {
   return this.setInitialValuesList([]);
 };
 
@@ -1026,7 +1026,7 @@ proto.ic_ledger.pb.types.v1.LedgerInit.prototype.clearInitialValuesList = functi
  * optional ic_base_types.pb.v1.PrincipalId archive_canister = 3;
  * @return {?proto.ic_base_types.pb.v1.PrincipalId}
  */
-proto.ic_ledger.pb.types.v1.LedgerInit.prototype.getArchiveCanister = function() {
+proto.ic_ledger.pb.v1.LedgerInit.prototype.getArchiveCanister = function() {
   return /** @type{?proto.ic_base_types.pb.v1.PrincipalId} */ (
     jspb.Message.getWrapperField(this, ic_base_types_pb_v1_types_pb.PrincipalId, 3));
 };
@@ -1034,18 +1034,18 @@ proto.ic_ledger.pb.types.v1.LedgerInit.prototype.getArchiveCanister = function()
 
 /**
  * @param {?proto.ic_base_types.pb.v1.PrincipalId|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.LedgerInit} returns this
+ * @return {!proto.ic_ledger.pb.v1.LedgerInit} returns this
 */
-proto.ic_ledger.pb.types.v1.LedgerInit.prototype.setArchiveCanister = function(value) {
+proto.ic_ledger.pb.v1.LedgerInit.prototype.setArchiveCanister = function(value) {
   return jspb.Message.setWrapperField(this, 3, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.LedgerInit} returns this
+ * @return {!proto.ic_ledger.pb.v1.LedgerInit} returns this
  */
-proto.ic_ledger.pb.types.v1.LedgerInit.prototype.clearArchiveCanister = function() {
+proto.ic_ledger.pb.v1.LedgerInit.prototype.clearArchiveCanister = function() {
   return this.setArchiveCanister(undefined);
 };
 
@@ -1054,7 +1054,7 @@ proto.ic_ledger.pb.types.v1.LedgerInit.prototype.clearArchiveCanister = function
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.LedgerInit.prototype.hasArchiveCanister = function() {
+proto.ic_ledger.pb.v1.LedgerInit.prototype.hasArchiveCanister = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 
@@ -1063,16 +1063,16 @@ proto.ic_ledger.pb.types.v1.LedgerInit.prototype.hasArchiveCanister = function()
  * optional uint32 max_message_size_bytes = 4;
  * @return {number}
  */
-proto.ic_ledger.pb.types.v1.LedgerInit.prototype.getMaxMessageSizeBytes = function() {
+proto.ic_ledger.pb.v1.LedgerInit.prototype.getMaxMessageSizeBytes = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.ic_ledger.pb.types.v1.LedgerInit} returns this
+ * @return {!proto.ic_ledger.pb.v1.LedgerInit} returns this
  */
-proto.ic_ledger.pb.types.v1.LedgerInit.prototype.setMaxMessageSizeBytes = function(value) {
+proto.ic_ledger.pb.v1.LedgerInit.prototype.setMaxMessageSizeBytes = function(value) {
   return jspb.Message.setProto3IntField(this, 4, value);
 };
 
@@ -1093,8 +1093,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.LedgerUpgrade.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.LedgerUpgrade.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.LedgerUpgrade.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.LedgerUpgrade.toObject(opt_includeInstance, this);
 };
 
 
@@ -1103,11 +1103,11 @@ proto.ic_ledger.pb.types.v1.LedgerUpgrade.prototype.toObject = function(opt_incl
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.LedgerUpgrade} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.LedgerUpgrade} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.LedgerUpgrade.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.LedgerUpgrade.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -1123,23 +1123,23 @@ proto.ic_ledger.pb.types.v1.LedgerUpgrade.toObject = function(includeInstance, m
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.LedgerUpgrade}
+ * @return {!proto.ic_ledger.pb.v1.LedgerUpgrade}
  */
-proto.ic_ledger.pb.types.v1.LedgerUpgrade.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.LedgerUpgrade.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.LedgerUpgrade;
-  return proto.ic_ledger.pb.types.v1.LedgerUpgrade.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.LedgerUpgrade;
+  return proto.ic_ledger.pb.v1.LedgerUpgrade.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.LedgerUpgrade} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.LedgerUpgrade} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.LedgerUpgrade}
+ * @return {!proto.ic_ledger.pb.v1.LedgerUpgrade}
  */
-proto.ic_ledger.pb.types.v1.LedgerUpgrade.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.LedgerUpgrade.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1159,9 +1159,9 @@ proto.ic_ledger.pb.types.v1.LedgerUpgrade.deserializeBinaryFromReader = function
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.LedgerUpgrade.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.LedgerUpgrade.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.LedgerUpgrade.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.LedgerUpgrade.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1169,11 +1169,11 @@ proto.ic_ledger.pb.types.v1.LedgerUpgrade.prototype.serializeBinary = function()
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.LedgerUpgrade} message
+ * @param {!proto.ic_ledger.pb.v1.LedgerUpgrade} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.LedgerUpgrade.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.LedgerUpgrade.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -1194,8 +1194,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.SendRequest.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.SendRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.SendRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -1204,18 +1204,18 @@ proto.ic_ledger.pb.types.v1.SendRequest.prototype.toObject = function(opt_includ
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.SendRequest} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.SendRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.SendRequest.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.SendRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    memo: (f = msg.getMemo()) && proto.ic_ledger.pb.types.v1.Memo.toObject(includeInstance, f),
-    payment: (f = msg.getPayment()) && proto.ic_ledger.pb.types.v1.Payment.toObject(includeInstance, f),
-    maxFee: (f = msg.getMaxFee()) && proto.ic_ledger.pb.types.v1.ICPTs.toObject(includeInstance, f),
-    fromSubaccount: (f = msg.getFromSubaccount()) && proto.ic_ledger.pb.types.v1.Subaccount.toObject(includeInstance, f),
-    to: (f = msg.getTo()) && proto.ic_ledger.pb.types.v1.AccountIdentifier.toObject(includeInstance, f),
-    createdAt: (f = msg.getCreatedAt()) && proto.ic_ledger.pb.types.v1.BlockHeight.toObject(includeInstance, f)
+    memo: (f = msg.getMemo()) && proto.ic_ledger.pb.v1.Memo.toObject(includeInstance, f),
+    payment: (f = msg.getPayment()) && proto.ic_ledger.pb.v1.Payment.toObject(includeInstance, f),
+    maxFee: (f = msg.getMaxFee()) && proto.ic_ledger.pb.v1.ICPTs.toObject(includeInstance, f),
+    fromSubaccount: (f = msg.getFromSubaccount()) && proto.ic_ledger.pb.v1.Subaccount.toObject(includeInstance, f),
+    to: (f = msg.getTo()) && proto.ic_ledger.pb.v1.AccountIdentifier.toObject(includeInstance, f),
+    createdAt: (f = msg.getCreatedAt()) && proto.ic_ledger.pb.v1.BlockHeight.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1229,23 +1229,23 @@ proto.ic_ledger.pb.types.v1.SendRequest.toObject = function(includeInstance, msg
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.SendRequest}
+ * @return {!proto.ic_ledger.pb.v1.SendRequest}
  */
-proto.ic_ledger.pb.types.v1.SendRequest.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.SendRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.SendRequest;
-  return proto.ic_ledger.pb.types.v1.SendRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.SendRequest;
+  return proto.ic_ledger.pb.v1.SendRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.SendRequest} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.SendRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.SendRequest}
+ * @return {!proto.ic_ledger.pb.v1.SendRequest}
  */
-proto.ic_ledger.pb.types.v1.SendRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.SendRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1253,33 +1253,33 @@ proto.ic_ledger.pb.types.v1.SendRequest.deserializeBinaryFromReader = function(m
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.ic_ledger.pb.types.v1.Memo;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.Memo.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.Memo;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.Memo.deserializeBinaryFromReader);
       msg.setMemo(value);
       break;
     case 2:
-      var value = new proto.ic_ledger.pb.types.v1.Payment;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.Payment.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.Payment;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.Payment.deserializeBinaryFromReader);
       msg.setPayment(value);
       break;
     case 3:
-      var value = new proto.ic_ledger.pb.types.v1.ICPTs;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.ICPTs.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.ICPTs;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.ICPTs.deserializeBinaryFromReader);
       msg.setMaxFee(value);
       break;
     case 4:
-      var value = new proto.ic_ledger.pb.types.v1.Subaccount;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.Subaccount.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.Subaccount;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.Subaccount.deserializeBinaryFromReader);
       msg.setFromSubaccount(value);
       break;
     case 5:
-      var value = new proto.ic_ledger.pb.types.v1.AccountIdentifier;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.AccountIdentifier.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.AccountIdentifier;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.AccountIdentifier.deserializeBinaryFromReader);
       msg.setTo(value);
       break;
     case 6:
-      var value = new proto.ic_ledger.pb.types.v1.BlockHeight;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.BlockHeight.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.BlockHeight;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.BlockHeight.deserializeBinaryFromReader);
       msg.setCreatedAt(value);
       break;
     default:
@@ -1295,9 +1295,9 @@ proto.ic_ledger.pb.types.v1.SendRequest.deserializeBinaryFromReader = function(m
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.SendRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.SendRequest.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.SendRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1305,18 +1305,18 @@ proto.ic_ledger.pb.types.v1.SendRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.SendRequest} message
+ * @param {!proto.ic_ledger.pb.v1.SendRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.SendRequest.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.SendRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getMemo();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.ic_ledger.pb.types.v1.Memo.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.Memo.serializeBinaryToWriter
     );
   }
   f = message.getPayment();
@@ -1324,7 +1324,7 @@ proto.ic_ledger.pb.types.v1.SendRequest.serializeBinaryToWriter = function(messa
     writer.writeMessage(
       2,
       f,
-      proto.ic_ledger.pb.types.v1.Payment.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.Payment.serializeBinaryToWriter
     );
   }
   f = message.getMaxFee();
@@ -1332,7 +1332,7 @@ proto.ic_ledger.pb.types.v1.SendRequest.serializeBinaryToWriter = function(messa
     writer.writeMessage(
       3,
       f,
-      proto.ic_ledger.pb.types.v1.ICPTs.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.ICPTs.serializeBinaryToWriter
     );
   }
   f = message.getFromSubaccount();
@@ -1340,7 +1340,7 @@ proto.ic_ledger.pb.types.v1.SendRequest.serializeBinaryToWriter = function(messa
     writer.writeMessage(
       4,
       f,
-      proto.ic_ledger.pb.types.v1.Subaccount.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.Subaccount.serializeBinaryToWriter
     );
   }
   f = message.getTo();
@@ -1348,7 +1348,7 @@ proto.ic_ledger.pb.types.v1.SendRequest.serializeBinaryToWriter = function(messa
     writer.writeMessage(
       5,
       f,
-      proto.ic_ledger.pb.types.v1.AccountIdentifier.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.AccountIdentifier.serializeBinaryToWriter
     );
   }
   f = message.getCreatedAt();
@@ -1356,7 +1356,7 @@ proto.ic_ledger.pb.types.v1.SendRequest.serializeBinaryToWriter = function(messa
     writer.writeMessage(
       6,
       f,
-      proto.ic_ledger.pb.types.v1.BlockHeight.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.BlockHeight.serializeBinaryToWriter
     );
   }
 };
@@ -1364,28 +1364,28 @@ proto.ic_ledger.pb.types.v1.SendRequest.serializeBinaryToWriter = function(messa
 
 /**
  * optional Memo memo = 1;
- * @return {?proto.ic_ledger.pb.types.v1.Memo}
+ * @return {?proto.ic_ledger.pb.v1.Memo}
  */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.getMemo = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.Memo} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.Memo, 1));
+proto.ic_ledger.pb.v1.SendRequest.prototype.getMemo = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.Memo} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.Memo, 1));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.Memo|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.SendRequest} returns this
+ * @param {?proto.ic_ledger.pb.v1.Memo|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.SendRequest} returns this
 */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.setMemo = function(value) {
+proto.ic_ledger.pb.v1.SendRequest.prototype.setMemo = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.SendRequest} returns this
+ * @return {!proto.ic_ledger.pb.v1.SendRequest} returns this
  */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.clearMemo = function() {
+proto.ic_ledger.pb.v1.SendRequest.prototype.clearMemo = function() {
   return this.setMemo(undefined);
 };
 
@@ -1394,35 +1394,35 @@ proto.ic_ledger.pb.types.v1.SendRequest.prototype.clearMemo = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.hasMemo = function() {
+proto.ic_ledger.pb.v1.SendRequest.prototype.hasMemo = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
 
 /**
  * optional Payment payment = 2;
- * @return {?proto.ic_ledger.pb.types.v1.Payment}
+ * @return {?proto.ic_ledger.pb.v1.Payment}
  */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.getPayment = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.Payment} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.Payment, 2));
+proto.ic_ledger.pb.v1.SendRequest.prototype.getPayment = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.Payment} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.Payment, 2));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.Payment|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.SendRequest} returns this
+ * @param {?proto.ic_ledger.pb.v1.Payment|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.SendRequest} returns this
 */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.setPayment = function(value) {
+proto.ic_ledger.pb.v1.SendRequest.prototype.setPayment = function(value) {
   return jspb.Message.setWrapperField(this, 2, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.SendRequest} returns this
+ * @return {!proto.ic_ledger.pb.v1.SendRequest} returns this
  */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.clearPayment = function() {
+proto.ic_ledger.pb.v1.SendRequest.prototype.clearPayment = function() {
   return this.setPayment(undefined);
 };
 
@@ -1431,35 +1431,35 @@ proto.ic_ledger.pb.types.v1.SendRequest.prototype.clearPayment = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.hasPayment = function() {
+proto.ic_ledger.pb.v1.SendRequest.prototype.hasPayment = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
 
 /**
  * optional ICPTs max_fee = 3;
- * @return {?proto.ic_ledger.pb.types.v1.ICPTs}
+ * @return {?proto.ic_ledger.pb.v1.ICPTs}
  */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.getMaxFee = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.ICPTs} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.ICPTs, 3));
+proto.ic_ledger.pb.v1.SendRequest.prototype.getMaxFee = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.ICPTs} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.ICPTs, 3));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.ICPTs|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.SendRequest} returns this
+ * @param {?proto.ic_ledger.pb.v1.ICPTs|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.SendRequest} returns this
 */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.setMaxFee = function(value) {
+proto.ic_ledger.pb.v1.SendRequest.prototype.setMaxFee = function(value) {
   return jspb.Message.setWrapperField(this, 3, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.SendRequest} returns this
+ * @return {!proto.ic_ledger.pb.v1.SendRequest} returns this
  */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.clearMaxFee = function() {
+proto.ic_ledger.pb.v1.SendRequest.prototype.clearMaxFee = function() {
   return this.setMaxFee(undefined);
 };
 
@@ -1468,35 +1468,35 @@ proto.ic_ledger.pb.types.v1.SendRequest.prototype.clearMaxFee = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.hasMaxFee = function() {
+proto.ic_ledger.pb.v1.SendRequest.prototype.hasMaxFee = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 
 
 /**
  * optional Subaccount from_subaccount = 4;
- * @return {?proto.ic_ledger.pb.types.v1.Subaccount}
+ * @return {?proto.ic_ledger.pb.v1.Subaccount}
  */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.getFromSubaccount = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.Subaccount} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.Subaccount, 4));
+proto.ic_ledger.pb.v1.SendRequest.prototype.getFromSubaccount = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.Subaccount} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.Subaccount, 4));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.Subaccount|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.SendRequest} returns this
+ * @param {?proto.ic_ledger.pb.v1.Subaccount|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.SendRequest} returns this
 */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.setFromSubaccount = function(value) {
+proto.ic_ledger.pb.v1.SendRequest.prototype.setFromSubaccount = function(value) {
   return jspb.Message.setWrapperField(this, 4, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.SendRequest} returns this
+ * @return {!proto.ic_ledger.pb.v1.SendRequest} returns this
  */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.clearFromSubaccount = function() {
+proto.ic_ledger.pb.v1.SendRequest.prototype.clearFromSubaccount = function() {
   return this.setFromSubaccount(undefined);
 };
 
@@ -1505,35 +1505,35 @@ proto.ic_ledger.pb.types.v1.SendRequest.prototype.clearFromSubaccount = function
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.hasFromSubaccount = function() {
+proto.ic_ledger.pb.v1.SendRequest.prototype.hasFromSubaccount = function() {
   return jspb.Message.getField(this, 4) != null;
 };
 
 
 /**
  * optional AccountIdentifier to = 5;
- * @return {?proto.ic_ledger.pb.types.v1.AccountIdentifier}
+ * @return {?proto.ic_ledger.pb.v1.AccountIdentifier}
  */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.getTo = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.AccountIdentifier} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.AccountIdentifier, 5));
+proto.ic_ledger.pb.v1.SendRequest.prototype.getTo = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.AccountIdentifier} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.AccountIdentifier, 5));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.AccountIdentifier|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.SendRequest} returns this
+ * @param {?proto.ic_ledger.pb.v1.AccountIdentifier|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.SendRequest} returns this
 */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.setTo = function(value) {
+proto.ic_ledger.pb.v1.SendRequest.prototype.setTo = function(value) {
   return jspb.Message.setWrapperField(this, 5, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.SendRequest} returns this
+ * @return {!proto.ic_ledger.pb.v1.SendRequest} returns this
  */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.clearTo = function() {
+proto.ic_ledger.pb.v1.SendRequest.prototype.clearTo = function() {
   return this.setTo(undefined);
 };
 
@@ -1542,35 +1542,35 @@ proto.ic_ledger.pb.types.v1.SendRequest.prototype.clearTo = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.hasTo = function() {
+proto.ic_ledger.pb.v1.SendRequest.prototype.hasTo = function() {
   return jspb.Message.getField(this, 5) != null;
 };
 
 
 /**
  * optional BlockHeight created_at = 6;
- * @return {?proto.ic_ledger.pb.types.v1.BlockHeight}
+ * @return {?proto.ic_ledger.pb.v1.BlockHeight}
  */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.getCreatedAt = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.BlockHeight} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.BlockHeight, 6));
+proto.ic_ledger.pb.v1.SendRequest.prototype.getCreatedAt = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.BlockHeight} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.BlockHeight, 6));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.BlockHeight|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.SendRequest} returns this
+ * @param {?proto.ic_ledger.pb.v1.BlockHeight|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.SendRequest} returns this
 */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.setCreatedAt = function(value) {
+proto.ic_ledger.pb.v1.SendRequest.prototype.setCreatedAt = function(value) {
   return jspb.Message.setWrapperField(this, 6, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.SendRequest} returns this
+ * @return {!proto.ic_ledger.pb.v1.SendRequest} returns this
  */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.clearCreatedAt = function() {
+proto.ic_ledger.pb.v1.SendRequest.prototype.clearCreatedAt = function() {
   return this.setCreatedAt(undefined);
 };
 
@@ -1579,7 +1579,7 @@ proto.ic_ledger.pb.types.v1.SendRequest.prototype.clearCreatedAt = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.SendRequest.prototype.hasCreatedAt = function() {
+proto.ic_ledger.pb.v1.SendRequest.prototype.hasCreatedAt = function() {
   return jspb.Message.getField(this, 6) != null;
 };
 
@@ -1600,8 +1600,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.SendResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.SendResponse.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.SendResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.SendResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -1610,13 +1610,13 @@ proto.ic_ledger.pb.types.v1.SendResponse.prototype.toObject = function(opt_inclu
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.SendResponse} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.SendResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.SendResponse.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.SendResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    resultingHeight: (f = msg.getResultingHeight()) && proto.ic_ledger.pb.types.v1.BlockHeight.toObject(includeInstance, f)
+    resultingHeight: (f = msg.getResultingHeight()) && proto.ic_ledger.pb.v1.BlockHeight.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1630,23 +1630,23 @@ proto.ic_ledger.pb.types.v1.SendResponse.toObject = function(includeInstance, ms
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.SendResponse}
+ * @return {!proto.ic_ledger.pb.v1.SendResponse}
  */
-proto.ic_ledger.pb.types.v1.SendResponse.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.SendResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.SendResponse;
-  return proto.ic_ledger.pb.types.v1.SendResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.SendResponse;
+  return proto.ic_ledger.pb.v1.SendResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.SendResponse} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.SendResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.SendResponse}
+ * @return {!proto.ic_ledger.pb.v1.SendResponse}
  */
-proto.ic_ledger.pb.types.v1.SendResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.SendResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1654,8 +1654,8 @@ proto.ic_ledger.pb.types.v1.SendResponse.deserializeBinaryFromReader = function(
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.ic_ledger.pb.types.v1.BlockHeight;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.BlockHeight.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.BlockHeight;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.BlockHeight.deserializeBinaryFromReader);
       msg.setResultingHeight(value);
       break;
     default:
@@ -1671,9 +1671,9 @@ proto.ic_ledger.pb.types.v1.SendResponse.deserializeBinaryFromReader = function(
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.SendResponse.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.SendResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.SendResponse.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.SendResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1681,18 +1681,18 @@ proto.ic_ledger.pb.types.v1.SendResponse.prototype.serializeBinary = function() 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.SendResponse} message
+ * @param {!proto.ic_ledger.pb.v1.SendResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.SendResponse.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.SendResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getResultingHeight();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.ic_ledger.pb.types.v1.BlockHeight.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.BlockHeight.serializeBinaryToWriter
     );
   }
 };
@@ -1700,28 +1700,28 @@ proto.ic_ledger.pb.types.v1.SendResponse.serializeBinaryToWriter = function(mess
 
 /**
  * optional BlockHeight resulting_height = 1;
- * @return {?proto.ic_ledger.pb.types.v1.BlockHeight}
+ * @return {?proto.ic_ledger.pb.v1.BlockHeight}
  */
-proto.ic_ledger.pb.types.v1.SendResponse.prototype.getResultingHeight = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.BlockHeight} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.BlockHeight, 1));
+proto.ic_ledger.pb.v1.SendResponse.prototype.getResultingHeight = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.BlockHeight} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.BlockHeight, 1));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.BlockHeight|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.SendResponse} returns this
+ * @param {?proto.ic_ledger.pb.v1.BlockHeight|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.SendResponse} returns this
 */
-proto.ic_ledger.pb.types.v1.SendResponse.prototype.setResultingHeight = function(value) {
+proto.ic_ledger.pb.v1.SendResponse.prototype.setResultingHeight = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.SendResponse} returns this
+ * @return {!proto.ic_ledger.pb.v1.SendResponse} returns this
  */
-proto.ic_ledger.pb.types.v1.SendResponse.prototype.clearResultingHeight = function() {
+proto.ic_ledger.pb.v1.SendResponse.prototype.clearResultingHeight = function() {
   return this.setResultingHeight(undefined);
 };
 
@@ -1730,7 +1730,7 @@ proto.ic_ledger.pb.types.v1.SendResponse.prototype.clearResultingHeight = functi
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.SendResponse.prototype.hasResultingHeight = function() {
+proto.ic_ledger.pb.v1.SendResponse.prototype.hasResultingHeight = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -1751,8 +1751,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.NotifyRequest.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.NotifyRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.NotifyRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -1761,17 +1761,17 @@ proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.toObject = function(opt_incl
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.NotifyRequest} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.NotifyRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.NotifyRequest.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.NotifyRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    blockHeight: (f = msg.getBlockHeight()) && proto.ic_ledger.pb.types.v1.BlockHeight.toObject(includeInstance, f),
-    maxFee: (f = msg.getMaxFee()) && proto.ic_ledger.pb.types.v1.ICPTs.toObject(includeInstance, f),
-    fromSubaccount: (f = msg.getFromSubaccount()) && proto.ic_ledger.pb.types.v1.Subaccount.toObject(includeInstance, f),
+    blockHeight: (f = msg.getBlockHeight()) && proto.ic_ledger.pb.v1.BlockHeight.toObject(includeInstance, f),
+    maxFee: (f = msg.getMaxFee()) && proto.ic_ledger.pb.v1.ICPTs.toObject(includeInstance, f),
+    fromSubaccount: (f = msg.getFromSubaccount()) && proto.ic_ledger.pb.v1.Subaccount.toObject(includeInstance, f),
     toCanister: (f = msg.getToCanister()) && ic_base_types_pb_v1_types_pb.PrincipalId.toObject(includeInstance, f),
-    toSubaccount: (f = msg.getToSubaccount()) && proto.ic_ledger.pb.types.v1.Subaccount.toObject(includeInstance, f)
+    toSubaccount: (f = msg.getToSubaccount()) && proto.ic_ledger.pb.v1.Subaccount.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1785,23 +1785,23 @@ proto.ic_ledger.pb.types.v1.NotifyRequest.toObject = function(includeInstance, m
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.NotifyRequest}
+ * @return {!proto.ic_ledger.pb.v1.NotifyRequest}
  */
-proto.ic_ledger.pb.types.v1.NotifyRequest.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.NotifyRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.NotifyRequest;
-  return proto.ic_ledger.pb.types.v1.NotifyRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.NotifyRequest;
+  return proto.ic_ledger.pb.v1.NotifyRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.NotifyRequest} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.NotifyRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.NotifyRequest}
+ * @return {!proto.ic_ledger.pb.v1.NotifyRequest}
  */
-proto.ic_ledger.pb.types.v1.NotifyRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.NotifyRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1809,18 +1809,18 @@ proto.ic_ledger.pb.types.v1.NotifyRequest.deserializeBinaryFromReader = function
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.ic_ledger.pb.types.v1.BlockHeight;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.BlockHeight.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.BlockHeight;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.BlockHeight.deserializeBinaryFromReader);
       msg.setBlockHeight(value);
       break;
     case 2:
-      var value = new proto.ic_ledger.pb.types.v1.ICPTs;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.ICPTs.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.ICPTs;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.ICPTs.deserializeBinaryFromReader);
       msg.setMaxFee(value);
       break;
     case 3:
-      var value = new proto.ic_ledger.pb.types.v1.Subaccount;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.Subaccount.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.Subaccount;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.Subaccount.deserializeBinaryFromReader);
       msg.setFromSubaccount(value);
       break;
     case 4:
@@ -1829,8 +1829,8 @@ proto.ic_ledger.pb.types.v1.NotifyRequest.deserializeBinaryFromReader = function
       msg.setToCanister(value);
       break;
     case 5:
-      var value = new proto.ic_ledger.pb.types.v1.Subaccount;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.Subaccount.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.Subaccount;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.Subaccount.deserializeBinaryFromReader);
       msg.setToSubaccount(value);
       break;
     default:
@@ -1846,9 +1846,9 @@ proto.ic_ledger.pb.types.v1.NotifyRequest.deserializeBinaryFromReader = function
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.NotifyRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.NotifyRequest.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.NotifyRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1856,18 +1856,18 @@ proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.serializeBinary = function()
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.NotifyRequest} message
+ * @param {!proto.ic_ledger.pb.v1.NotifyRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.NotifyRequest.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.NotifyRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getBlockHeight();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.ic_ledger.pb.types.v1.BlockHeight.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.BlockHeight.serializeBinaryToWriter
     );
   }
   f = message.getMaxFee();
@@ -1875,7 +1875,7 @@ proto.ic_ledger.pb.types.v1.NotifyRequest.serializeBinaryToWriter = function(mes
     writer.writeMessage(
       2,
       f,
-      proto.ic_ledger.pb.types.v1.ICPTs.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.ICPTs.serializeBinaryToWriter
     );
   }
   f = message.getFromSubaccount();
@@ -1883,7 +1883,7 @@ proto.ic_ledger.pb.types.v1.NotifyRequest.serializeBinaryToWriter = function(mes
     writer.writeMessage(
       3,
       f,
-      proto.ic_ledger.pb.types.v1.Subaccount.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.Subaccount.serializeBinaryToWriter
     );
   }
   f = message.getToCanister();
@@ -1899,7 +1899,7 @@ proto.ic_ledger.pb.types.v1.NotifyRequest.serializeBinaryToWriter = function(mes
     writer.writeMessage(
       5,
       f,
-      proto.ic_ledger.pb.types.v1.Subaccount.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.Subaccount.serializeBinaryToWriter
     );
   }
 };
@@ -1907,28 +1907,28 @@ proto.ic_ledger.pb.types.v1.NotifyRequest.serializeBinaryToWriter = function(mes
 
 /**
  * optional BlockHeight block_height = 1;
- * @return {?proto.ic_ledger.pb.types.v1.BlockHeight}
+ * @return {?proto.ic_ledger.pb.v1.BlockHeight}
  */
-proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.getBlockHeight = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.BlockHeight} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.BlockHeight, 1));
+proto.ic_ledger.pb.v1.NotifyRequest.prototype.getBlockHeight = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.BlockHeight} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.BlockHeight, 1));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.BlockHeight|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.NotifyRequest} returns this
+ * @param {?proto.ic_ledger.pb.v1.BlockHeight|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.NotifyRequest} returns this
 */
-proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.setBlockHeight = function(value) {
+proto.ic_ledger.pb.v1.NotifyRequest.prototype.setBlockHeight = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.NotifyRequest} returns this
+ * @return {!proto.ic_ledger.pb.v1.NotifyRequest} returns this
  */
-proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.clearBlockHeight = function() {
+proto.ic_ledger.pb.v1.NotifyRequest.prototype.clearBlockHeight = function() {
   return this.setBlockHeight(undefined);
 };
 
@@ -1937,35 +1937,35 @@ proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.clearBlockHeight = function(
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.hasBlockHeight = function() {
+proto.ic_ledger.pb.v1.NotifyRequest.prototype.hasBlockHeight = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
 
 /**
  * optional ICPTs max_fee = 2;
- * @return {?proto.ic_ledger.pb.types.v1.ICPTs}
+ * @return {?proto.ic_ledger.pb.v1.ICPTs}
  */
-proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.getMaxFee = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.ICPTs} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.ICPTs, 2));
+proto.ic_ledger.pb.v1.NotifyRequest.prototype.getMaxFee = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.ICPTs} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.ICPTs, 2));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.ICPTs|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.NotifyRequest} returns this
+ * @param {?proto.ic_ledger.pb.v1.ICPTs|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.NotifyRequest} returns this
 */
-proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.setMaxFee = function(value) {
+proto.ic_ledger.pb.v1.NotifyRequest.prototype.setMaxFee = function(value) {
   return jspb.Message.setWrapperField(this, 2, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.NotifyRequest} returns this
+ * @return {!proto.ic_ledger.pb.v1.NotifyRequest} returns this
  */
-proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.clearMaxFee = function() {
+proto.ic_ledger.pb.v1.NotifyRequest.prototype.clearMaxFee = function() {
   return this.setMaxFee(undefined);
 };
 
@@ -1974,35 +1974,35 @@ proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.clearMaxFee = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.hasMaxFee = function() {
+proto.ic_ledger.pb.v1.NotifyRequest.prototype.hasMaxFee = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
 
 /**
  * optional Subaccount from_subaccount = 3;
- * @return {?proto.ic_ledger.pb.types.v1.Subaccount}
+ * @return {?proto.ic_ledger.pb.v1.Subaccount}
  */
-proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.getFromSubaccount = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.Subaccount} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.Subaccount, 3));
+proto.ic_ledger.pb.v1.NotifyRequest.prototype.getFromSubaccount = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.Subaccount} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.Subaccount, 3));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.Subaccount|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.NotifyRequest} returns this
+ * @param {?proto.ic_ledger.pb.v1.Subaccount|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.NotifyRequest} returns this
 */
-proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.setFromSubaccount = function(value) {
+proto.ic_ledger.pb.v1.NotifyRequest.prototype.setFromSubaccount = function(value) {
   return jspb.Message.setWrapperField(this, 3, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.NotifyRequest} returns this
+ * @return {!proto.ic_ledger.pb.v1.NotifyRequest} returns this
  */
-proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.clearFromSubaccount = function() {
+proto.ic_ledger.pb.v1.NotifyRequest.prototype.clearFromSubaccount = function() {
   return this.setFromSubaccount(undefined);
 };
 
@@ -2011,7 +2011,7 @@ proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.clearFromSubaccount = functi
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.hasFromSubaccount = function() {
+proto.ic_ledger.pb.v1.NotifyRequest.prototype.hasFromSubaccount = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 
@@ -2020,7 +2020,7 @@ proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.hasFromSubaccount = function
  * optional ic_base_types.pb.v1.PrincipalId to_canister = 4;
  * @return {?proto.ic_base_types.pb.v1.PrincipalId}
  */
-proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.getToCanister = function() {
+proto.ic_ledger.pb.v1.NotifyRequest.prototype.getToCanister = function() {
   return /** @type{?proto.ic_base_types.pb.v1.PrincipalId} */ (
     jspb.Message.getWrapperField(this, ic_base_types_pb_v1_types_pb.PrincipalId, 4));
 };
@@ -2028,18 +2028,18 @@ proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.getToCanister = function() {
 
 /**
  * @param {?proto.ic_base_types.pb.v1.PrincipalId|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.NotifyRequest} returns this
+ * @return {!proto.ic_ledger.pb.v1.NotifyRequest} returns this
 */
-proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.setToCanister = function(value) {
+proto.ic_ledger.pb.v1.NotifyRequest.prototype.setToCanister = function(value) {
   return jspb.Message.setWrapperField(this, 4, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.NotifyRequest} returns this
+ * @return {!proto.ic_ledger.pb.v1.NotifyRequest} returns this
  */
-proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.clearToCanister = function() {
+proto.ic_ledger.pb.v1.NotifyRequest.prototype.clearToCanister = function() {
   return this.setToCanister(undefined);
 };
 
@@ -2048,35 +2048,35 @@ proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.clearToCanister = function()
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.hasToCanister = function() {
+proto.ic_ledger.pb.v1.NotifyRequest.prototype.hasToCanister = function() {
   return jspb.Message.getField(this, 4) != null;
 };
 
 
 /**
  * optional Subaccount to_subaccount = 5;
- * @return {?proto.ic_ledger.pb.types.v1.Subaccount}
+ * @return {?proto.ic_ledger.pb.v1.Subaccount}
  */
-proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.getToSubaccount = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.Subaccount} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.Subaccount, 5));
+proto.ic_ledger.pb.v1.NotifyRequest.prototype.getToSubaccount = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.Subaccount} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.Subaccount, 5));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.Subaccount|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.NotifyRequest} returns this
+ * @param {?proto.ic_ledger.pb.v1.Subaccount|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.NotifyRequest} returns this
 */
-proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.setToSubaccount = function(value) {
+proto.ic_ledger.pb.v1.NotifyRequest.prototype.setToSubaccount = function(value) {
   return jspb.Message.setWrapperField(this, 5, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.NotifyRequest} returns this
+ * @return {!proto.ic_ledger.pb.v1.NotifyRequest} returns this
  */
-proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.clearToSubaccount = function() {
+proto.ic_ledger.pb.v1.NotifyRequest.prototype.clearToSubaccount = function() {
   return this.setToSubaccount(undefined);
 };
 
@@ -2085,7 +2085,7 @@ proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.clearToSubaccount = function
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.NotifyRequest.prototype.hasToSubaccount = function() {
+proto.ic_ledger.pb.v1.NotifyRequest.prototype.hasToSubaccount = function() {
   return jspb.Message.getField(this, 5) != null;
 };
 
@@ -2106,8 +2106,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.NotifyResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.NotifyResponse.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.NotifyResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.NotifyResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -2116,11 +2116,11 @@ proto.ic_ledger.pb.types.v1.NotifyResponse.prototype.toObject = function(opt_inc
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.NotifyResponse} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.NotifyResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.NotifyResponse.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.NotifyResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -2136,23 +2136,23 @@ proto.ic_ledger.pb.types.v1.NotifyResponse.toObject = function(includeInstance, 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.NotifyResponse}
+ * @return {!proto.ic_ledger.pb.v1.NotifyResponse}
  */
-proto.ic_ledger.pb.types.v1.NotifyResponse.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.NotifyResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.NotifyResponse;
-  return proto.ic_ledger.pb.types.v1.NotifyResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.NotifyResponse;
+  return proto.ic_ledger.pb.v1.NotifyResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.NotifyResponse} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.NotifyResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.NotifyResponse}
+ * @return {!proto.ic_ledger.pb.v1.NotifyResponse}
  */
-proto.ic_ledger.pb.types.v1.NotifyResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.NotifyResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2172,9 +2172,9 @@ proto.ic_ledger.pb.types.v1.NotifyResponse.deserializeBinaryFromReader = functio
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.NotifyResponse.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.NotifyResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.NotifyResponse.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.NotifyResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2182,11 +2182,11 @@ proto.ic_ledger.pb.types.v1.NotifyResponse.prototype.serializeBinary = function(
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.NotifyResponse} message
+ * @param {!proto.ic_ledger.pb.v1.NotifyResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.NotifyResponse.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.NotifyResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -2207,8 +2207,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.AccountBalanceRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.AccountBalanceRequest.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.AccountBalanceRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.AccountBalanceRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -2217,13 +2217,13 @@ proto.ic_ledger.pb.types.v1.AccountBalanceRequest.prototype.toObject = function(
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.AccountBalanceRequest} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.AccountBalanceRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.AccountBalanceRequest.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.AccountBalanceRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    account: (f = msg.getAccount()) && proto.ic_ledger.pb.types.v1.AccountIdentifier.toObject(includeInstance, f)
+    account: (f = msg.getAccount()) && proto.ic_ledger.pb.v1.AccountIdentifier.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -2237,23 +2237,23 @@ proto.ic_ledger.pb.types.v1.AccountBalanceRequest.toObject = function(includeIns
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.AccountBalanceRequest}
+ * @return {!proto.ic_ledger.pb.v1.AccountBalanceRequest}
  */
-proto.ic_ledger.pb.types.v1.AccountBalanceRequest.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.AccountBalanceRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.AccountBalanceRequest;
-  return proto.ic_ledger.pb.types.v1.AccountBalanceRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.AccountBalanceRequest;
+  return proto.ic_ledger.pb.v1.AccountBalanceRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.AccountBalanceRequest} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.AccountBalanceRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.AccountBalanceRequest}
+ * @return {!proto.ic_ledger.pb.v1.AccountBalanceRequest}
  */
-proto.ic_ledger.pb.types.v1.AccountBalanceRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.AccountBalanceRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2261,8 +2261,8 @@ proto.ic_ledger.pb.types.v1.AccountBalanceRequest.deserializeBinaryFromReader = 
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.ic_ledger.pb.types.v1.AccountIdentifier;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.AccountIdentifier.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.AccountIdentifier;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.AccountIdentifier.deserializeBinaryFromReader);
       msg.setAccount(value);
       break;
     default:
@@ -2278,9 +2278,9 @@ proto.ic_ledger.pb.types.v1.AccountBalanceRequest.deserializeBinaryFromReader = 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.AccountBalanceRequest.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.AccountBalanceRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.AccountBalanceRequest.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.AccountBalanceRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2288,18 +2288,18 @@ proto.ic_ledger.pb.types.v1.AccountBalanceRequest.prototype.serializeBinary = fu
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.AccountBalanceRequest} message
+ * @param {!proto.ic_ledger.pb.v1.AccountBalanceRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.AccountBalanceRequest.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.AccountBalanceRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getAccount();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.ic_ledger.pb.types.v1.AccountIdentifier.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.AccountIdentifier.serializeBinaryToWriter
     );
   }
 };
@@ -2307,28 +2307,28 @@ proto.ic_ledger.pb.types.v1.AccountBalanceRequest.serializeBinaryToWriter = func
 
 /**
  * optional AccountIdentifier account = 1;
- * @return {?proto.ic_ledger.pb.types.v1.AccountIdentifier}
+ * @return {?proto.ic_ledger.pb.v1.AccountIdentifier}
  */
-proto.ic_ledger.pb.types.v1.AccountBalanceRequest.prototype.getAccount = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.AccountIdentifier} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.AccountIdentifier, 1));
+proto.ic_ledger.pb.v1.AccountBalanceRequest.prototype.getAccount = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.AccountIdentifier} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.AccountIdentifier, 1));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.AccountIdentifier|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.AccountBalanceRequest} returns this
+ * @param {?proto.ic_ledger.pb.v1.AccountIdentifier|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.AccountBalanceRequest} returns this
 */
-proto.ic_ledger.pb.types.v1.AccountBalanceRequest.prototype.setAccount = function(value) {
+proto.ic_ledger.pb.v1.AccountBalanceRequest.prototype.setAccount = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.AccountBalanceRequest} returns this
+ * @return {!proto.ic_ledger.pb.v1.AccountBalanceRequest} returns this
  */
-proto.ic_ledger.pb.types.v1.AccountBalanceRequest.prototype.clearAccount = function() {
+proto.ic_ledger.pb.v1.AccountBalanceRequest.prototype.clearAccount = function() {
   return this.setAccount(undefined);
 };
 
@@ -2337,7 +2337,7 @@ proto.ic_ledger.pb.types.v1.AccountBalanceRequest.prototype.clearAccount = funct
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.AccountBalanceRequest.prototype.hasAccount = function() {
+proto.ic_ledger.pb.v1.AccountBalanceRequest.prototype.hasAccount = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -2358,8 +2358,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.AccountBalanceResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.AccountBalanceResponse.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.AccountBalanceResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.AccountBalanceResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -2368,13 +2368,13 @@ proto.ic_ledger.pb.types.v1.AccountBalanceResponse.prototype.toObject = function
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.AccountBalanceResponse} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.AccountBalanceResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.AccountBalanceResponse.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.AccountBalanceResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    balance: (f = msg.getBalance()) && proto.ic_ledger.pb.types.v1.ICPTs.toObject(includeInstance, f)
+    balance: (f = msg.getBalance()) && proto.ic_ledger.pb.v1.ICPTs.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -2388,23 +2388,23 @@ proto.ic_ledger.pb.types.v1.AccountBalanceResponse.toObject = function(includeIn
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.AccountBalanceResponse}
+ * @return {!proto.ic_ledger.pb.v1.AccountBalanceResponse}
  */
-proto.ic_ledger.pb.types.v1.AccountBalanceResponse.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.AccountBalanceResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.AccountBalanceResponse;
-  return proto.ic_ledger.pb.types.v1.AccountBalanceResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.AccountBalanceResponse;
+  return proto.ic_ledger.pb.v1.AccountBalanceResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.AccountBalanceResponse} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.AccountBalanceResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.AccountBalanceResponse}
+ * @return {!proto.ic_ledger.pb.v1.AccountBalanceResponse}
  */
-proto.ic_ledger.pb.types.v1.AccountBalanceResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.AccountBalanceResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2412,8 +2412,8 @@ proto.ic_ledger.pb.types.v1.AccountBalanceResponse.deserializeBinaryFromReader =
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.ic_ledger.pb.types.v1.ICPTs;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.ICPTs.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.ICPTs;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.ICPTs.deserializeBinaryFromReader);
       msg.setBalance(value);
       break;
     default:
@@ -2429,9 +2429,9 @@ proto.ic_ledger.pb.types.v1.AccountBalanceResponse.deserializeBinaryFromReader =
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.AccountBalanceResponse.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.AccountBalanceResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.AccountBalanceResponse.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.AccountBalanceResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2439,18 +2439,18 @@ proto.ic_ledger.pb.types.v1.AccountBalanceResponse.prototype.serializeBinary = f
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.AccountBalanceResponse} message
+ * @param {!proto.ic_ledger.pb.v1.AccountBalanceResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.AccountBalanceResponse.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.AccountBalanceResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getBalance();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.ic_ledger.pb.types.v1.ICPTs.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.ICPTs.serializeBinaryToWriter
     );
   }
 };
@@ -2458,28 +2458,28 @@ proto.ic_ledger.pb.types.v1.AccountBalanceResponse.serializeBinaryToWriter = fun
 
 /**
  * optional ICPTs balance = 1;
- * @return {?proto.ic_ledger.pb.types.v1.ICPTs}
+ * @return {?proto.ic_ledger.pb.v1.ICPTs}
  */
-proto.ic_ledger.pb.types.v1.AccountBalanceResponse.prototype.getBalance = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.ICPTs} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.ICPTs, 1));
+proto.ic_ledger.pb.v1.AccountBalanceResponse.prototype.getBalance = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.ICPTs} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.ICPTs, 1));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.ICPTs|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.AccountBalanceResponse} returns this
+ * @param {?proto.ic_ledger.pb.v1.ICPTs|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.AccountBalanceResponse} returns this
 */
-proto.ic_ledger.pb.types.v1.AccountBalanceResponse.prototype.setBalance = function(value) {
+proto.ic_ledger.pb.v1.AccountBalanceResponse.prototype.setBalance = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.AccountBalanceResponse} returns this
+ * @return {!proto.ic_ledger.pb.v1.AccountBalanceResponse} returns this
  */
-proto.ic_ledger.pb.types.v1.AccountBalanceResponse.prototype.clearBalance = function() {
+proto.ic_ledger.pb.v1.AccountBalanceResponse.prototype.clearBalance = function() {
   return this.setBalance(undefined);
 };
 
@@ -2488,7 +2488,7 @@ proto.ic_ledger.pb.types.v1.AccountBalanceResponse.prototype.clearBalance = func
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.AccountBalanceResponse.prototype.hasBalance = function() {
+proto.ic_ledger.pb.v1.AccountBalanceResponse.prototype.hasBalance = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -2509,8 +2509,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.TipOfChainRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.TipOfChainRequest.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.TipOfChainRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.TipOfChainRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -2519,11 +2519,11 @@ proto.ic_ledger.pb.types.v1.TipOfChainRequest.prototype.toObject = function(opt_
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.TipOfChainRequest} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.TipOfChainRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.TipOfChainRequest.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.TipOfChainRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -2539,23 +2539,23 @@ proto.ic_ledger.pb.types.v1.TipOfChainRequest.toObject = function(includeInstanc
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.TipOfChainRequest}
+ * @return {!proto.ic_ledger.pb.v1.TipOfChainRequest}
  */
-proto.ic_ledger.pb.types.v1.TipOfChainRequest.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.TipOfChainRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.TipOfChainRequest;
-  return proto.ic_ledger.pb.types.v1.TipOfChainRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.TipOfChainRequest;
+  return proto.ic_ledger.pb.v1.TipOfChainRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.TipOfChainRequest} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.TipOfChainRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.TipOfChainRequest}
+ * @return {!proto.ic_ledger.pb.v1.TipOfChainRequest}
  */
-proto.ic_ledger.pb.types.v1.TipOfChainRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.TipOfChainRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2575,9 +2575,9 @@ proto.ic_ledger.pb.types.v1.TipOfChainRequest.deserializeBinaryFromReader = func
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.TipOfChainRequest.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.TipOfChainRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.TipOfChainRequest.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.TipOfChainRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2585,11 +2585,11 @@ proto.ic_ledger.pb.types.v1.TipOfChainRequest.prototype.serializeBinary = functi
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.TipOfChainRequest} message
+ * @param {!proto.ic_ledger.pb.v1.TipOfChainRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.TipOfChainRequest.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.TipOfChainRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -2610,8 +2610,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.TipOfChainResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.TipOfChainResponse.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.TipOfChainResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.TipOfChainResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -2620,14 +2620,14 @@ proto.ic_ledger.pb.types.v1.TipOfChainResponse.prototype.toObject = function(opt
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.TipOfChainResponse} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.TipOfChainResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.TipOfChainResponse.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.TipOfChainResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    certification: (f = msg.getCertification()) && proto.ic_ledger.pb.types.v1.Certification.toObject(includeInstance, f),
-    chainLength: (f = msg.getChainLength()) && proto.ic_ledger.pb.types.v1.BlockHeight.toObject(includeInstance, f)
+    certification: (f = msg.getCertification()) && proto.ic_ledger.pb.v1.Certification.toObject(includeInstance, f),
+    chainLength: (f = msg.getChainLength()) && proto.ic_ledger.pb.v1.BlockHeight.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -2641,23 +2641,23 @@ proto.ic_ledger.pb.types.v1.TipOfChainResponse.toObject = function(includeInstan
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.TipOfChainResponse}
+ * @return {!proto.ic_ledger.pb.v1.TipOfChainResponse}
  */
-proto.ic_ledger.pb.types.v1.TipOfChainResponse.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.TipOfChainResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.TipOfChainResponse;
-  return proto.ic_ledger.pb.types.v1.TipOfChainResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.TipOfChainResponse;
+  return proto.ic_ledger.pb.v1.TipOfChainResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.TipOfChainResponse} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.TipOfChainResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.TipOfChainResponse}
+ * @return {!proto.ic_ledger.pb.v1.TipOfChainResponse}
  */
-proto.ic_ledger.pb.types.v1.TipOfChainResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.TipOfChainResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2665,13 +2665,13 @@ proto.ic_ledger.pb.types.v1.TipOfChainResponse.deserializeBinaryFromReader = fun
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.ic_ledger.pb.types.v1.Certification;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.Certification.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.Certification;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.Certification.deserializeBinaryFromReader);
       msg.setCertification(value);
       break;
     case 2:
-      var value = new proto.ic_ledger.pb.types.v1.BlockHeight;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.BlockHeight.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.BlockHeight;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.BlockHeight.deserializeBinaryFromReader);
       msg.setChainLength(value);
       break;
     default:
@@ -2687,9 +2687,9 @@ proto.ic_ledger.pb.types.v1.TipOfChainResponse.deserializeBinaryFromReader = fun
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.TipOfChainResponse.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.TipOfChainResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.TipOfChainResponse.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.TipOfChainResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2697,18 +2697,18 @@ proto.ic_ledger.pb.types.v1.TipOfChainResponse.prototype.serializeBinary = funct
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.TipOfChainResponse} message
+ * @param {!proto.ic_ledger.pb.v1.TipOfChainResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.TipOfChainResponse.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.TipOfChainResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getCertification();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.ic_ledger.pb.types.v1.Certification.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.Certification.serializeBinaryToWriter
     );
   }
   f = message.getChainLength();
@@ -2716,7 +2716,7 @@ proto.ic_ledger.pb.types.v1.TipOfChainResponse.serializeBinaryToWriter = functio
     writer.writeMessage(
       2,
       f,
-      proto.ic_ledger.pb.types.v1.BlockHeight.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.BlockHeight.serializeBinaryToWriter
     );
   }
 };
@@ -2724,28 +2724,28 @@ proto.ic_ledger.pb.types.v1.TipOfChainResponse.serializeBinaryToWriter = functio
 
 /**
  * optional Certification certification = 1;
- * @return {?proto.ic_ledger.pb.types.v1.Certification}
+ * @return {?proto.ic_ledger.pb.v1.Certification}
  */
-proto.ic_ledger.pb.types.v1.TipOfChainResponse.prototype.getCertification = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.Certification} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.Certification, 1));
+proto.ic_ledger.pb.v1.TipOfChainResponse.prototype.getCertification = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.Certification} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.Certification, 1));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.Certification|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.TipOfChainResponse} returns this
+ * @param {?proto.ic_ledger.pb.v1.Certification|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.TipOfChainResponse} returns this
 */
-proto.ic_ledger.pb.types.v1.TipOfChainResponse.prototype.setCertification = function(value) {
+proto.ic_ledger.pb.v1.TipOfChainResponse.prototype.setCertification = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.TipOfChainResponse} returns this
+ * @return {!proto.ic_ledger.pb.v1.TipOfChainResponse} returns this
  */
-proto.ic_ledger.pb.types.v1.TipOfChainResponse.prototype.clearCertification = function() {
+proto.ic_ledger.pb.v1.TipOfChainResponse.prototype.clearCertification = function() {
   return this.setCertification(undefined);
 };
 
@@ -2754,35 +2754,35 @@ proto.ic_ledger.pb.types.v1.TipOfChainResponse.prototype.clearCertification = fu
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.TipOfChainResponse.prototype.hasCertification = function() {
+proto.ic_ledger.pb.v1.TipOfChainResponse.prototype.hasCertification = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
 
 /**
  * optional BlockHeight chain_length = 2;
- * @return {?proto.ic_ledger.pb.types.v1.BlockHeight}
+ * @return {?proto.ic_ledger.pb.v1.BlockHeight}
  */
-proto.ic_ledger.pb.types.v1.TipOfChainResponse.prototype.getChainLength = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.BlockHeight} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.BlockHeight, 2));
+proto.ic_ledger.pb.v1.TipOfChainResponse.prototype.getChainLength = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.BlockHeight} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.BlockHeight, 2));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.BlockHeight|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.TipOfChainResponse} returns this
+ * @param {?proto.ic_ledger.pb.v1.BlockHeight|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.TipOfChainResponse} returns this
 */
-proto.ic_ledger.pb.types.v1.TipOfChainResponse.prototype.setChainLength = function(value) {
+proto.ic_ledger.pb.v1.TipOfChainResponse.prototype.setChainLength = function(value) {
   return jspb.Message.setWrapperField(this, 2, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.TipOfChainResponse} returns this
+ * @return {!proto.ic_ledger.pb.v1.TipOfChainResponse} returns this
  */
-proto.ic_ledger.pb.types.v1.TipOfChainResponse.prototype.clearChainLength = function() {
+proto.ic_ledger.pb.v1.TipOfChainResponse.prototype.clearChainLength = function() {
   return this.setChainLength(undefined);
 };
 
@@ -2791,7 +2791,7 @@ proto.ic_ledger.pb.types.v1.TipOfChainResponse.prototype.clearChainLength = func
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.TipOfChainResponse.prototype.hasChainLength = function() {
+proto.ic_ledger.pb.v1.TipOfChainResponse.prototype.hasChainLength = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
@@ -2812,8 +2812,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.TotalSupplyRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.TotalSupplyRequest.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.TotalSupplyRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.TotalSupplyRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -2822,11 +2822,11 @@ proto.ic_ledger.pb.types.v1.TotalSupplyRequest.prototype.toObject = function(opt
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.TotalSupplyRequest} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.TotalSupplyRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.TotalSupplyRequest.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.TotalSupplyRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -2842,23 +2842,23 @@ proto.ic_ledger.pb.types.v1.TotalSupplyRequest.toObject = function(includeInstan
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.TotalSupplyRequest}
+ * @return {!proto.ic_ledger.pb.v1.TotalSupplyRequest}
  */
-proto.ic_ledger.pb.types.v1.TotalSupplyRequest.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.TotalSupplyRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.TotalSupplyRequest;
-  return proto.ic_ledger.pb.types.v1.TotalSupplyRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.TotalSupplyRequest;
+  return proto.ic_ledger.pb.v1.TotalSupplyRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.TotalSupplyRequest} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.TotalSupplyRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.TotalSupplyRequest}
+ * @return {!proto.ic_ledger.pb.v1.TotalSupplyRequest}
  */
-proto.ic_ledger.pb.types.v1.TotalSupplyRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.TotalSupplyRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2878,9 +2878,9 @@ proto.ic_ledger.pb.types.v1.TotalSupplyRequest.deserializeBinaryFromReader = fun
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.TotalSupplyRequest.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.TotalSupplyRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.TotalSupplyRequest.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.TotalSupplyRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2888,11 +2888,11 @@ proto.ic_ledger.pb.types.v1.TotalSupplyRequest.prototype.serializeBinary = funct
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.TotalSupplyRequest} message
+ * @param {!proto.ic_ledger.pb.v1.TotalSupplyRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.TotalSupplyRequest.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.TotalSupplyRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -2913,8 +2913,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.TotalSupplyResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.TotalSupplyResponse.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.TotalSupplyResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.TotalSupplyResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -2923,13 +2923,13 @@ proto.ic_ledger.pb.types.v1.TotalSupplyResponse.prototype.toObject = function(op
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.TotalSupplyResponse} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.TotalSupplyResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.TotalSupplyResponse.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.TotalSupplyResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    totalSupply: (f = msg.getTotalSupply()) && proto.ic_ledger.pb.types.v1.ICPTs.toObject(includeInstance, f)
+    totalSupply: (f = msg.getTotalSupply()) && proto.ic_ledger.pb.v1.ICPTs.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -2943,23 +2943,23 @@ proto.ic_ledger.pb.types.v1.TotalSupplyResponse.toObject = function(includeInsta
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.TotalSupplyResponse}
+ * @return {!proto.ic_ledger.pb.v1.TotalSupplyResponse}
  */
-proto.ic_ledger.pb.types.v1.TotalSupplyResponse.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.TotalSupplyResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.TotalSupplyResponse;
-  return proto.ic_ledger.pb.types.v1.TotalSupplyResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.TotalSupplyResponse;
+  return proto.ic_ledger.pb.v1.TotalSupplyResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.TotalSupplyResponse} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.TotalSupplyResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.TotalSupplyResponse}
+ * @return {!proto.ic_ledger.pb.v1.TotalSupplyResponse}
  */
-proto.ic_ledger.pb.types.v1.TotalSupplyResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.TotalSupplyResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2967,8 +2967,8 @@ proto.ic_ledger.pb.types.v1.TotalSupplyResponse.deserializeBinaryFromReader = fu
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.ic_ledger.pb.types.v1.ICPTs;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.ICPTs.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.ICPTs;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.ICPTs.deserializeBinaryFromReader);
       msg.setTotalSupply(value);
       break;
     default:
@@ -2984,9 +2984,9 @@ proto.ic_ledger.pb.types.v1.TotalSupplyResponse.deserializeBinaryFromReader = fu
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.TotalSupplyResponse.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.TotalSupplyResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.TotalSupplyResponse.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.TotalSupplyResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2994,18 +2994,18 @@ proto.ic_ledger.pb.types.v1.TotalSupplyResponse.prototype.serializeBinary = func
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.TotalSupplyResponse} message
+ * @param {!proto.ic_ledger.pb.v1.TotalSupplyResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.TotalSupplyResponse.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.TotalSupplyResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getTotalSupply();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.ic_ledger.pb.types.v1.ICPTs.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.ICPTs.serializeBinaryToWriter
     );
   }
 };
@@ -3013,28 +3013,28 @@ proto.ic_ledger.pb.types.v1.TotalSupplyResponse.serializeBinaryToWriter = functi
 
 /**
  * optional ICPTs total_supply = 1;
- * @return {?proto.ic_ledger.pb.types.v1.ICPTs}
+ * @return {?proto.ic_ledger.pb.v1.ICPTs}
  */
-proto.ic_ledger.pb.types.v1.TotalSupplyResponse.prototype.getTotalSupply = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.ICPTs} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.ICPTs, 1));
+proto.ic_ledger.pb.v1.TotalSupplyResponse.prototype.getTotalSupply = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.ICPTs} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.ICPTs, 1));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.ICPTs|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.TotalSupplyResponse} returns this
+ * @param {?proto.ic_ledger.pb.v1.ICPTs|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.TotalSupplyResponse} returns this
 */
-proto.ic_ledger.pb.types.v1.TotalSupplyResponse.prototype.setTotalSupply = function(value) {
+proto.ic_ledger.pb.v1.TotalSupplyResponse.prototype.setTotalSupply = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.TotalSupplyResponse} returns this
+ * @return {!proto.ic_ledger.pb.v1.TotalSupplyResponse} returns this
  */
-proto.ic_ledger.pb.types.v1.TotalSupplyResponse.prototype.clearTotalSupply = function() {
+proto.ic_ledger.pb.v1.TotalSupplyResponse.prototype.clearTotalSupply = function() {
   return this.setTotalSupply(undefined);
 };
 
@@ -3043,7 +3043,7 @@ proto.ic_ledger.pb.types.v1.TotalSupplyResponse.prototype.clearTotalSupply = fun
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.TotalSupplyResponse.prototype.hasTotalSupply = function() {
+proto.ic_ledger.pb.v1.TotalSupplyResponse.prototype.hasTotalSupply = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -3064,8 +3064,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.LedgerArchiveRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.LedgerArchiveRequest.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.LedgerArchiveRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.LedgerArchiveRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -3074,13 +3074,13 @@ proto.ic_ledger.pb.types.v1.LedgerArchiveRequest.prototype.toObject = function(o
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.LedgerArchiveRequest} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.LedgerArchiveRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.LedgerArchiveRequest.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.LedgerArchiveRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    timestamp: (f = msg.getTimestamp()) && proto.ic_ledger.pb.types.v1.TimeStamp.toObject(includeInstance, f)
+    timestamp: (f = msg.getTimestamp()) && proto.ic_ledger.pb.v1.TimeStamp.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -3094,23 +3094,23 @@ proto.ic_ledger.pb.types.v1.LedgerArchiveRequest.toObject = function(includeInst
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.LedgerArchiveRequest}
+ * @return {!proto.ic_ledger.pb.v1.LedgerArchiveRequest}
  */
-proto.ic_ledger.pb.types.v1.LedgerArchiveRequest.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.LedgerArchiveRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.LedgerArchiveRequest;
-  return proto.ic_ledger.pb.types.v1.LedgerArchiveRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.LedgerArchiveRequest;
+  return proto.ic_ledger.pb.v1.LedgerArchiveRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.LedgerArchiveRequest} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.LedgerArchiveRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.LedgerArchiveRequest}
+ * @return {!proto.ic_ledger.pb.v1.LedgerArchiveRequest}
  */
-proto.ic_ledger.pb.types.v1.LedgerArchiveRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.LedgerArchiveRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3118,8 +3118,8 @@ proto.ic_ledger.pb.types.v1.LedgerArchiveRequest.deserializeBinaryFromReader = f
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.ic_ledger.pb.types.v1.TimeStamp;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.TimeStamp.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.TimeStamp;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.TimeStamp.deserializeBinaryFromReader);
       msg.setTimestamp(value);
       break;
     default:
@@ -3135,9 +3135,9 @@ proto.ic_ledger.pb.types.v1.LedgerArchiveRequest.deserializeBinaryFromReader = f
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.LedgerArchiveRequest.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.LedgerArchiveRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.LedgerArchiveRequest.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.LedgerArchiveRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3145,18 +3145,18 @@ proto.ic_ledger.pb.types.v1.LedgerArchiveRequest.prototype.serializeBinary = fun
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.LedgerArchiveRequest} message
+ * @param {!proto.ic_ledger.pb.v1.LedgerArchiveRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.LedgerArchiveRequest.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.LedgerArchiveRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getTimestamp();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.ic_ledger.pb.types.v1.TimeStamp.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.TimeStamp.serializeBinaryToWriter
     );
   }
 };
@@ -3164,28 +3164,28 @@ proto.ic_ledger.pb.types.v1.LedgerArchiveRequest.serializeBinaryToWriter = funct
 
 /**
  * optional TimeStamp timestamp = 1;
- * @return {?proto.ic_ledger.pb.types.v1.TimeStamp}
+ * @return {?proto.ic_ledger.pb.v1.TimeStamp}
  */
-proto.ic_ledger.pb.types.v1.LedgerArchiveRequest.prototype.getTimestamp = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.TimeStamp} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.TimeStamp, 1));
+proto.ic_ledger.pb.v1.LedgerArchiveRequest.prototype.getTimestamp = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.TimeStamp} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.TimeStamp, 1));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.TimeStamp|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.LedgerArchiveRequest} returns this
+ * @param {?proto.ic_ledger.pb.v1.TimeStamp|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.LedgerArchiveRequest} returns this
 */
-proto.ic_ledger.pb.types.v1.LedgerArchiveRequest.prototype.setTimestamp = function(value) {
+proto.ic_ledger.pb.v1.LedgerArchiveRequest.prototype.setTimestamp = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.LedgerArchiveRequest} returns this
+ * @return {!proto.ic_ledger.pb.v1.LedgerArchiveRequest} returns this
  */
-proto.ic_ledger.pb.types.v1.LedgerArchiveRequest.prototype.clearTimestamp = function() {
+proto.ic_ledger.pb.v1.LedgerArchiveRequest.prototype.clearTimestamp = function() {
   return this.setTimestamp(undefined);
 };
 
@@ -3194,7 +3194,7 @@ proto.ic_ledger.pb.types.v1.LedgerArchiveRequest.prototype.clearTimestamp = func
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.LedgerArchiveRequest.prototype.hasTimestamp = function() {
+proto.ic_ledger.pb.v1.LedgerArchiveRequest.prototype.hasTimestamp = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -3215,8 +3215,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.GetBlocksRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.GetBlocksRequest.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.GetBlocksRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.GetBlocksRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -3225,11 +3225,11 @@ proto.ic_ledger.pb.types.v1.GetBlocksRequest.prototype.toObject = function(opt_i
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.GetBlocksRequest} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.GetBlocksRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.GetBlocksRequest.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.GetBlocksRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     start: jspb.Message.getFieldWithDefault(msg, 1, 0),
     length: jspb.Message.getFieldWithDefault(msg, 2, 0)
@@ -3246,23 +3246,23 @@ proto.ic_ledger.pb.types.v1.GetBlocksRequest.toObject = function(includeInstance
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.GetBlocksRequest}
+ * @return {!proto.ic_ledger.pb.v1.GetBlocksRequest}
  */
-proto.ic_ledger.pb.types.v1.GetBlocksRequest.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.GetBlocksRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.GetBlocksRequest;
-  return proto.ic_ledger.pb.types.v1.GetBlocksRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.GetBlocksRequest;
+  return proto.ic_ledger.pb.v1.GetBlocksRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.GetBlocksRequest} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.GetBlocksRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.GetBlocksRequest}
+ * @return {!proto.ic_ledger.pb.v1.GetBlocksRequest}
  */
-proto.ic_ledger.pb.types.v1.GetBlocksRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.GetBlocksRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3290,9 +3290,9 @@ proto.ic_ledger.pb.types.v1.GetBlocksRequest.deserializeBinaryFromReader = funct
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.GetBlocksRequest.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.GetBlocksRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.GetBlocksRequest.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.GetBlocksRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3300,11 +3300,11 @@ proto.ic_ledger.pb.types.v1.GetBlocksRequest.prototype.serializeBinary = functio
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.GetBlocksRequest} message
+ * @param {!proto.ic_ledger.pb.v1.GetBlocksRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.GetBlocksRequest.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.GetBlocksRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getStart();
   if (f !== 0) {
@@ -3327,16 +3327,16 @@ proto.ic_ledger.pb.types.v1.GetBlocksRequest.serializeBinaryToWriter = function(
  * optional uint64 start = 1;
  * @return {number}
  */
-proto.ic_ledger.pb.types.v1.GetBlocksRequest.prototype.getStart = function() {
+proto.ic_ledger.pb.v1.GetBlocksRequest.prototype.getStart = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.ic_ledger.pb.types.v1.GetBlocksRequest} returns this
+ * @return {!proto.ic_ledger.pb.v1.GetBlocksRequest} returns this
  */
-proto.ic_ledger.pb.types.v1.GetBlocksRequest.prototype.setStart = function(value) {
+proto.ic_ledger.pb.v1.GetBlocksRequest.prototype.setStart = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 
@@ -3345,16 +3345,16 @@ proto.ic_ledger.pb.types.v1.GetBlocksRequest.prototype.setStart = function(value
  * optional uint64 length = 2;
  * @return {number}
  */
-proto.ic_ledger.pb.types.v1.GetBlocksRequest.prototype.getLength = function() {
+proto.ic_ledger.pb.v1.GetBlocksRequest.prototype.getLength = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.ic_ledger.pb.types.v1.GetBlocksRequest} returns this
+ * @return {!proto.ic_ledger.pb.v1.GetBlocksRequest} returns this
  */
-proto.ic_ledger.pb.types.v1.GetBlocksRequest.prototype.setLength = function(value) {
+proto.ic_ledger.pb.v1.GetBlocksRequest.prototype.setLength = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
 
@@ -3365,7 +3365,7 @@ proto.ic_ledger.pb.types.v1.GetBlocksRequest.prototype.setLength = function(valu
  * @private {!Array<number>}
  * @const
  */
-proto.ic_ledger.pb.types.v1.GetBlocksResponse.repeatedFields_ = [1];
+proto.ic_ledger.pb.v1.GetBlocksResponse.repeatedFields_ = [1];
 
 
 
@@ -3382,8 +3382,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.GetBlocksResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.GetBlocksResponse.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.GetBlocksResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.GetBlocksResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -3392,11 +3392,11 @@ proto.ic_ledger.pb.types.v1.GetBlocksResponse.prototype.toObject = function(opt_
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.GetBlocksResponse} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.GetBlocksResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.GetBlocksResponse.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.GetBlocksResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     blocksList: msg.getBlocksList_asB64()
   };
@@ -3412,23 +3412,23 @@ proto.ic_ledger.pb.types.v1.GetBlocksResponse.toObject = function(includeInstanc
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.GetBlocksResponse}
+ * @return {!proto.ic_ledger.pb.v1.GetBlocksResponse}
  */
-proto.ic_ledger.pb.types.v1.GetBlocksResponse.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.GetBlocksResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.GetBlocksResponse;
-  return proto.ic_ledger.pb.types.v1.GetBlocksResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.GetBlocksResponse;
+  return proto.ic_ledger.pb.v1.GetBlocksResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.GetBlocksResponse} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.GetBlocksResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.GetBlocksResponse}
+ * @return {!proto.ic_ledger.pb.v1.GetBlocksResponse}
  */
-proto.ic_ledger.pb.types.v1.GetBlocksResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.GetBlocksResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3452,9 +3452,9 @@ proto.ic_ledger.pb.types.v1.GetBlocksResponse.deserializeBinaryFromReader = func
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.GetBlocksResponse.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.GetBlocksResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.GetBlocksResponse.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.GetBlocksResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3462,11 +3462,11 @@ proto.ic_ledger.pb.types.v1.GetBlocksResponse.prototype.serializeBinary = functi
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.GetBlocksResponse} message
+ * @param {!proto.ic_ledger.pb.v1.GetBlocksResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.GetBlocksResponse.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.GetBlocksResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getBlocksList_asU8();
   if (f.length > 0) {
@@ -3482,7 +3482,7 @@ proto.ic_ledger.pb.types.v1.GetBlocksResponse.serializeBinaryToWriter = function
  * repeated bytes blocks = 1;
  * @return {!(Array<!Uint8Array>|Array<string>)}
  */
-proto.ic_ledger.pb.types.v1.GetBlocksResponse.prototype.getBlocksList = function() {
+proto.ic_ledger.pb.v1.GetBlocksResponse.prototype.getBlocksList = function() {
   return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (jspb.Message.getRepeatedField(this, 1));
 };
 
@@ -3492,7 +3492,7 @@ proto.ic_ledger.pb.types.v1.GetBlocksResponse.prototype.getBlocksList = function
  * This is a type-conversion wrapper around `getBlocksList()`
  * @return {!Array<string>}
  */
-proto.ic_ledger.pb.types.v1.GetBlocksResponse.prototype.getBlocksList_asB64 = function() {
+proto.ic_ledger.pb.v1.GetBlocksResponse.prototype.getBlocksList_asB64 = function() {
   return /** @type {!Array<string>} */ (jspb.Message.bytesListAsB64(
       this.getBlocksList()));
 };
@@ -3505,7 +3505,7 @@ proto.ic_ledger.pb.types.v1.GetBlocksResponse.prototype.getBlocksList_asB64 = fu
  * This is a type-conversion wrapper around `getBlocksList()`
  * @return {!Array<!Uint8Array>}
  */
-proto.ic_ledger.pb.types.v1.GetBlocksResponse.prototype.getBlocksList_asU8 = function() {
+proto.ic_ledger.pb.v1.GetBlocksResponse.prototype.getBlocksList_asU8 = function() {
   return /** @type {!Array<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
       this.getBlocksList()));
 };
@@ -3513,9 +3513,9 @@ proto.ic_ledger.pb.types.v1.GetBlocksResponse.prototype.getBlocksList_asU8 = fun
 
 /**
  * @param {!(Array<!Uint8Array>|Array<string>)} value
- * @return {!proto.ic_ledger.pb.types.v1.GetBlocksResponse} returns this
+ * @return {!proto.ic_ledger.pb.v1.GetBlocksResponse} returns this
  */
-proto.ic_ledger.pb.types.v1.GetBlocksResponse.prototype.setBlocksList = function(value) {
+proto.ic_ledger.pb.v1.GetBlocksResponse.prototype.setBlocksList = function(value) {
   return jspb.Message.setField(this, 1, value || []);
 };
 
@@ -3523,18 +3523,18 @@ proto.ic_ledger.pb.types.v1.GetBlocksResponse.prototype.setBlocksList = function
 /**
  * @param {!(string|Uint8Array)} value
  * @param {number=} opt_index
- * @return {!proto.ic_ledger.pb.types.v1.GetBlocksResponse} returns this
+ * @return {!proto.ic_ledger.pb.v1.GetBlocksResponse} returns this
  */
-proto.ic_ledger.pb.types.v1.GetBlocksResponse.prototype.addBlocks = function(value, opt_index) {
+proto.ic_ledger.pb.v1.GetBlocksResponse.prototype.addBlocks = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 1, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.ic_ledger.pb.types.v1.GetBlocksResponse} returns this
+ * @return {!proto.ic_ledger.pb.v1.GetBlocksResponse} returns this
  */
-proto.ic_ledger.pb.types.v1.GetBlocksResponse.prototype.clearBlocksList = function() {
+proto.ic_ledger.pb.v1.GetBlocksResponse.prototype.clearBlocksList = function() {
   return this.setBlocksList([]);
 };
 
@@ -3555,8 +3555,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.ArchiveInit.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.ArchiveInit.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.ArchiveInit.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.ArchiveInit.toObject(opt_includeInstance, this);
 };
 
 
@@ -3565,11 +3565,11 @@ proto.ic_ledger.pb.types.v1.ArchiveInit.prototype.toObject = function(opt_includ
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.ArchiveInit} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.ArchiveInit} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.ArchiveInit.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.ArchiveInit.toObject = function(includeInstance, msg) {
   var f, obj = {
     nodeMaxMemorySizeBytes: jspb.Message.getFieldWithDefault(msg, 1, 0),
     maxMessageSizeBytes: jspb.Message.getFieldWithDefault(msg, 2, 0)
@@ -3586,23 +3586,23 @@ proto.ic_ledger.pb.types.v1.ArchiveInit.toObject = function(includeInstance, msg
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.ArchiveInit}
+ * @return {!proto.ic_ledger.pb.v1.ArchiveInit}
  */
-proto.ic_ledger.pb.types.v1.ArchiveInit.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.ArchiveInit.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.ArchiveInit;
-  return proto.ic_ledger.pb.types.v1.ArchiveInit.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.ArchiveInit;
+  return proto.ic_ledger.pb.v1.ArchiveInit.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.ArchiveInit} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.ArchiveInit} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.ArchiveInit}
+ * @return {!proto.ic_ledger.pb.v1.ArchiveInit}
  */
-proto.ic_ledger.pb.types.v1.ArchiveInit.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.ArchiveInit.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3630,9 +3630,9 @@ proto.ic_ledger.pb.types.v1.ArchiveInit.deserializeBinaryFromReader = function(m
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.ArchiveInit.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.ArchiveInit.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.ArchiveInit.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.ArchiveInit.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3640,11 +3640,11 @@ proto.ic_ledger.pb.types.v1.ArchiveInit.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.ArchiveInit} message
+ * @param {!proto.ic_ledger.pb.v1.ArchiveInit} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.ArchiveInit.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.ArchiveInit.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getNodeMaxMemorySizeBytes();
   if (f !== 0) {
@@ -3667,16 +3667,16 @@ proto.ic_ledger.pb.types.v1.ArchiveInit.serializeBinaryToWriter = function(messa
  * optional uint32 node_max_memory_size_bytes = 1;
  * @return {number}
  */
-proto.ic_ledger.pb.types.v1.ArchiveInit.prototype.getNodeMaxMemorySizeBytes = function() {
+proto.ic_ledger.pb.v1.ArchiveInit.prototype.getNodeMaxMemorySizeBytes = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.ic_ledger.pb.types.v1.ArchiveInit} returns this
+ * @return {!proto.ic_ledger.pb.v1.ArchiveInit} returns this
  */
-proto.ic_ledger.pb.types.v1.ArchiveInit.prototype.setNodeMaxMemorySizeBytes = function(value) {
+proto.ic_ledger.pb.v1.ArchiveInit.prototype.setNodeMaxMemorySizeBytes = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 
@@ -3685,16 +3685,16 @@ proto.ic_ledger.pb.types.v1.ArchiveInit.prototype.setNodeMaxMemorySizeBytes = fu
  * optional uint32 max_message_size_bytes = 2;
  * @return {number}
  */
-proto.ic_ledger.pb.types.v1.ArchiveInit.prototype.getMaxMessageSizeBytes = function() {
+proto.ic_ledger.pb.v1.ArchiveInit.prototype.getMaxMessageSizeBytes = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.ic_ledger.pb.types.v1.ArchiveInit} returns this
+ * @return {!proto.ic_ledger.pb.v1.ArchiveInit} returns this
  */
-proto.ic_ledger.pb.types.v1.ArchiveInit.prototype.setMaxMessageSizeBytes = function(value) {
+proto.ic_ledger.pb.v1.ArchiveInit.prototype.setMaxMessageSizeBytes = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
 
@@ -3705,7 +3705,7 @@ proto.ic_ledger.pb.types.v1.ArchiveInit.prototype.setMaxMessageSizeBytes = funct
  * @private {!Array<number>}
  * @const
  */
-proto.ic_ledger.pb.types.v1.ArchiveAddRequest.repeatedFields_ = [1];
+proto.ic_ledger.pb.v1.ArchiveAddRequest.repeatedFields_ = [1];
 
 
 
@@ -3722,8 +3722,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.ArchiveAddRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.ArchiveAddRequest.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.ArchiveAddRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.ArchiveAddRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -3732,14 +3732,14 @@ proto.ic_ledger.pb.types.v1.ArchiveAddRequest.prototype.toObject = function(opt_
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.ArchiveAddRequest} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.ArchiveAddRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.ArchiveAddRequest.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.ArchiveAddRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     blocksList: jspb.Message.toObjectList(msg.getBlocksList(),
-    proto.ic_ledger.pb.types.v1.Block.toObject, includeInstance)
+    proto.ic_ledger.pb.v1.Block.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -3753,23 +3753,23 @@ proto.ic_ledger.pb.types.v1.ArchiveAddRequest.toObject = function(includeInstanc
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.ArchiveAddRequest}
+ * @return {!proto.ic_ledger.pb.v1.ArchiveAddRequest}
  */
-proto.ic_ledger.pb.types.v1.ArchiveAddRequest.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.ArchiveAddRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.ArchiveAddRequest;
-  return proto.ic_ledger.pb.types.v1.ArchiveAddRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.ArchiveAddRequest;
+  return proto.ic_ledger.pb.v1.ArchiveAddRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.ArchiveAddRequest} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.ArchiveAddRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.ArchiveAddRequest}
+ * @return {!proto.ic_ledger.pb.v1.ArchiveAddRequest}
  */
-proto.ic_ledger.pb.types.v1.ArchiveAddRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.ArchiveAddRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3777,8 +3777,8 @@ proto.ic_ledger.pb.types.v1.ArchiveAddRequest.deserializeBinaryFromReader = func
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.ic_ledger.pb.types.v1.Block;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.Block.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.Block;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.Block.deserializeBinaryFromReader);
       msg.addBlocks(value);
       break;
     default:
@@ -3794,9 +3794,9 @@ proto.ic_ledger.pb.types.v1.ArchiveAddRequest.deserializeBinaryFromReader = func
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.ArchiveAddRequest.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.ArchiveAddRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.ArchiveAddRequest.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.ArchiveAddRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3804,18 +3804,18 @@ proto.ic_ledger.pb.types.v1.ArchiveAddRequest.prototype.serializeBinary = functi
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.ArchiveAddRequest} message
+ * @param {!proto.ic_ledger.pb.v1.ArchiveAddRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.ArchiveAddRequest.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.ArchiveAddRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getBlocksList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      proto.ic_ledger.pb.types.v1.Block.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.Block.serializeBinaryToWriter
     );
   }
 };
@@ -3823,38 +3823,38 @@ proto.ic_ledger.pb.types.v1.ArchiveAddRequest.serializeBinaryToWriter = function
 
 /**
  * repeated Block blocks = 1;
- * @return {!Array<!proto.ic_ledger.pb.types.v1.Block>}
+ * @return {!Array<!proto.ic_ledger.pb.v1.Block>}
  */
-proto.ic_ledger.pb.types.v1.ArchiveAddRequest.prototype.getBlocksList = function() {
-  return /** @type{!Array<!proto.ic_ledger.pb.types.v1.Block>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.ic_ledger.pb.types.v1.Block, 1));
+proto.ic_ledger.pb.v1.ArchiveAddRequest.prototype.getBlocksList = function() {
+  return /** @type{!Array<!proto.ic_ledger.pb.v1.Block>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.ic_ledger.pb.v1.Block, 1));
 };
 
 
 /**
- * @param {!Array<!proto.ic_ledger.pb.types.v1.Block>} value
- * @return {!proto.ic_ledger.pb.types.v1.ArchiveAddRequest} returns this
+ * @param {!Array<!proto.ic_ledger.pb.v1.Block>} value
+ * @return {!proto.ic_ledger.pb.v1.ArchiveAddRequest} returns this
 */
-proto.ic_ledger.pb.types.v1.ArchiveAddRequest.prototype.setBlocksList = function(value) {
+proto.ic_ledger.pb.v1.ArchiveAddRequest.prototype.setBlocksList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
 /**
- * @param {!proto.ic_ledger.pb.types.v1.Block=} opt_value
+ * @param {!proto.ic_ledger.pb.v1.Block=} opt_value
  * @param {number=} opt_index
- * @return {!proto.ic_ledger.pb.types.v1.Block}
+ * @return {!proto.ic_ledger.pb.v1.Block}
  */
-proto.ic_ledger.pb.types.v1.ArchiveAddRequest.prototype.addBlocks = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.ic_ledger.pb.types.v1.Block, opt_index);
+proto.ic_ledger.pb.v1.ArchiveAddRequest.prototype.addBlocks = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.ic_ledger.pb.v1.Block, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.ic_ledger.pb.types.v1.ArchiveAddRequest} returns this
+ * @return {!proto.ic_ledger.pb.v1.ArchiveAddRequest} returns this
  */
-proto.ic_ledger.pb.types.v1.ArchiveAddRequest.prototype.clearBlocksList = function() {
+proto.ic_ledger.pb.v1.ArchiveAddRequest.prototype.clearBlocksList = function() {
   return this.setBlocksList([]);
 };
 
@@ -3875,8 +3875,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.ArchiveAddResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.ArchiveAddResponse.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.ArchiveAddResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.ArchiveAddResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -3885,11 +3885,11 @@ proto.ic_ledger.pb.types.v1.ArchiveAddResponse.prototype.toObject = function(opt
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.ArchiveAddResponse} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.ArchiveAddResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.ArchiveAddResponse.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.ArchiveAddResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -3905,23 +3905,23 @@ proto.ic_ledger.pb.types.v1.ArchiveAddResponse.toObject = function(includeInstan
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.ArchiveAddResponse}
+ * @return {!proto.ic_ledger.pb.v1.ArchiveAddResponse}
  */
-proto.ic_ledger.pb.types.v1.ArchiveAddResponse.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.ArchiveAddResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.ArchiveAddResponse;
-  return proto.ic_ledger.pb.types.v1.ArchiveAddResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.ArchiveAddResponse;
+  return proto.ic_ledger.pb.v1.ArchiveAddResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.ArchiveAddResponse} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.ArchiveAddResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.ArchiveAddResponse}
+ * @return {!proto.ic_ledger.pb.v1.ArchiveAddResponse}
  */
-proto.ic_ledger.pb.types.v1.ArchiveAddResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.ArchiveAddResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3941,9 +3941,9 @@ proto.ic_ledger.pb.types.v1.ArchiveAddResponse.deserializeBinaryFromReader = fun
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.ArchiveAddResponse.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.ArchiveAddResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.ArchiveAddResponse.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.ArchiveAddResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3951,11 +3951,11 @@ proto.ic_ledger.pb.types.v1.ArchiveAddResponse.prototype.serializeBinary = funct
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.ArchiveAddResponse} message
+ * @param {!proto.ic_ledger.pb.v1.ArchiveAddResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.ArchiveAddResponse.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.ArchiveAddResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -3976,8 +3976,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.GetNodesRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.GetNodesRequest.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.GetNodesRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.GetNodesRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -3986,11 +3986,11 @@ proto.ic_ledger.pb.types.v1.GetNodesRequest.prototype.toObject = function(opt_in
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.GetNodesRequest} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.GetNodesRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.GetNodesRequest.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.GetNodesRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -4006,23 +4006,23 @@ proto.ic_ledger.pb.types.v1.GetNodesRequest.toObject = function(includeInstance,
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.GetNodesRequest}
+ * @return {!proto.ic_ledger.pb.v1.GetNodesRequest}
  */
-proto.ic_ledger.pb.types.v1.GetNodesRequest.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.GetNodesRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.GetNodesRequest;
-  return proto.ic_ledger.pb.types.v1.GetNodesRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.GetNodesRequest;
+  return proto.ic_ledger.pb.v1.GetNodesRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.GetNodesRequest} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.GetNodesRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.GetNodesRequest}
+ * @return {!proto.ic_ledger.pb.v1.GetNodesRequest}
  */
-proto.ic_ledger.pb.types.v1.GetNodesRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.GetNodesRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4042,9 +4042,9 @@ proto.ic_ledger.pb.types.v1.GetNodesRequest.deserializeBinaryFromReader = functi
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.GetNodesRequest.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.GetNodesRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.GetNodesRequest.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.GetNodesRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4052,11 +4052,11 @@ proto.ic_ledger.pb.types.v1.GetNodesRequest.prototype.serializeBinary = function
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.GetNodesRequest} message
+ * @param {!proto.ic_ledger.pb.v1.GetNodesRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.GetNodesRequest.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.GetNodesRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -4067,7 +4067,7 @@ proto.ic_ledger.pb.types.v1.GetNodesRequest.serializeBinaryToWriter = function(m
  * @private {!Array<number>}
  * @const
  */
-proto.ic_ledger.pb.types.v1.GetNodesResponse.repeatedFields_ = [1];
+proto.ic_ledger.pb.v1.GetNodesResponse.repeatedFields_ = [1];
 
 
 
@@ -4084,8 +4084,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.GetNodesResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.GetNodesResponse.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.GetNodesResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.GetNodesResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -4094,11 +4094,11 @@ proto.ic_ledger.pb.types.v1.GetNodesResponse.prototype.toObject = function(opt_i
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.GetNodesResponse} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.GetNodesResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.GetNodesResponse.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.GetNodesResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     nodesList: jspb.Message.toObjectList(msg.getNodesList(),
     ic_base_types_pb_v1_types_pb.PrincipalId.toObject, includeInstance)
@@ -4115,23 +4115,23 @@ proto.ic_ledger.pb.types.v1.GetNodesResponse.toObject = function(includeInstance
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.GetNodesResponse}
+ * @return {!proto.ic_ledger.pb.v1.GetNodesResponse}
  */
-proto.ic_ledger.pb.types.v1.GetNodesResponse.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.GetNodesResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.GetNodesResponse;
-  return proto.ic_ledger.pb.types.v1.GetNodesResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.GetNodesResponse;
+  return proto.ic_ledger.pb.v1.GetNodesResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.GetNodesResponse} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.GetNodesResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.GetNodesResponse}
+ * @return {!proto.ic_ledger.pb.v1.GetNodesResponse}
  */
-proto.ic_ledger.pb.types.v1.GetNodesResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.GetNodesResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4156,9 +4156,9 @@ proto.ic_ledger.pb.types.v1.GetNodesResponse.deserializeBinaryFromReader = funct
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.GetNodesResponse.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.GetNodesResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.GetNodesResponse.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.GetNodesResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4166,11 +4166,11 @@ proto.ic_ledger.pb.types.v1.GetNodesResponse.prototype.serializeBinary = functio
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.GetNodesResponse} message
+ * @param {!proto.ic_ledger.pb.v1.GetNodesResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.GetNodesResponse.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.GetNodesResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getNodesList();
   if (f.length > 0) {
@@ -4187,7 +4187,7 @@ proto.ic_ledger.pb.types.v1.GetNodesResponse.serializeBinaryToWriter = function(
  * repeated ic_base_types.pb.v1.PrincipalId nodes = 1;
  * @return {!Array<!proto.ic_base_types.pb.v1.PrincipalId>}
  */
-proto.ic_ledger.pb.types.v1.GetNodesResponse.prototype.getNodesList = function() {
+proto.ic_ledger.pb.v1.GetNodesResponse.prototype.getNodesList = function() {
   return /** @type{!Array<!proto.ic_base_types.pb.v1.PrincipalId>} */ (
     jspb.Message.getRepeatedWrapperField(this, ic_base_types_pb_v1_types_pb.PrincipalId, 1));
 };
@@ -4195,9 +4195,9 @@ proto.ic_ledger.pb.types.v1.GetNodesResponse.prototype.getNodesList = function()
 
 /**
  * @param {!Array<!proto.ic_base_types.pb.v1.PrincipalId>} value
- * @return {!proto.ic_ledger.pb.types.v1.GetNodesResponse} returns this
+ * @return {!proto.ic_ledger.pb.v1.GetNodesResponse} returns this
 */
-proto.ic_ledger.pb.types.v1.GetNodesResponse.prototype.setNodesList = function(value) {
+proto.ic_ledger.pb.v1.GetNodesResponse.prototype.setNodesList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
@@ -4207,16 +4207,16 @@ proto.ic_ledger.pb.types.v1.GetNodesResponse.prototype.setNodesList = function(v
  * @param {number=} opt_index
  * @return {!proto.ic_base_types.pb.v1.PrincipalId}
  */
-proto.ic_ledger.pb.types.v1.GetNodesResponse.prototype.addNodes = function(opt_value, opt_index) {
+proto.ic_ledger.pb.v1.GetNodesResponse.prototype.addNodes = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.ic_base_types.pb.v1.PrincipalId, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.ic_ledger.pb.types.v1.GetNodesResponse} returns this
+ * @return {!proto.ic_ledger.pb.v1.GetNodesResponse} returns this
  */
-proto.ic_ledger.pb.types.v1.GetNodesResponse.prototype.clearNodesList = function() {
+proto.ic_ledger.pb.v1.GetNodesResponse.prototype.clearNodesList = function() {
   return this.setNodesList([]);
 };
 
@@ -4237,8 +4237,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.ICPTs.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.ICPTs.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.ICPTs.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.ICPTs.toObject(opt_includeInstance, this);
 };
 
 
@@ -4247,11 +4247,11 @@ proto.ic_ledger.pb.types.v1.ICPTs.prototype.toObject = function(opt_includeInsta
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.ICPTs} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.ICPTs} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.ICPTs.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.ICPTs.toObject = function(includeInstance, msg) {
   var f, obj = {
     doms: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
@@ -4267,23 +4267,23 @@ proto.ic_ledger.pb.types.v1.ICPTs.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.ICPTs}
+ * @return {!proto.ic_ledger.pb.v1.ICPTs}
  */
-proto.ic_ledger.pb.types.v1.ICPTs.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.ICPTs.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.ICPTs;
-  return proto.ic_ledger.pb.types.v1.ICPTs.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.ICPTs;
+  return proto.ic_ledger.pb.v1.ICPTs.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.ICPTs} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.ICPTs} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.ICPTs}
+ * @return {!proto.ic_ledger.pb.v1.ICPTs}
  */
-proto.ic_ledger.pb.types.v1.ICPTs.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.ICPTs.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4307,9 +4307,9 @@ proto.ic_ledger.pb.types.v1.ICPTs.deserializeBinaryFromReader = function(msg, re
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.ICPTs.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.ICPTs.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.ICPTs.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.ICPTs.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4317,11 +4317,11 @@ proto.ic_ledger.pb.types.v1.ICPTs.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.ICPTs} message
+ * @param {!proto.ic_ledger.pb.v1.ICPTs} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.ICPTs.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.ICPTs.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getDoms();
   if (f !== 0) {
@@ -4337,16 +4337,16 @@ proto.ic_ledger.pb.types.v1.ICPTs.serializeBinaryToWriter = function(message, wr
  * optional uint64 doms = 1;
  * @return {number}
  */
-proto.ic_ledger.pb.types.v1.ICPTs.prototype.getDoms = function() {
+proto.ic_ledger.pb.v1.ICPTs.prototype.getDoms = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.ic_ledger.pb.types.v1.ICPTs} returns this
+ * @return {!proto.ic_ledger.pb.v1.ICPTs} returns this
  */
-proto.ic_ledger.pb.types.v1.ICPTs.prototype.setDoms = function(value) {
+proto.ic_ledger.pb.v1.ICPTs.prototype.setDoms = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 
@@ -4367,8 +4367,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.Payment.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.Payment.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.Payment.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.Payment.toObject(opt_includeInstance, this);
 };
 
 
@@ -4377,13 +4377,13 @@ proto.ic_ledger.pb.types.v1.Payment.prototype.toObject = function(opt_includeIns
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.Payment} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.Payment} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.Payment.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.Payment.toObject = function(includeInstance, msg) {
   var f, obj = {
-    receiverGets: (f = msg.getReceiverGets()) && proto.ic_ledger.pb.types.v1.ICPTs.toObject(includeInstance, f)
+    receiverGets: (f = msg.getReceiverGets()) && proto.ic_ledger.pb.v1.ICPTs.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -4397,23 +4397,23 @@ proto.ic_ledger.pb.types.v1.Payment.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.Payment}
+ * @return {!proto.ic_ledger.pb.v1.Payment}
  */
-proto.ic_ledger.pb.types.v1.Payment.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.Payment.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.Payment;
-  return proto.ic_ledger.pb.types.v1.Payment.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.Payment;
+  return proto.ic_ledger.pb.v1.Payment.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.Payment} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.Payment} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.Payment}
+ * @return {!proto.ic_ledger.pb.v1.Payment}
  */
-proto.ic_ledger.pb.types.v1.Payment.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.Payment.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4421,8 +4421,8 @@ proto.ic_ledger.pb.types.v1.Payment.deserializeBinaryFromReader = function(msg, 
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.ic_ledger.pb.types.v1.ICPTs;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.ICPTs.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.ICPTs;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.ICPTs.deserializeBinaryFromReader);
       msg.setReceiverGets(value);
       break;
     default:
@@ -4438,9 +4438,9 @@ proto.ic_ledger.pb.types.v1.Payment.deserializeBinaryFromReader = function(msg, 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.Payment.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.Payment.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.Payment.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.Payment.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4448,18 +4448,18 @@ proto.ic_ledger.pb.types.v1.Payment.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.Payment} message
+ * @param {!proto.ic_ledger.pb.v1.Payment} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.Payment.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.Payment.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getReceiverGets();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.ic_ledger.pb.types.v1.ICPTs.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.ICPTs.serializeBinaryToWriter
     );
   }
 };
@@ -4467,28 +4467,28 @@ proto.ic_ledger.pb.types.v1.Payment.serializeBinaryToWriter = function(message, 
 
 /**
  * optional ICPTs receiver_gets = 1;
- * @return {?proto.ic_ledger.pb.types.v1.ICPTs}
+ * @return {?proto.ic_ledger.pb.v1.ICPTs}
  */
-proto.ic_ledger.pb.types.v1.Payment.prototype.getReceiverGets = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.ICPTs} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.ICPTs, 1));
+proto.ic_ledger.pb.v1.Payment.prototype.getReceiverGets = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.ICPTs} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.ICPTs, 1));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.ICPTs|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.Payment} returns this
+ * @param {?proto.ic_ledger.pb.v1.ICPTs|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.Payment} returns this
 */
-proto.ic_ledger.pb.types.v1.Payment.prototype.setReceiverGets = function(value) {
+proto.ic_ledger.pb.v1.Payment.prototype.setReceiverGets = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.Payment} returns this
+ * @return {!proto.ic_ledger.pb.v1.Payment} returns this
  */
-proto.ic_ledger.pb.types.v1.Payment.prototype.clearReceiverGets = function() {
+proto.ic_ledger.pb.v1.Payment.prototype.clearReceiverGets = function() {
   return this.setReceiverGets(undefined);
 };
 
@@ -4497,7 +4497,7 @@ proto.ic_ledger.pb.types.v1.Payment.prototype.clearReceiverGets = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.Payment.prototype.hasReceiverGets = function() {
+proto.ic_ledger.pb.v1.Payment.prototype.hasReceiverGets = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -4518,8 +4518,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.BlockHeight.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.BlockHeight.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.BlockHeight.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.BlockHeight.toObject(opt_includeInstance, this);
 };
 
 
@@ -4528,11 +4528,11 @@ proto.ic_ledger.pb.types.v1.BlockHeight.prototype.toObject = function(opt_includ
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.BlockHeight} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.BlockHeight} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.BlockHeight.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.BlockHeight.toObject = function(includeInstance, msg) {
   var f, obj = {
     height: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
@@ -4548,23 +4548,23 @@ proto.ic_ledger.pb.types.v1.BlockHeight.toObject = function(includeInstance, msg
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.BlockHeight}
+ * @return {!proto.ic_ledger.pb.v1.BlockHeight}
  */
-proto.ic_ledger.pb.types.v1.BlockHeight.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.BlockHeight.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.BlockHeight;
-  return proto.ic_ledger.pb.types.v1.BlockHeight.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.BlockHeight;
+  return proto.ic_ledger.pb.v1.BlockHeight.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.BlockHeight} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.BlockHeight} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.BlockHeight}
+ * @return {!proto.ic_ledger.pb.v1.BlockHeight}
  */
-proto.ic_ledger.pb.types.v1.BlockHeight.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.BlockHeight.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4588,9 +4588,9 @@ proto.ic_ledger.pb.types.v1.BlockHeight.deserializeBinaryFromReader = function(m
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.BlockHeight.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.BlockHeight.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.BlockHeight.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.BlockHeight.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4598,11 +4598,11 @@ proto.ic_ledger.pb.types.v1.BlockHeight.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.BlockHeight} message
+ * @param {!proto.ic_ledger.pb.v1.BlockHeight} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.BlockHeight.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.BlockHeight.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getHeight();
   if (f !== 0) {
@@ -4618,16 +4618,16 @@ proto.ic_ledger.pb.types.v1.BlockHeight.serializeBinaryToWriter = function(messa
  * optional uint64 height = 1;
  * @return {number}
  */
-proto.ic_ledger.pb.types.v1.BlockHeight.prototype.getHeight = function() {
+proto.ic_ledger.pb.v1.BlockHeight.prototype.getHeight = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.ic_ledger.pb.types.v1.BlockHeight} returns this
+ * @return {!proto.ic_ledger.pb.v1.BlockHeight} returns this
  */
-proto.ic_ledger.pb.types.v1.BlockHeight.prototype.setHeight = function(value) {
+proto.ic_ledger.pb.v1.BlockHeight.prototype.setHeight = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 
@@ -4648,8 +4648,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.Block.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.Block.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.Block.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.Block.toObject(opt_includeInstance, this);
 };
 
 
@@ -4658,15 +4658,15 @@ proto.ic_ledger.pb.types.v1.Block.prototype.toObject = function(opt_includeInsta
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.Block} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.Block} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.Block.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.Block.toObject = function(includeInstance, msg) {
   var f, obj = {
-    parentHash: (f = msg.getParentHash()) && proto.ic_ledger.pb.types.v1.Hash.toObject(includeInstance, f),
-    timestamp: (f = msg.getTimestamp()) && proto.ic_ledger.pb.types.v1.TimeStamp.toObject(includeInstance, f),
-    transaction: (f = msg.getTransaction()) && proto.ic_ledger.pb.types.v1.Transaction.toObject(includeInstance, f)
+    parentHash: (f = msg.getParentHash()) && proto.ic_ledger.pb.v1.Hash.toObject(includeInstance, f),
+    timestamp: (f = msg.getTimestamp()) && proto.ic_ledger.pb.v1.TimeStamp.toObject(includeInstance, f),
+    transaction: (f = msg.getTransaction()) && proto.ic_ledger.pb.v1.Transaction.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -4680,23 +4680,23 @@ proto.ic_ledger.pb.types.v1.Block.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.Block}
+ * @return {!proto.ic_ledger.pb.v1.Block}
  */
-proto.ic_ledger.pb.types.v1.Block.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.Block.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.Block;
-  return proto.ic_ledger.pb.types.v1.Block.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.Block;
+  return proto.ic_ledger.pb.v1.Block.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.Block} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.Block} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.Block}
+ * @return {!proto.ic_ledger.pb.v1.Block}
  */
-proto.ic_ledger.pb.types.v1.Block.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.Block.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4704,18 +4704,18 @@ proto.ic_ledger.pb.types.v1.Block.deserializeBinaryFromReader = function(msg, re
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.ic_ledger.pb.types.v1.Hash;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.Hash.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.Hash;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.Hash.deserializeBinaryFromReader);
       msg.setParentHash(value);
       break;
     case 2:
-      var value = new proto.ic_ledger.pb.types.v1.TimeStamp;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.TimeStamp.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.TimeStamp;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.TimeStamp.deserializeBinaryFromReader);
       msg.setTimestamp(value);
       break;
     case 3:
-      var value = new proto.ic_ledger.pb.types.v1.Transaction;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.Transaction.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.Transaction;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.Transaction.deserializeBinaryFromReader);
       msg.setTransaction(value);
       break;
     default:
@@ -4731,9 +4731,9 @@ proto.ic_ledger.pb.types.v1.Block.deserializeBinaryFromReader = function(msg, re
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.Block.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.Block.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.Block.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.Block.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4741,18 +4741,18 @@ proto.ic_ledger.pb.types.v1.Block.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.Block} message
+ * @param {!proto.ic_ledger.pb.v1.Block} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.Block.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.Block.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getParentHash();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.ic_ledger.pb.types.v1.Hash.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.Hash.serializeBinaryToWriter
     );
   }
   f = message.getTimestamp();
@@ -4760,7 +4760,7 @@ proto.ic_ledger.pb.types.v1.Block.serializeBinaryToWriter = function(message, wr
     writer.writeMessage(
       2,
       f,
-      proto.ic_ledger.pb.types.v1.TimeStamp.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.TimeStamp.serializeBinaryToWriter
     );
   }
   f = message.getTransaction();
@@ -4768,7 +4768,7 @@ proto.ic_ledger.pb.types.v1.Block.serializeBinaryToWriter = function(message, wr
     writer.writeMessage(
       3,
       f,
-      proto.ic_ledger.pb.types.v1.Transaction.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.Transaction.serializeBinaryToWriter
     );
   }
 };
@@ -4776,28 +4776,28 @@ proto.ic_ledger.pb.types.v1.Block.serializeBinaryToWriter = function(message, wr
 
 /**
  * optional Hash parent_hash = 1;
- * @return {?proto.ic_ledger.pb.types.v1.Hash}
+ * @return {?proto.ic_ledger.pb.v1.Hash}
  */
-proto.ic_ledger.pb.types.v1.Block.prototype.getParentHash = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.Hash} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.Hash, 1));
+proto.ic_ledger.pb.v1.Block.prototype.getParentHash = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.Hash} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.Hash, 1));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.Hash|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.Block} returns this
+ * @param {?proto.ic_ledger.pb.v1.Hash|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.Block} returns this
 */
-proto.ic_ledger.pb.types.v1.Block.prototype.setParentHash = function(value) {
+proto.ic_ledger.pb.v1.Block.prototype.setParentHash = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.Block} returns this
+ * @return {!proto.ic_ledger.pb.v1.Block} returns this
  */
-proto.ic_ledger.pb.types.v1.Block.prototype.clearParentHash = function() {
+proto.ic_ledger.pb.v1.Block.prototype.clearParentHash = function() {
   return this.setParentHash(undefined);
 };
 
@@ -4806,35 +4806,35 @@ proto.ic_ledger.pb.types.v1.Block.prototype.clearParentHash = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.Block.prototype.hasParentHash = function() {
+proto.ic_ledger.pb.v1.Block.prototype.hasParentHash = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
 
 /**
  * optional TimeStamp timestamp = 2;
- * @return {?proto.ic_ledger.pb.types.v1.TimeStamp}
+ * @return {?proto.ic_ledger.pb.v1.TimeStamp}
  */
-proto.ic_ledger.pb.types.v1.Block.prototype.getTimestamp = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.TimeStamp} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.TimeStamp, 2));
+proto.ic_ledger.pb.v1.Block.prototype.getTimestamp = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.TimeStamp} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.TimeStamp, 2));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.TimeStamp|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.Block} returns this
+ * @param {?proto.ic_ledger.pb.v1.TimeStamp|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.Block} returns this
 */
-proto.ic_ledger.pb.types.v1.Block.prototype.setTimestamp = function(value) {
+proto.ic_ledger.pb.v1.Block.prototype.setTimestamp = function(value) {
   return jspb.Message.setWrapperField(this, 2, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.Block} returns this
+ * @return {!proto.ic_ledger.pb.v1.Block} returns this
  */
-proto.ic_ledger.pb.types.v1.Block.prototype.clearTimestamp = function() {
+proto.ic_ledger.pb.v1.Block.prototype.clearTimestamp = function() {
   return this.setTimestamp(undefined);
 };
 
@@ -4843,35 +4843,35 @@ proto.ic_ledger.pb.types.v1.Block.prototype.clearTimestamp = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.Block.prototype.hasTimestamp = function() {
+proto.ic_ledger.pb.v1.Block.prototype.hasTimestamp = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
 
 /**
  * optional Transaction transaction = 3;
- * @return {?proto.ic_ledger.pb.types.v1.Transaction}
+ * @return {?proto.ic_ledger.pb.v1.Transaction}
  */
-proto.ic_ledger.pb.types.v1.Block.prototype.getTransaction = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.Transaction} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.Transaction, 3));
+proto.ic_ledger.pb.v1.Block.prototype.getTransaction = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.Transaction} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.Transaction, 3));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.Transaction|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.Block} returns this
+ * @param {?proto.ic_ledger.pb.v1.Transaction|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.Block} returns this
 */
-proto.ic_ledger.pb.types.v1.Block.prototype.setTransaction = function(value) {
+proto.ic_ledger.pb.v1.Block.prototype.setTransaction = function(value) {
   return jspb.Message.setWrapperField(this, 3, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.Block} returns this
+ * @return {!proto.ic_ledger.pb.v1.Block} returns this
  */
-proto.ic_ledger.pb.types.v1.Block.prototype.clearTransaction = function() {
+proto.ic_ledger.pb.v1.Block.prototype.clearTransaction = function() {
   return this.setTransaction(undefined);
 };
 
@@ -4880,7 +4880,7 @@ proto.ic_ledger.pb.types.v1.Block.prototype.clearTransaction = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.Block.prototype.hasTransaction = function() {
+proto.ic_ledger.pb.v1.Block.prototype.hasTransaction = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 
@@ -4901,8 +4901,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.Hash.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.Hash.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.Hash.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.Hash.toObject(opt_includeInstance, this);
 };
 
 
@@ -4911,11 +4911,11 @@ proto.ic_ledger.pb.types.v1.Hash.prototype.toObject = function(opt_includeInstan
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.Hash} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.Hash} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.Hash.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.Hash.toObject = function(includeInstance, msg) {
   var f, obj = {
     hash: msg.getHash_asB64()
   };
@@ -4931,23 +4931,23 @@ proto.ic_ledger.pb.types.v1.Hash.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.Hash}
+ * @return {!proto.ic_ledger.pb.v1.Hash}
  */
-proto.ic_ledger.pb.types.v1.Hash.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.Hash.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.Hash;
-  return proto.ic_ledger.pb.types.v1.Hash.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.Hash;
+  return proto.ic_ledger.pb.v1.Hash.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.Hash} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.Hash} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.Hash}
+ * @return {!proto.ic_ledger.pb.v1.Hash}
  */
-proto.ic_ledger.pb.types.v1.Hash.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.Hash.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4971,9 +4971,9 @@ proto.ic_ledger.pb.types.v1.Hash.deserializeBinaryFromReader = function(msg, rea
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.Hash.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.Hash.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.Hash.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.Hash.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4981,11 +4981,11 @@ proto.ic_ledger.pb.types.v1.Hash.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.Hash} message
+ * @param {!proto.ic_ledger.pb.v1.Hash} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.Hash.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.Hash.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getHash_asU8();
   if (f.length > 0) {
@@ -5001,7 +5001,7 @@ proto.ic_ledger.pb.types.v1.Hash.serializeBinaryToWriter = function(message, wri
  * optional bytes hash = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.ic_ledger.pb.types.v1.Hash.prototype.getHash = function() {
+proto.ic_ledger.pb.v1.Hash.prototype.getHash = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -5011,7 +5011,7 @@ proto.ic_ledger.pb.types.v1.Hash.prototype.getHash = function() {
  * This is a type-conversion wrapper around `getHash()`
  * @return {string}
  */
-proto.ic_ledger.pb.types.v1.Hash.prototype.getHash_asB64 = function() {
+proto.ic_ledger.pb.v1.Hash.prototype.getHash_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getHash()));
 };
@@ -5024,7 +5024,7 @@ proto.ic_ledger.pb.types.v1.Hash.prototype.getHash_asB64 = function() {
  * This is a type-conversion wrapper around `getHash()`
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.Hash.prototype.getHash_asU8 = function() {
+proto.ic_ledger.pb.v1.Hash.prototype.getHash_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getHash()));
 };
@@ -5032,9 +5032,9 @@ proto.ic_ledger.pb.types.v1.Hash.prototype.getHash_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.ic_ledger.pb.types.v1.Hash} returns this
+ * @return {!proto.ic_ledger.pb.v1.Hash} returns this
  */
-proto.ic_ledger.pb.types.v1.Hash.prototype.setHash = function(value) {
+proto.ic_ledger.pb.v1.Hash.prototype.setHash = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -5055,8 +5055,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.Account.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.Account.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.Account.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.Account.toObject(opt_includeInstance, this);
 };
 
 
@@ -5065,14 +5065,14 @@ proto.ic_ledger.pb.types.v1.Account.prototype.toObject = function(opt_includeIns
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.Account} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.Account} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.Account.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.Account.toObject = function(includeInstance, msg) {
   var f, obj = {
-    identifier: (f = msg.getIdentifier()) && proto.ic_ledger.pb.types.v1.AccountIdentifier.toObject(includeInstance, f),
-    balance: (f = msg.getBalance()) && proto.ic_ledger.pb.types.v1.ICPTs.toObject(includeInstance, f)
+    identifier: (f = msg.getIdentifier()) && proto.ic_ledger.pb.v1.AccountIdentifier.toObject(includeInstance, f),
+    balance: (f = msg.getBalance()) && proto.ic_ledger.pb.v1.ICPTs.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -5086,23 +5086,23 @@ proto.ic_ledger.pb.types.v1.Account.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.Account}
+ * @return {!proto.ic_ledger.pb.v1.Account}
  */
-proto.ic_ledger.pb.types.v1.Account.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.Account.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.Account;
-  return proto.ic_ledger.pb.types.v1.Account.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.Account;
+  return proto.ic_ledger.pb.v1.Account.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.Account} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.Account} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.Account}
+ * @return {!proto.ic_ledger.pb.v1.Account}
  */
-proto.ic_ledger.pb.types.v1.Account.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.Account.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5110,13 +5110,13 @@ proto.ic_ledger.pb.types.v1.Account.deserializeBinaryFromReader = function(msg, 
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.ic_ledger.pb.types.v1.AccountIdentifier;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.AccountIdentifier.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.AccountIdentifier;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.AccountIdentifier.deserializeBinaryFromReader);
       msg.setIdentifier(value);
       break;
     case 2:
-      var value = new proto.ic_ledger.pb.types.v1.ICPTs;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.ICPTs.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.ICPTs;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.ICPTs.deserializeBinaryFromReader);
       msg.setBalance(value);
       break;
     default:
@@ -5132,9 +5132,9 @@ proto.ic_ledger.pb.types.v1.Account.deserializeBinaryFromReader = function(msg, 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.Account.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.Account.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.Account.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.Account.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5142,18 +5142,18 @@ proto.ic_ledger.pb.types.v1.Account.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.Account} message
+ * @param {!proto.ic_ledger.pb.v1.Account} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.Account.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.Account.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getIdentifier();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.ic_ledger.pb.types.v1.AccountIdentifier.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.AccountIdentifier.serializeBinaryToWriter
     );
   }
   f = message.getBalance();
@@ -5161,7 +5161,7 @@ proto.ic_ledger.pb.types.v1.Account.serializeBinaryToWriter = function(message, 
     writer.writeMessage(
       2,
       f,
-      proto.ic_ledger.pb.types.v1.ICPTs.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.ICPTs.serializeBinaryToWriter
     );
   }
 };
@@ -5169,28 +5169,28 @@ proto.ic_ledger.pb.types.v1.Account.serializeBinaryToWriter = function(message, 
 
 /**
  * optional AccountIdentifier identifier = 1;
- * @return {?proto.ic_ledger.pb.types.v1.AccountIdentifier}
+ * @return {?proto.ic_ledger.pb.v1.AccountIdentifier}
  */
-proto.ic_ledger.pb.types.v1.Account.prototype.getIdentifier = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.AccountIdentifier} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.AccountIdentifier, 1));
+proto.ic_ledger.pb.v1.Account.prototype.getIdentifier = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.AccountIdentifier} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.AccountIdentifier, 1));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.AccountIdentifier|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.Account} returns this
+ * @param {?proto.ic_ledger.pb.v1.AccountIdentifier|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.Account} returns this
 */
-proto.ic_ledger.pb.types.v1.Account.prototype.setIdentifier = function(value) {
+proto.ic_ledger.pb.v1.Account.prototype.setIdentifier = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.Account} returns this
+ * @return {!proto.ic_ledger.pb.v1.Account} returns this
  */
-proto.ic_ledger.pb.types.v1.Account.prototype.clearIdentifier = function() {
+proto.ic_ledger.pb.v1.Account.prototype.clearIdentifier = function() {
   return this.setIdentifier(undefined);
 };
 
@@ -5199,35 +5199,35 @@ proto.ic_ledger.pb.types.v1.Account.prototype.clearIdentifier = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.Account.prototype.hasIdentifier = function() {
+proto.ic_ledger.pb.v1.Account.prototype.hasIdentifier = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
 
 /**
  * optional ICPTs balance = 2;
- * @return {?proto.ic_ledger.pb.types.v1.ICPTs}
+ * @return {?proto.ic_ledger.pb.v1.ICPTs}
  */
-proto.ic_ledger.pb.types.v1.Account.prototype.getBalance = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.ICPTs} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.ICPTs, 2));
+proto.ic_ledger.pb.v1.Account.prototype.getBalance = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.ICPTs} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.ICPTs, 2));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.ICPTs|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.Account} returns this
+ * @param {?proto.ic_ledger.pb.v1.ICPTs|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.Account} returns this
 */
-proto.ic_ledger.pb.types.v1.Account.prototype.setBalance = function(value) {
+proto.ic_ledger.pb.v1.Account.prototype.setBalance = function(value) {
   return jspb.Message.setWrapperField(this, 2, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.Account} returns this
+ * @return {!proto.ic_ledger.pb.v1.Account} returns this
  */
-proto.ic_ledger.pb.types.v1.Account.prototype.clearBalance = function() {
+proto.ic_ledger.pb.v1.Account.prototype.clearBalance = function() {
   return this.setBalance(undefined);
 };
 
@@ -5236,7 +5236,7 @@ proto.ic_ledger.pb.types.v1.Account.prototype.clearBalance = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.Account.prototype.hasBalance = function() {
+proto.ic_ledger.pb.v1.Account.prototype.hasBalance = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
@@ -5250,12 +5250,12 @@ proto.ic_ledger.pb.types.v1.Account.prototype.hasBalance = function() {
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.ic_ledger.pb.types.v1.Transaction.oneofGroups_ = [[1,2,3]];
+proto.ic_ledger.pb.v1.Transaction.oneofGroups_ = [[1,2,3]];
 
 /**
  * @enum {number}
  */
-proto.ic_ledger.pb.types.v1.Transaction.TransferCase = {
+proto.ic_ledger.pb.v1.Transaction.TransferCase = {
   TRANSFER_NOT_SET: 0,
   BURN: 1,
   MINT: 2,
@@ -5263,10 +5263,10 @@ proto.ic_ledger.pb.types.v1.Transaction.TransferCase = {
 };
 
 /**
- * @return {proto.ic_ledger.pb.types.v1.Transaction.TransferCase}
+ * @return {proto.ic_ledger.pb.v1.Transaction.TransferCase}
  */
-proto.ic_ledger.pb.types.v1.Transaction.prototype.getTransferCase = function() {
-  return /** @type {proto.ic_ledger.pb.types.v1.Transaction.TransferCase} */(jspb.Message.computeOneofCase(this, proto.ic_ledger.pb.types.v1.Transaction.oneofGroups_[0]));
+proto.ic_ledger.pb.v1.Transaction.prototype.getTransferCase = function() {
+  return /** @type {proto.ic_ledger.pb.v1.Transaction.TransferCase} */(jspb.Message.computeOneofCase(this, proto.ic_ledger.pb.v1.Transaction.oneofGroups_[0]));
 };
 
 
@@ -5284,8 +5284,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.Transaction.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.Transaction.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.Transaction.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.Transaction.toObject(opt_includeInstance, this);
 };
 
 
@@ -5294,17 +5294,17 @@ proto.ic_ledger.pb.types.v1.Transaction.prototype.toObject = function(opt_includ
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.Transaction} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.Transaction} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.Transaction.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.Transaction.toObject = function(includeInstance, msg) {
   var f, obj = {
-    burn: (f = msg.getBurn()) && proto.ic_ledger.pb.types.v1.Burn.toObject(includeInstance, f),
-    mint: (f = msg.getMint()) && proto.ic_ledger.pb.types.v1.Mint.toObject(includeInstance, f),
-    send: (f = msg.getSend()) && proto.ic_ledger.pb.types.v1.Send.toObject(includeInstance, f),
-    memo: (f = msg.getMemo()) && proto.ic_ledger.pb.types.v1.Memo.toObject(includeInstance, f),
-    createdAt: (f = msg.getCreatedAt()) && proto.ic_ledger.pb.types.v1.BlockHeight.toObject(includeInstance, f)
+    burn: (f = msg.getBurn()) && proto.ic_ledger.pb.v1.Burn.toObject(includeInstance, f),
+    mint: (f = msg.getMint()) && proto.ic_ledger.pb.v1.Mint.toObject(includeInstance, f),
+    send: (f = msg.getSend()) && proto.ic_ledger.pb.v1.Send.toObject(includeInstance, f),
+    memo: (f = msg.getMemo()) && proto.ic_ledger.pb.v1.Memo.toObject(includeInstance, f),
+    createdAt: (f = msg.getCreatedAt()) && proto.ic_ledger.pb.v1.BlockHeight.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -5318,23 +5318,23 @@ proto.ic_ledger.pb.types.v1.Transaction.toObject = function(includeInstance, msg
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.Transaction}
+ * @return {!proto.ic_ledger.pb.v1.Transaction}
  */
-proto.ic_ledger.pb.types.v1.Transaction.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.Transaction.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.Transaction;
-  return proto.ic_ledger.pb.types.v1.Transaction.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.Transaction;
+  return proto.ic_ledger.pb.v1.Transaction.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.Transaction} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.Transaction} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.Transaction}
+ * @return {!proto.ic_ledger.pb.v1.Transaction}
  */
-proto.ic_ledger.pb.types.v1.Transaction.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.Transaction.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5342,28 +5342,28 @@ proto.ic_ledger.pb.types.v1.Transaction.deserializeBinaryFromReader = function(m
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.ic_ledger.pb.types.v1.Burn;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.Burn.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.Burn;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.Burn.deserializeBinaryFromReader);
       msg.setBurn(value);
       break;
     case 2:
-      var value = new proto.ic_ledger.pb.types.v1.Mint;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.Mint.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.Mint;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.Mint.deserializeBinaryFromReader);
       msg.setMint(value);
       break;
     case 3:
-      var value = new proto.ic_ledger.pb.types.v1.Send;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.Send.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.Send;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.Send.deserializeBinaryFromReader);
       msg.setSend(value);
       break;
     case 4:
-      var value = new proto.ic_ledger.pb.types.v1.Memo;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.Memo.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.Memo;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.Memo.deserializeBinaryFromReader);
       msg.setMemo(value);
       break;
     case 5:
-      var value = new proto.ic_ledger.pb.types.v1.BlockHeight;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.BlockHeight.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.BlockHeight;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.BlockHeight.deserializeBinaryFromReader);
       msg.setCreatedAt(value);
       break;
     default:
@@ -5379,9 +5379,9 @@ proto.ic_ledger.pb.types.v1.Transaction.deserializeBinaryFromReader = function(m
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.Transaction.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.Transaction.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.Transaction.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.Transaction.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5389,18 +5389,18 @@ proto.ic_ledger.pb.types.v1.Transaction.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.Transaction} message
+ * @param {!proto.ic_ledger.pb.v1.Transaction} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.Transaction.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.Transaction.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getBurn();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.ic_ledger.pb.types.v1.Burn.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.Burn.serializeBinaryToWriter
     );
   }
   f = message.getMint();
@@ -5408,7 +5408,7 @@ proto.ic_ledger.pb.types.v1.Transaction.serializeBinaryToWriter = function(messa
     writer.writeMessage(
       2,
       f,
-      proto.ic_ledger.pb.types.v1.Mint.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.Mint.serializeBinaryToWriter
     );
   }
   f = message.getSend();
@@ -5416,7 +5416,7 @@ proto.ic_ledger.pb.types.v1.Transaction.serializeBinaryToWriter = function(messa
     writer.writeMessage(
       3,
       f,
-      proto.ic_ledger.pb.types.v1.Send.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.Send.serializeBinaryToWriter
     );
   }
   f = message.getMemo();
@@ -5424,7 +5424,7 @@ proto.ic_ledger.pb.types.v1.Transaction.serializeBinaryToWriter = function(messa
     writer.writeMessage(
       4,
       f,
-      proto.ic_ledger.pb.types.v1.Memo.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.Memo.serializeBinaryToWriter
     );
   }
   f = message.getCreatedAt();
@@ -5432,7 +5432,7 @@ proto.ic_ledger.pb.types.v1.Transaction.serializeBinaryToWriter = function(messa
     writer.writeMessage(
       5,
       f,
-      proto.ic_ledger.pb.types.v1.BlockHeight.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.BlockHeight.serializeBinaryToWriter
     );
   }
 };
@@ -5440,28 +5440,28 @@ proto.ic_ledger.pb.types.v1.Transaction.serializeBinaryToWriter = function(messa
 
 /**
  * optional Burn burn = 1;
- * @return {?proto.ic_ledger.pb.types.v1.Burn}
+ * @return {?proto.ic_ledger.pb.v1.Burn}
  */
-proto.ic_ledger.pb.types.v1.Transaction.prototype.getBurn = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.Burn} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.Burn, 1));
+proto.ic_ledger.pb.v1.Transaction.prototype.getBurn = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.Burn} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.Burn, 1));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.Burn|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.Transaction} returns this
+ * @param {?proto.ic_ledger.pb.v1.Burn|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.Transaction} returns this
 */
-proto.ic_ledger.pb.types.v1.Transaction.prototype.setBurn = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 1, proto.ic_ledger.pb.types.v1.Transaction.oneofGroups_[0], value);
+proto.ic_ledger.pb.v1.Transaction.prototype.setBurn = function(value) {
+  return jspb.Message.setOneofWrapperField(this, 1, proto.ic_ledger.pb.v1.Transaction.oneofGroups_[0], value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.Transaction} returns this
+ * @return {!proto.ic_ledger.pb.v1.Transaction} returns this
  */
-proto.ic_ledger.pb.types.v1.Transaction.prototype.clearBurn = function() {
+proto.ic_ledger.pb.v1.Transaction.prototype.clearBurn = function() {
   return this.setBurn(undefined);
 };
 
@@ -5470,35 +5470,35 @@ proto.ic_ledger.pb.types.v1.Transaction.prototype.clearBurn = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.Transaction.prototype.hasBurn = function() {
+proto.ic_ledger.pb.v1.Transaction.prototype.hasBurn = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
 
 /**
  * optional Mint mint = 2;
- * @return {?proto.ic_ledger.pb.types.v1.Mint}
+ * @return {?proto.ic_ledger.pb.v1.Mint}
  */
-proto.ic_ledger.pb.types.v1.Transaction.prototype.getMint = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.Mint} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.Mint, 2));
+proto.ic_ledger.pb.v1.Transaction.prototype.getMint = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.Mint} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.Mint, 2));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.Mint|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.Transaction} returns this
+ * @param {?proto.ic_ledger.pb.v1.Mint|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.Transaction} returns this
 */
-proto.ic_ledger.pb.types.v1.Transaction.prototype.setMint = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 2, proto.ic_ledger.pb.types.v1.Transaction.oneofGroups_[0], value);
+proto.ic_ledger.pb.v1.Transaction.prototype.setMint = function(value) {
+  return jspb.Message.setOneofWrapperField(this, 2, proto.ic_ledger.pb.v1.Transaction.oneofGroups_[0], value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.Transaction} returns this
+ * @return {!proto.ic_ledger.pb.v1.Transaction} returns this
  */
-proto.ic_ledger.pb.types.v1.Transaction.prototype.clearMint = function() {
+proto.ic_ledger.pb.v1.Transaction.prototype.clearMint = function() {
   return this.setMint(undefined);
 };
 
@@ -5507,35 +5507,35 @@ proto.ic_ledger.pb.types.v1.Transaction.prototype.clearMint = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.Transaction.prototype.hasMint = function() {
+proto.ic_ledger.pb.v1.Transaction.prototype.hasMint = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
 
 /**
  * optional Send send = 3;
- * @return {?proto.ic_ledger.pb.types.v1.Send}
+ * @return {?proto.ic_ledger.pb.v1.Send}
  */
-proto.ic_ledger.pb.types.v1.Transaction.prototype.getSend = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.Send} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.Send, 3));
+proto.ic_ledger.pb.v1.Transaction.prototype.getSend = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.Send} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.Send, 3));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.Send|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.Transaction} returns this
+ * @param {?proto.ic_ledger.pb.v1.Send|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.Transaction} returns this
 */
-proto.ic_ledger.pb.types.v1.Transaction.prototype.setSend = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 3, proto.ic_ledger.pb.types.v1.Transaction.oneofGroups_[0], value);
+proto.ic_ledger.pb.v1.Transaction.prototype.setSend = function(value) {
+  return jspb.Message.setOneofWrapperField(this, 3, proto.ic_ledger.pb.v1.Transaction.oneofGroups_[0], value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.Transaction} returns this
+ * @return {!proto.ic_ledger.pb.v1.Transaction} returns this
  */
-proto.ic_ledger.pb.types.v1.Transaction.prototype.clearSend = function() {
+proto.ic_ledger.pb.v1.Transaction.prototype.clearSend = function() {
   return this.setSend(undefined);
 };
 
@@ -5544,35 +5544,35 @@ proto.ic_ledger.pb.types.v1.Transaction.prototype.clearSend = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.Transaction.prototype.hasSend = function() {
+proto.ic_ledger.pb.v1.Transaction.prototype.hasSend = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 
 
 /**
  * optional Memo memo = 4;
- * @return {?proto.ic_ledger.pb.types.v1.Memo}
+ * @return {?proto.ic_ledger.pb.v1.Memo}
  */
-proto.ic_ledger.pb.types.v1.Transaction.prototype.getMemo = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.Memo} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.Memo, 4));
+proto.ic_ledger.pb.v1.Transaction.prototype.getMemo = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.Memo} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.Memo, 4));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.Memo|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.Transaction} returns this
+ * @param {?proto.ic_ledger.pb.v1.Memo|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.Transaction} returns this
 */
-proto.ic_ledger.pb.types.v1.Transaction.prototype.setMemo = function(value) {
+proto.ic_ledger.pb.v1.Transaction.prototype.setMemo = function(value) {
   return jspb.Message.setWrapperField(this, 4, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.Transaction} returns this
+ * @return {!proto.ic_ledger.pb.v1.Transaction} returns this
  */
-proto.ic_ledger.pb.types.v1.Transaction.prototype.clearMemo = function() {
+proto.ic_ledger.pb.v1.Transaction.prototype.clearMemo = function() {
   return this.setMemo(undefined);
 };
 
@@ -5581,35 +5581,35 @@ proto.ic_ledger.pb.types.v1.Transaction.prototype.clearMemo = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.Transaction.prototype.hasMemo = function() {
+proto.ic_ledger.pb.v1.Transaction.prototype.hasMemo = function() {
   return jspb.Message.getField(this, 4) != null;
 };
 
 
 /**
  * optional BlockHeight created_at = 5;
- * @return {?proto.ic_ledger.pb.types.v1.BlockHeight}
+ * @return {?proto.ic_ledger.pb.v1.BlockHeight}
  */
-proto.ic_ledger.pb.types.v1.Transaction.prototype.getCreatedAt = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.BlockHeight} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.BlockHeight, 5));
+proto.ic_ledger.pb.v1.Transaction.prototype.getCreatedAt = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.BlockHeight} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.BlockHeight, 5));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.BlockHeight|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.Transaction} returns this
+ * @param {?proto.ic_ledger.pb.v1.BlockHeight|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.Transaction} returns this
 */
-proto.ic_ledger.pb.types.v1.Transaction.prototype.setCreatedAt = function(value) {
+proto.ic_ledger.pb.v1.Transaction.prototype.setCreatedAt = function(value) {
   return jspb.Message.setWrapperField(this, 5, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.Transaction} returns this
+ * @return {!proto.ic_ledger.pb.v1.Transaction} returns this
  */
-proto.ic_ledger.pb.types.v1.Transaction.prototype.clearCreatedAt = function() {
+proto.ic_ledger.pb.v1.Transaction.prototype.clearCreatedAt = function() {
   return this.setCreatedAt(undefined);
 };
 
@@ -5618,7 +5618,7 @@ proto.ic_ledger.pb.types.v1.Transaction.prototype.clearCreatedAt = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.Transaction.prototype.hasCreatedAt = function() {
+proto.ic_ledger.pb.v1.Transaction.prototype.hasCreatedAt = function() {
   return jspb.Message.getField(this, 5) != null;
 };
 
@@ -5639,8 +5639,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.Send.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.Send.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.Send.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.Send.toObject(opt_includeInstance, this);
 };
 
 
@@ -5649,16 +5649,16 @@ proto.ic_ledger.pb.types.v1.Send.prototype.toObject = function(opt_includeInstan
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.Send} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.Send} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.Send.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.Send.toObject = function(includeInstance, msg) {
   var f, obj = {
-    from: (f = msg.getFrom()) && proto.ic_ledger.pb.types.v1.AccountIdentifier.toObject(includeInstance, f),
-    to: (f = msg.getTo()) && proto.ic_ledger.pb.types.v1.AccountIdentifier.toObject(includeInstance, f),
-    amount: (f = msg.getAmount()) && proto.ic_ledger.pb.types.v1.ICPTs.toObject(includeInstance, f),
-    maxFee: (f = msg.getMaxFee()) && proto.ic_ledger.pb.types.v1.ICPTs.toObject(includeInstance, f)
+    from: (f = msg.getFrom()) && proto.ic_ledger.pb.v1.AccountIdentifier.toObject(includeInstance, f),
+    to: (f = msg.getTo()) && proto.ic_ledger.pb.v1.AccountIdentifier.toObject(includeInstance, f),
+    amount: (f = msg.getAmount()) && proto.ic_ledger.pb.v1.ICPTs.toObject(includeInstance, f),
+    maxFee: (f = msg.getMaxFee()) && proto.ic_ledger.pb.v1.ICPTs.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -5672,23 +5672,23 @@ proto.ic_ledger.pb.types.v1.Send.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.Send}
+ * @return {!proto.ic_ledger.pb.v1.Send}
  */
-proto.ic_ledger.pb.types.v1.Send.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.Send.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.Send;
-  return proto.ic_ledger.pb.types.v1.Send.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.Send;
+  return proto.ic_ledger.pb.v1.Send.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.Send} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.Send} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.Send}
+ * @return {!proto.ic_ledger.pb.v1.Send}
  */
-proto.ic_ledger.pb.types.v1.Send.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.Send.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5696,23 +5696,23 @@ proto.ic_ledger.pb.types.v1.Send.deserializeBinaryFromReader = function(msg, rea
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.ic_ledger.pb.types.v1.AccountIdentifier;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.AccountIdentifier.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.AccountIdentifier;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.AccountIdentifier.deserializeBinaryFromReader);
       msg.setFrom(value);
       break;
     case 2:
-      var value = new proto.ic_ledger.pb.types.v1.AccountIdentifier;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.AccountIdentifier.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.AccountIdentifier;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.AccountIdentifier.deserializeBinaryFromReader);
       msg.setTo(value);
       break;
     case 3:
-      var value = new proto.ic_ledger.pb.types.v1.ICPTs;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.ICPTs.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.ICPTs;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.ICPTs.deserializeBinaryFromReader);
       msg.setAmount(value);
       break;
     case 4:
-      var value = new proto.ic_ledger.pb.types.v1.ICPTs;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.ICPTs.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.ICPTs;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.ICPTs.deserializeBinaryFromReader);
       msg.setMaxFee(value);
       break;
     default:
@@ -5728,9 +5728,9 @@ proto.ic_ledger.pb.types.v1.Send.deserializeBinaryFromReader = function(msg, rea
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.Send.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.Send.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.Send.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.Send.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5738,18 +5738,18 @@ proto.ic_ledger.pb.types.v1.Send.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.Send} message
+ * @param {!proto.ic_ledger.pb.v1.Send} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.Send.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.Send.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getFrom();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.ic_ledger.pb.types.v1.AccountIdentifier.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.AccountIdentifier.serializeBinaryToWriter
     );
   }
   f = message.getTo();
@@ -5757,7 +5757,7 @@ proto.ic_ledger.pb.types.v1.Send.serializeBinaryToWriter = function(message, wri
     writer.writeMessage(
       2,
       f,
-      proto.ic_ledger.pb.types.v1.AccountIdentifier.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.AccountIdentifier.serializeBinaryToWriter
     );
   }
   f = message.getAmount();
@@ -5765,7 +5765,7 @@ proto.ic_ledger.pb.types.v1.Send.serializeBinaryToWriter = function(message, wri
     writer.writeMessage(
       3,
       f,
-      proto.ic_ledger.pb.types.v1.ICPTs.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.ICPTs.serializeBinaryToWriter
     );
   }
   f = message.getMaxFee();
@@ -5773,7 +5773,7 @@ proto.ic_ledger.pb.types.v1.Send.serializeBinaryToWriter = function(message, wri
     writer.writeMessage(
       4,
       f,
-      proto.ic_ledger.pb.types.v1.ICPTs.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.ICPTs.serializeBinaryToWriter
     );
   }
 };
@@ -5781,28 +5781,28 @@ proto.ic_ledger.pb.types.v1.Send.serializeBinaryToWriter = function(message, wri
 
 /**
  * optional AccountIdentifier from = 1;
- * @return {?proto.ic_ledger.pb.types.v1.AccountIdentifier}
+ * @return {?proto.ic_ledger.pb.v1.AccountIdentifier}
  */
-proto.ic_ledger.pb.types.v1.Send.prototype.getFrom = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.AccountIdentifier} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.AccountIdentifier, 1));
+proto.ic_ledger.pb.v1.Send.prototype.getFrom = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.AccountIdentifier} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.AccountIdentifier, 1));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.AccountIdentifier|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.Send} returns this
+ * @param {?proto.ic_ledger.pb.v1.AccountIdentifier|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.Send} returns this
 */
-proto.ic_ledger.pb.types.v1.Send.prototype.setFrom = function(value) {
+proto.ic_ledger.pb.v1.Send.prototype.setFrom = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.Send} returns this
+ * @return {!proto.ic_ledger.pb.v1.Send} returns this
  */
-proto.ic_ledger.pb.types.v1.Send.prototype.clearFrom = function() {
+proto.ic_ledger.pb.v1.Send.prototype.clearFrom = function() {
   return this.setFrom(undefined);
 };
 
@@ -5811,35 +5811,35 @@ proto.ic_ledger.pb.types.v1.Send.prototype.clearFrom = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.Send.prototype.hasFrom = function() {
+proto.ic_ledger.pb.v1.Send.prototype.hasFrom = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
 
 /**
  * optional AccountIdentifier to = 2;
- * @return {?proto.ic_ledger.pb.types.v1.AccountIdentifier}
+ * @return {?proto.ic_ledger.pb.v1.AccountIdentifier}
  */
-proto.ic_ledger.pb.types.v1.Send.prototype.getTo = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.AccountIdentifier} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.AccountIdentifier, 2));
+proto.ic_ledger.pb.v1.Send.prototype.getTo = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.AccountIdentifier} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.AccountIdentifier, 2));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.AccountIdentifier|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.Send} returns this
+ * @param {?proto.ic_ledger.pb.v1.AccountIdentifier|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.Send} returns this
 */
-proto.ic_ledger.pb.types.v1.Send.prototype.setTo = function(value) {
+proto.ic_ledger.pb.v1.Send.prototype.setTo = function(value) {
   return jspb.Message.setWrapperField(this, 2, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.Send} returns this
+ * @return {!proto.ic_ledger.pb.v1.Send} returns this
  */
-proto.ic_ledger.pb.types.v1.Send.prototype.clearTo = function() {
+proto.ic_ledger.pb.v1.Send.prototype.clearTo = function() {
   return this.setTo(undefined);
 };
 
@@ -5848,35 +5848,35 @@ proto.ic_ledger.pb.types.v1.Send.prototype.clearTo = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.Send.prototype.hasTo = function() {
+proto.ic_ledger.pb.v1.Send.prototype.hasTo = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
 
 /**
  * optional ICPTs amount = 3;
- * @return {?proto.ic_ledger.pb.types.v1.ICPTs}
+ * @return {?proto.ic_ledger.pb.v1.ICPTs}
  */
-proto.ic_ledger.pb.types.v1.Send.prototype.getAmount = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.ICPTs} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.ICPTs, 3));
+proto.ic_ledger.pb.v1.Send.prototype.getAmount = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.ICPTs} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.ICPTs, 3));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.ICPTs|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.Send} returns this
+ * @param {?proto.ic_ledger.pb.v1.ICPTs|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.Send} returns this
 */
-proto.ic_ledger.pb.types.v1.Send.prototype.setAmount = function(value) {
+proto.ic_ledger.pb.v1.Send.prototype.setAmount = function(value) {
   return jspb.Message.setWrapperField(this, 3, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.Send} returns this
+ * @return {!proto.ic_ledger.pb.v1.Send} returns this
  */
-proto.ic_ledger.pb.types.v1.Send.prototype.clearAmount = function() {
+proto.ic_ledger.pb.v1.Send.prototype.clearAmount = function() {
   return this.setAmount(undefined);
 };
 
@@ -5885,35 +5885,35 @@ proto.ic_ledger.pb.types.v1.Send.prototype.clearAmount = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.Send.prototype.hasAmount = function() {
+proto.ic_ledger.pb.v1.Send.prototype.hasAmount = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 
 
 /**
  * optional ICPTs max_fee = 4;
- * @return {?proto.ic_ledger.pb.types.v1.ICPTs}
+ * @return {?proto.ic_ledger.pb.v1.ICPTs}
  */
-proto.ic_ledger.pb.types.v1.Send.prototype.getMaxFee = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.ICPTs} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.ICPTs, 4));
+proto.ic_ledger.pb.v1.Send.prototype.getMaxFee = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.ICPTs} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.ICPTs, 4));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.ICPTs|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.Send} returns this
+ * @param {?proto.ic_ledger.pb.v1.ICPTs|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.Send} returns this
 */
-proto.ic_ledger.pb.types.v1.Send.prototype.setMaxFee = function(value) {
+proto.ic_ledger.pb.v1.Send.prototype.setMaxFee = function(value) {
   return jspb.Message.setWrapperField(this, 4, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.Send} returns this
+ * @return {!proto.ic_ledger.pb.v1.Send} returns this
  */
-proto.ic_ledger.pb.types.v1.Send.prototype.clearMaxFee = function() {
+proto.ic_ledger.pb.v1.Send.prototype.clearMaxFee = function() {
   return this.setMaxFee(undefined);
 };
 
@@ -5922,7 +5922,7 @@ proto.ic_ledger.pb.types.v1.Send.prototype.clearMaxFee = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.Send.prototype.hasMaxFee = function() {
+proto.ic_ledger.pb.v1.Send.prototype.hasMaxFee = function() {
   return jspb.Message.getField(this, 4) != null;
 };
 
@@ -5943,8 +5943,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.Mint.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.Mint.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.Mint.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.Mint.toObject(opt_includeInstance, this);
 };
 
 
@@ -5953,14 +5953,14 @@ proto.ic_ledger.pb.types.v1.Mint.prototype.toObject = function(opt_includeInstan
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.Mint} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.Mint} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.Mint.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.Mint.toObject = function(includeInstance, msg) {
   var f, obj = {
-    to: (f = msg.getTo()) && proto.ic_ledger.pb.types.v1.AccountIdentifier.toObject(includeInstance, f),
-    amount: (f = msg.getAmount()) && proto.ic_ledger.pb.types.v1.ICPTs.toObject(includeInstance, f)
+    to: (f = msg.getTo()) && proto.ic_ledger.pb.v1.AccountIdentifier.toObject(includeInstance, f),
+    amount: (f = msg.getAmount()) && proto.ic_ledger.pb.v1.ICPTs.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -5974,23 +5974,23 @@ proto.ic_ledger.pb.types.v1.Mint.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.Mint}
+ * @return {!proto.ic_ledger.pb.v1.Mint}
  */
-proto.ic_ledger.pb.types.v1.Mint.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.Mint.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.Mint;
-  return proto.ic_ledger.pb.types.v1.Mint.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.Mint;
+  return proto.ic_ledger.pb.v1.Mint.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.Mint} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.Mint} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.Mint}
+ * @return {!proto.ic_ledger.pb.v1.Mint}
  */
-proto.ic_ledger.pb.types.v1.Mint.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.Mint.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5998,13 +5998,13 @@ proto.ic_ledger.pb.types.v1.Mint.deserializeBinaryFromReader = function(msg, rea
     var field = reader.getFieldNumber();
     switch (field) {
     case 2:
-      var value = new proto.ic_ledger.pb.types.v1.AccountIdentifier;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.AccountIdentifier.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.AccountIdentifier;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.AccountIdentifier.deserializeBinaryFromReader);
       msg.setTo(value);
       break;
     case 3:
-      var value = new proto.ic_ledger.pb.types.v1.ICPTs;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.ICPTs.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.ICPTs;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.ICPTs.deserializeBinaryFromReader);
       msg.setAmount(value);
       break;
     default:
@@ -6020,9 +6020,9 @@ proto.ic_ledger.pb.types.v1.Mint.deserializeBinaryFromReader = function(msg, rea
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.Mint.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.Mint.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.Mint.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.Mint.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6030,18 +6030,18 @@ proto.ic_ledger.pb.types.v1.Mint.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.Mint} message
+ * @param {!proto.ic_ledger.pb.v1.Mint} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.Mint.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.Mint.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getTo();
   if (f != null) {
     writer.writeMessage(
       2,
       f,
-      proto.ic_ledger.pb.types.v1.AccountIdentifier.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.AccountIdentifier.serializeBinaryToWriter
     );
   }
   f = message.getAmount();
@@ -6049,7 +6049,7 @@ proto.ic_ledger.pb.types.v1.Mint.serializeBinaryToWriter = function(message, wri
     writer.writeMessage(
       3,
       f,
-      proto.ic_ledger.pb.types.v1.ICPTs.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.ICPTs.serializeBinaryToWriter
     );
   }
 };
@@ -6057,28 +6057,28 @@ proto.ic_ledger.pb.types.v1.Mint.serializeBinaryToWriter = function(message, wri
 
 /**
  * optional AccountIdentifier to = 2;
- * @return {?proto.ic_ledger.pb.types.v1.AccountIdentifier}
+ * @return {?proto.ic_ledger.pb.v1.AccountIdentifier}
  */
-proto.ic_ledger.pb.types.v1.Mint.prototype.getTo = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.AccountIdentifier} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.AccountIdentifier, 2));
+proto.ic_ledger.pb.v1.Mint.prototype.getTo = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.AccountIdentifier} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.AccountIdentifier, 2));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.AccountIdentifier|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.Mint} returns this
+ * @param {?proto.ic_ledger.pb.v1.AccountIdentifier|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.Mint} returns this
 */
-proto.ic_ledger.pb.types.v1.Mint.prototype.setTo = function(value) {
+proto.ic_ledger.pb.v1.Mint.prototype.setTo = function(value) {
   return jspb.Message.setWrapperField(this, 2, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.Mint} returns this
+ * @return {!proto.ic_ledger.pb.v1.Mint} returns this
  */
-proto.ic_ledger.pb.types.v1.Mint.prototype.clearTo = function() {
+proto.ic_ledger.pb.v1.Mint.prototype.clearTo = function() {
   return this.setTo(undefined);
 };
 
@@ -6087,35 +6087,35 @@ proto.ic_ledger.pb.types.v1.Mint.prototype.clearTo = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.Mint.prototype.hasTo = function() {
+proto.ic_ledger.pb.v1.Mint.prototype.hasTo = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
 
 /**
  * optional ICPTs amount = 3;
- * @return {?proto.ic_ledger.pb.types.v1.ICPTs}
+ * @return {?proto.ic_ledger.pb.v1.ICPTs}
  */
-proto.ic_ledger.pb.types.v1.Mint.prototype.getAmount = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.ICPTs} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.ICPTs, 3));
+proto.ic_ledger.pb.v1.Mint.prototype.getAmount = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.ICPTs} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.ICPTs, 3));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.ICPTs|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.Mint} returns this
+ * @param {?proto.ic_ledger.pb.v1.ICPTs|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.Mint} returns this
 */
-proto.ic_ledger.pb.types.v1.Mint.prototype.setAmount = function(value) {
+proto.ic_ledger.pb.v1.Mint.prototype.setAmount = function(value) {
   return jspb.Message.setWrapperField(this, 3, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.Mint} returns this
+ * @return {!proto.ic_ledger.pb.v1.Mint} returns this
  */
-proto.ic_ledger.pb.types.v1.Mint.prototype.clearAmount = function() {
+proto.ic_ledger.pb.v1.Mint.prototype.clearAmount = function() {
   return this.setAmount(undefined);
 };
 
@@ -6124,7 +6124,7 @@ proto.ic_ledger.pb.types.v1.Mint.prototype.clearAmount = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.Mint.prototype.hasAmount = function() {
+proto.ic_ledger.pb.v1.Mint.prototype.hasAmount = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 
@@ -6145,8 +6145,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.Burn.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.Burn.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.Burn.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.Burn.toObject(opt_includeInstance, this);
 };
 
 
@@ -6155,14 +6155,14 @@ proto.ic_ledger.pb.types.v1.Burn.prototype.toObject = function(opt_includeInstan
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.Burn} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.Burn} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.Burn.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.Burn.toObject = function(includeInstance, msg) {
   var f, obj = {
-    from: (f = msg.getFrom()) && proto.ic_ledger.pb.types.v1.AccountIdentifier.toObject(includeInstance, f),
-    amount: (f = msg.getAmount()) && proto.ic_ledger.pb.types.v1.ICPTs.toObject(includeInstance, f)
+    from: (f = msg.getFrom()) && proto.ic_ledger.pb.v1.AccountIdentifier.toObject(includeInstance, f),
+    amount: (f = msg.getAmount()) && proto.ic_ledger.pb.v1.ICPTs.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -6176,23 +6176,23 @@ proto.ic_ledger.pb.types.v1.Burn.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.Burn}
+ * @return {!proto.ic_ledger.pb.v1.Burn}
  */
-proto.ic_ledger.pb.types.v1.Burn.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.Burn.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.Burn;
-  return proto.ic_ledger.pb.types.v1.Burn.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.Burn;
+  return proto.ic_ledger.pb.v1.Burn.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.Burn} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.Burn} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.Burn}
+ * @return {!proto.ic_ledger.pb.v1.Burn}
  */
-proto.ic_ledger.pb.types.v1.Burn.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.Burn.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6200,13 +6200,13 @@ proto.ic_ledger.pb.types.v1.Burn.deserializeBinaryFromReader = function(msg, rea
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.ic_ledger.pb.types.v1.AccountIdentifier;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.AccountIdentifier.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.AccountIdentifier;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.AccountIdentifier.deserializeBinaryFromReader);
       msg.setFrom(value);
       break;
     case 3:
-      var value = new proto.ic_ledger.pb.types.v1.ICPTs;
-      reader.readMessage(value,proto.ic_ledger.pb.types.v1.ICPTs.deserializeBinaryFromReader);
+      var value = new proto.ic_ledger.pb.v1.ICPTs;
+      reader.readMessage(value,proto.ic_ledger.pb.v1.ICPTs.deserializeBinaryFromReader);
       msg.setAmount(value);
       break;
     default:
@@ -6222,9 +6222,9 @@ proto.ic_ledger.pb.types.v1.Burn.deserializeBinaryFromReader = function(msg, rea
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.Burn.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.Burn.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.Burn.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.Burn.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6232,18 +6232,18 @@ proto.ic_ledger.pb.types.v1.Burn.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.Burn} message
+ * @param {!proto.ic_ledger.pb.v1.Burn} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.Burn.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.Burn.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getFrom();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.ic_ledger.pb.types.v1.AccountIdentifier.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.AccountIdentifier.serializeBinaryToWriter
     );
   }
   f = message.getAmount();
@@ -6251,7 +6251,7 @@ proto.ic_ledger.pb.types.v1.Burn.serializeBinaryToWriter = function(message, wri
     writer.writeMessage(
       3,
       f,
-      proto.ic_ledger.pb.types.v1.ICPTs.serializeBinaryToWriter
+      proto.ic_ledger.pb.v1.ICPTs.serializeBinaryToWriter
     );
   }
 };
@@ -6259,28 +6259,28 @@ proto.ic_ledger.pb.types.v1.Burn.serializeBinaryToWriter = function(message, wri
 
 /**
  * optional AccountIdentifier from = 1;
- * @return {?proto.ic_ledger.pb.types.v1.AccountIdentifier}
+ * @return {?proto.ic_ledger.pb.v1.AccountIdentifier}
  */
-proto.ic_ledger.pb.types.v1.Burn.prototype.getFrom = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.AccountIdentifier} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.AccountIdentifier, 1));
+proto.ic_ledger.pb.v1.Burn.prototype.getFrom = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.AccountIdentifier} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.AccountIdentifier, 1));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.AccountIdentifier|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.Burn} returns this
+ * @param {?proto.ic_ledger.pb.v1.AccountIdentifier|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.Burn} returns this
 */
-proto.ic_ledger.pb.types.v1.Burn.prototype.setFrom = function(value) {
+proto.ic_ledger.pb.v1.Burn.prototype.setFrom = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.Burn} returns this
+ * @return {!proto.ic_ledger.pb.v1.Burn} returns this
  */
-proto.ic_ledger.pb.types.v1.Burn.prototype.clearFrom = function() {
+proto.ic_ledger.pb.v1.Burn.prototype.clearFrom = function() {
   return this.setFrom(undefined);
 };
 
@@ -6289,35 +6289,35 @@ proto.ic_ledger.pb.types.v1.Burn.prototype.clearFrom = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.Burn.prototype.hasFrom = function() {
+proto.ic_ledger.pb.v1.Burn.prototype.hasFrom = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
 
 /**
  * optional ICPTs amount = 3;
- * @return {?proto.ic_ledger.pb.types.v1.ICPTs}
+ * @return {?proto.ic_ledger.pb.v1.ICPTs}
  */
-proto.ic_ledger.pb.types.v1.Burn.prototype.getAmount = function() {
-  return /** @type{?proto.ic_ledger.pb.types.v1.ICPTs} */ (
-    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.types.v1.ICPTs, 3));
+proto.ic_ledger.pb.v1.Burn.prototype.getAmount = function() {
+  return /** @type{?proto.ic_ledger.pb.v1.ICPTs} */ (
+    jspb.Message.getWrapperField(this, proto.ic_ledger.pb.v1.ICPTs, 3));
 };
 
 
 /**
- * @param {?proto.ic_ledger.pb.types.v1.ICPTs|undefined} value
- * @return {!proto.ic_ledger.pb.types.v1.Burn} returns this
+ * @param {?proto.ic_ledger.pb.v1.ICPTs|undefined} value
+ * @return {!proto.ic_ledger.pb.v1.Burn} returns this
 */
-proto.ic_ledger.pb.types.v1.Burn.prototype.setAmount = function(value) {
+proto.ic_ledger.pb.v1.Burn.prototype.setAmount = function(value) {
   return jspb.Message.setWrapperField(this, 3, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.ic_ledger.pb.types.v1.Burn} returns this
+ * @return {!proto.ic_ledger.pb.v1.Burn} returns this
  */
-proto.ic_ledger.pb.types.v1.Burn.prototype.clearAmount = function() {
+proto.ic_ledger.pb.v1.Burn.prototype.clearAmount = function() {
   return this.setAmount(undefined);
 };
 
@@ -6326,7 +6326,7 @@ proto.ic_ledger.pb.types.v1.Burn.prototype.clearAmount = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.ic_ledger.pb.types.v1.Burn.prototype.hasAmount = function() {
+proto.ic_ledger.pb.v1.Burn.prototype.hasAmount = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 
@@ -6347,8 +6347,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.AccountIdentifier.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.AccountIdentifier.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.AccountIdentifier.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.AccountIdentifier.toObject(opt_includeInstance, this);
 };
 
 
@@ -6357,11 +6357,11 @@ proto.ic_ledger.pb.types.v1.AccountIdentifier.prototype.toObject = function(opt_
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.AccountIdentifier} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.AccountIdentifier} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.AccountIdentifier.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.AccountIdentifier.toObject = function(includeInstance, msg) {
   var f, obj = {
     hash: msg.getHash_asB64()
   };
@@ -6377,23 +6377,23 @@ proto.ic_ledger.pb.types.v1.AccountIdentifier.toObject = function(includeInstanc
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.AccountIdentifier}
+ * @return {!proto.ic_ledger.pb.v1.AccountIdentifier}
  */
-proto.ic_ledger.pb.types.v1.AccountIdentifier.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.AccountIdentifier.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.AccountIdentifier;
-  return proto.ic_ledger.pb.types.v1.AccountIdentifier.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.AccountIdentifier;
+  return proto.ic_ledger.pb.v1.AccountIdentifier.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.AccountIdentifier} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.AccountIdentifier} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.AccountIdentifier}
+ * @return {!proto.ic_ledger.pb.v1.AccountIdentifier}
  */
-proto.ic_ledger.pb.types.v1.AccountIdentifier.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.AccountIdentifier.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6417,9 +6417,9 @@ proto.ic_ledger.pb.types.v1.AccountIdentifier.deserializeBinaryFromReader = func
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.AccountIdentifier.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.AccountIdentifier.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.AccountIdentifier.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.AccountIdentifier.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6427,11 +6427,11 @@ proto.ic_ledger.pb.types.v1.AccountIdentifier.prototype.serializeBinary = functi
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.AccountIdentifier} message
+ * @param {!proto.ic_ledger.pb.v1.AccountIdentifier} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.AccountIdentifier.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.AccountIdentifier.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getHash_asU8();
   if (f.length > 0) {
@@ -6447,7 +6447,7 @@ proto.ic_ledger.pb.types.v1.AccountIdentifier.serializeBinaryToWriter = function
  * optional bytes hash = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.ic_ledger.pb.types.v1.AccountIdentifier.prototype.getHash = function() {
+proto.ic_ledger.pb.v1.AccountIdentifier.prototype.getHash = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -6457,7 +6457,7 @@ proto.ic_ledger.pb.types.v1.AccountIdentifier.prototype.getHash = function() {
  * This is a type-conversion wrapper around `getHash()`
  * @return {string}
  */
-proto.ic_ledger.pb.types.v1.AccountIdentifier.prototype.getHash_asB64 = function() {
+proto.ic_ledger.pb.v1.AccountIdentifier.prototype.getHash_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getHash()));
 };
@@ -6470,7 +6470,7 @@ proto.ic_ledger.pb.types.v1.AccountIdentifier.prototype.getHash_asB64 = function
  * This is a type-conversion wrapper around `getHash()`
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.AccountIdentifier.prototype.getHash_asU8 = function() {
+proto.ic_ledger.pb.v1.AccountIdentifier.prototype.getHash_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getHash()));
 };
@@ -6478,9 +6478,9 @@ proto.ic_ledger.pb.types.v1.AccountIdentifier.prototype.getHash_asU8 = function(
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.ic_ledger.pb.types.v1.AccountIdentifier} returns this
+ * @return {!proto.ic_ledger.pb.v1.AccountIdentifier} returns this
  */
-proto.ic_ledger.pb.types.v1.AccountIdentifier.prototype.setHash = function(value) {
+proto.ic_ledger.pb.v1.AccountIdentifier.prototype.setHash = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -6501,8 +6501,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.Subaccount.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.Subaccount.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.Subaccount.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.Subaccount.toObject(opt_includeInstance, this);
 };
 
 
@@ -6511,11 +6511,11 @@ proto.ic_ledger.pb.types.v1.Subaccount.prototype.toObject = function(opt_include
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.Subaccount} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.Subaccount} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.Subaccount.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.Subaccount.toObject = function(includeInstance, msg) {
   var f, obj = {
     subAccount: msg.getSubAccount_asB64()
   };
@@ -6531,23 +6531,23 @@ proto.ic_ledger.pb.types.v1.Subaccount.toObject = function(includeInstance, msg)
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.Subaccount}
+ * @return {!proto.ic_ledger.pb.v1.Subaccount}
  */
-proto.ic_ledger.pb.types.v1.Subaccount.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.Subaccount.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.Subaccount;
-  return proto.ic_ledger.pb.types.v1.Subaccount.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.Subaccount;
+  return proto.ic_ledger.pb.v1.Subaccount.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.Subaccount} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.Subaccount} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.Subaccount}
+ * @return {!proto.ic_ledger.pb.v1.Subaccount}
  */
-proto.ic_ledger.pb.types.v1.Subaccount.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.Subaccount.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6571,9 +6571,9 @@ proto.ic_ledger.pb.types.v1.Subaccount.deserializeBinaryFromReader = function(ms
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.Subaccount.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.Subaccount.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.Subaccount.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.Subaccount.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6581,11 +6581,11 @@ proto.ic_ledger.pb.types.v1.Subaccount.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.Subaccount} message
+ * @param {!proto.ic_ledger.pb.v1.Subaccount} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.Subaccount.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.Subaccount.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getSubAccount_asU8();
   if (f.length > 0) {
@@ -6601,7 +6601,7 @@ proto.ic_ledger.pb.types.v1.Subaccount.serializeBinaryToWriter = function(messag
  * optional bytes sub_account = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.ic_ledger.pb.types.v1.Subaccount.prototype.getSubAccount = function() {
+proto.ic_ledger.pb.v1.Subaccount.prototype.getSubAccount = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -6611,7 +6611,7 @@ proto.ic_ledger.pb.types.v1.Subaccount.prototype.getSubAccount = function() {
  * This is a type-conversion wrapper around `getSubAccount()`
  * @return {string}
  */
-proto.ic_ledger.pb.types.v1.Subaccount.prototype.getSubAccount_asB64 = function() {
+proto.ic_ledger.pb.v1.Subaccount.prototype.getSubAccount_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getSubAccount()));
 };
@@ -6624,7 +6624,7 @@ proto.ic_ledger.pb.types.v1.Subaccount.prototype.getSubAccount_asB64 = function(
  * This is a type-conversion wrapper around `getSubAccount()`
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.Subaccount.prototype.getSubAccount_asU8 = function() {
+proto.ic_ledger.pb.v1.Subaccount.prototype.getSubAccount_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getSubAccount()));
 };
@@ -6632,9 +6632,9 @@ proto.ic_ledger.pb.types.v1.Subaccount.prototype.getSubAccount_asU8 = function()
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.ic_ledger.pb.types.v1.Subaccount} returns this
+ * @return {!proto.ic_ledger.pb.v1.Subaccount} returns this
  */
-proto.ic_ledger.pb.types.v1.Subaccount.prototype.setSubAccount = function(value) {
+proto.ic_ledger.pb.v1.Subaccount.prototype.setSubAccount = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -6655,8 +6655,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.Memo.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.Memo.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.Memo.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.Memo.toObject(opt_includeInstance, this);
 };
 
 
@@ -6665,11 +6665,11 @@ proto.ic_ledger.pb.types.v1.Memo.prototype.toObject = function(opt_includeInstan
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.Memo} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.Memo} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.Memo.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.Memo.toObject = function(includeInstance, msg) {
   var f, obj = {
     memo: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
@@ -6685,23 +6685,23 @@ proto.ic_ledger.pb.types.v1.Memo.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.Memo}
+ * @return {!proto.ic_ledger.pb.v1.Memo}
  */
-proto.ic_ledger.pb.types.v1.Memo.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.Memo.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.Memo;
-  return proto.ic_ledger.pb.types.v1.Memo.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.Memo;
+  return proto.ic_ledger.pb.v1.Memo.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.Memo} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.Memo} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.Memo}
+ * @return {!proto.ic_ledger.pb.v1.Memo}
  */
-proto.ic_ledger.pb.types.v1.Memo.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.Memo.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6725,9 +6725,9 @@ proto.ic_ledger.pb.types.v1.Memo.deserializeBinaryFromReader = function(msg, rea
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.Memo.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.Memo.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.Memo.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.Memo.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6735,11 +6735,11 @@ proto.ic_ledger.pb.types.v1.Memo.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.Memo} message
+ * @param {!proto.ic_ledger.pb.v1.Memo} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.Memo.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.Memo.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getMemo();
   if (f !== 0) {
@@ -6755,16 +6755,16 @@ proto.ic_ledger.pb.types.v1.Memo.serializeBinaryToWriter = function(message, wri
  * optional uint64 memo = 1;
  * @return {number}
  */
-proto.ic_ledger.pb.types.v1.Memo.prototype.getMemo = function() {
+proto.ic_ledger.pb.v1.Memo.prototype.getMemo = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.ic_ledger.pb.types.v1.Memo} returns this
+ * @return {!proto.ic_ledger.pb.v1.Memo} returns this
  */
-proto.ic_ledger.pb.types.v1.Memo.prototype.setMemo = function(value) {
+proto.ic_ledger.pb.v1.Memo.prototype.setMemo = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 
@@ -6785,8 +6785,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.TimeStamp.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.TimeStamp.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.TimeStamp.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.TimeStamp.toObject(opt_includeInstance, this);
 };
 
 
@@ -6795,11 +6795,11 @@ proto.ic_ledger.pb.types.v1.TimeStamp.prototype.toObject = function(opt_includeI
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.TimeStamp} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.TimeStamp} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.TimeStamp.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.TimeStamp.toObject = function(includeInstance, msg) {
   var f, obj = {
     timestampNanos: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
@@ -6815,23 +6815,23 @@ proto.ic_ledger.pb.types.v1.TimeStamp.toObject = function(includeInstance, msg) 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.TimeStamp}
+ * @return {!proto.ic_ledger.pb.v1.TimeStamp}
  */
-proto.ic_ledger.pb.types.v1.TimeStamp.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.TimeStamp.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.TimeStamp;
-  return proto.ic_ledger.pb.types.v1.TimeStamp.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.TimeStamp;
+  return proto.ic_ledger.pb.v1.TimeStamp.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.TimeStamp} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.TimeStamp} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.TimeStamp}
+ * @return {!proto.ic_ledger.pb.v1.TimeStamp}
  */
-proto.ic_ledger.pb.types.v1.TimeStamp.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.TimeStamp.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6855,9 +6855,9 @@ proto.ic_ledger.pb.types.v1.TimeStamp.deserializeBinaryFromReader = function(msg
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.TimeStamp.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.TimeStamp.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.TimeStamp.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.TimeStamp.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6865,11 +6865,11 @@ proto.ic_ledger.pb.types.v1.TimeStamp.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.TimeStamp} message
+ * @param {!proto.ic_ledger.pb.v1.TimeStamp} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.TimeStamp.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.TimeStamp.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getTimestampNanos();
   if (f !== 0) {
@@ -6885,16 +6885,16 @@ proto.ic_ledger.pb.types.v1.TimeStamp.serializeBinaryToWriter = function(message
  * optional uint64 timestamp_nanos = 1;
  * @return {number}
  */
-proto.ic_ledger.pb.types.v1.TimeStamp.prototype.getTimestampNanos = function() {
+proto.ic_ledger.pb.v1.TimeStamp.prototype.getTimestampNanos = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.ic_ledger.pb.types.v1.TimeStamp} returns this
+ * @return {!proto.ic_ledger.pb.v1.TimeStamp} returns this
  */
-proto.ic_ledger.pb.types.v1.TimeStamp.prototype.setTimestampNanos = function(value) {
+proto.ic_ledger.pb.v1.TimeStamp.prototype.setTimestampNanos = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 
@@ -6915,8 +6915,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ic_ledger.pb.types.v1.Certification.prototype.toObject = function(opt_includeInstance) {
-  return proto.ic_ledger.pb.types.v1.Certification.toObject(opt_includeInstance, this);
+proto.ic_ledger.pb.v1.Certification.prototype.toObject = function(opt_includeInstance) {
+  return proto.ic_ledger.pb.v1.Certification.toObject(opt_includeInstance, this);
 };
 
 
@@ -6925,11 +6925,11 @@ proto.ic_ledger.pb.types.v1.Certification.prototype.toObject = function(opt_incl
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ic_ledger.pb.types.v1.Certification} msg The msg instance to transform.
+ * @param {!proto.ic_ledger.pb.v1.Certification} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.Certification.toObject = function(includeInstance, msg) {
+proto.ic_ledger.pb.v1.Certification.toObject = function(includeInstance, msg) {
   var f, obj = {
     certification: msg.getCertification_asB64()
   };
@@ -6945,23 +6945,23 @@ proto.ic_ledger.pb.types.v1.Certification.toObject = function(includeInstance, m
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ic_ledger.pb.types.v1.Certification}
+ * @return {!proto.ic_ledger.pb.v1.Certification}
  */
-proto.ic_ledger.pb.types.v1.Certification.deserializeBinary = function(bytes) {
+proto.ic_ledger.pb.v1.Certification.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ic_ledger.pb.types.v1.Certification;
-  return proto.ic_ledger.pb.types.v1.Certification.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ic_ledger.pb.v1.Certification;
+  return proto.ic_ledger.pb.v1.Certification.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ic_ledger.pb.types.v1.Certification} msg The message object to deserialize into.
+ * @param {!proto.ic_ledger.pb.v1.Certification} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ic_ledger.pb.types.v1.Certification}
+ * @return {!proto.ic_ledger.pb.v1.Certification}
  */
-proto.ic_ledger.pb.types.v1.Certification.deserializeBinaryFromReader = function(msg, reader) {
+proto.ic_ledger.pb.v1.Certification.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6985,9 +6985,9 @@ proto.ic_ledger.pb.types.v1.Certification.deserializeBinaryFromReader = function
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.Certification.prototype.serializeBinary = function() {
+proto.ic_ledger.pb.v1.Certification.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ic_ledger.pb.types.v1.Certification.serializeBinaryToWriter(this, writer);
+  proto.ic_ledger.pb.v1.Certification.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6995,11 +6995,11 @@ proto.ic_ledger.pb.types.v1.Certification.prototype.serializeBinary = function()
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ic_ledger.pb.types.v1.Certification} message
+ * @param {!proto.ic_ledger.pb.v1.Certification} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ic_ledger.pb.types.v1.Certification.serializeBinaryToWriter = function(message, writer) {
+proto.ic_ledger.pb.v1.Certification.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getCertification_asU8();
   if (f.length > 0) {
@@ -7015,7 +7015,7 @@ proto.ic_ledger.pb.types.v1.Certification.serializeBinaryToWriter = function(mes
  * optional bytes certification = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.ic_ledger.pb.types.v1.Certification.prototype.getCertification = function() {
+proto.ic_ledger.pb.v1.Certification.prototype.getCertification = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -7025,7 +7025,7 @@ proto.ic_ledger.pb.types.v1.Certification.prototype.getCertification = function(
  * This is a type-conversion wrapper around `getCertification()`
  * @return {string}
  */
-proto.ic_ledger.pb.types.v1.Certification.prototype.getCertification_asB64 = function() {
+proto.ic_ledger.pb.v1.Certification.prototype.getCertification_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getCertification()));
 };
@@ -7038,7 +7038,7 @@ proto.ic_ledger.pb.types.v1.Certification.prototype.getCertification_asB64 = fun
  * This is a type-conversion wrapper around `getCertification()`
  * @return {!Uint8Array}
  */
-proto.ic_ledger.pb.types.v1.Certification.prototype.getCertification_asU8 = function() {
+proto.ic_ledger.pb.v1.Certification.prototype.getCertification_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getCertification()));
 };
@@ -7046,11 +7046,11 @@ proto.ic_ledger.pb.types.v1.Certification.prototype.getCertification_asU8 = func
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.ic_ledger.pb.types.v1.Certification} returns this
+ * @return {!proto.ic_ledger.pb.v1.Certification} returns this
  */
-proto.ic_ledger.pb.types.v1.Certification.prototype.setCertification = function(value) {
+proto.ic_ledger.pb.v1.Certification.prototype.setCertification = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
 
-goog.object.extend(exports, proto.ic_ledger.pb.types.v1);
+goog.object.extend(exports, proto.ic_ledger.pb.v1);
