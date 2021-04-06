@@ -44,7 +44,7 @@ jobs:
             import_style=commonjs,binary:${{ github.workspace }}/autogen \
             --proto_path proto \
             --proto_path ../../types/base_types/proto \
-            proto/types.proto \
+            proto/ic_ledger/pb/v1/types.proto \
             ../../types/base_types/proto/ic_base_types/pb/v1/types.proto
 
           popd
