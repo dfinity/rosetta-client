@@ -1,14 +1,10 @@
+const JSONbig = require("json-bigint")({ strict: true, useNativeBigInt: true });
+const assert = require("assert").strict;
 const { inspect } = require("util");
-const {
-  blobFromHex,
-  address_from_hex,
-  Chain,
-  Session,
-} = require("../dist/main");
+const { blobFromHex, address_from_hex, Session } = require("../dist/main");
 
 (async () => {
   const session = new Session({ baseUrl: "http://localhost:8080" });
-  const chain = new Chain(session);
 
   try {
     let submit_res = await session.transfer(
@@ -21,17 +17,16 @@ const {
       1000000n
     );
 
-    await new Promise((res) => setTimeout(res, 10000));
+    let tx_res = await session.transactions({
+      network_identifier: await session.network_identifier,
+      transaction_identifier: submit_res.transaction_identifier,
+    });
 
-    console.log(
-      inspect(chain.get_transaction(submit_res.transaction_identifier.hash), {
-        depth: null,
-      })
-    );
+    assert(tx_res.total_count === 1);
+
+    console.log(JSONbig.stringify(tx_res, null, 2));
   } catch (err) {
     console.error(inspect(err, { depth: null }));
     throw err;
-  } finally {
-    chain.close();
   }
 })();
