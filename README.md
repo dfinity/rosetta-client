@@ -2,11 +2,11 @@
 
 [![GitHub Actions](https://github.com/dfinity/rosetta-client/workflows/integration-test/badge.svg?branch=master)](https://github.com/dfinity/rosetta-client/actions?query=branch%3Amaster)
 
-Based on [`@lunarhq/rosetta-ts-client`][rosetta-ts-client], with additional
-helper functions to derive keys/accounts and perform transfers.
+A JavaScript package to call Rosetta API, with additional helper functions to
+derive credentials and perform transfers.
 
-基于 [`@lunarhq/rosetta-ts-client`][rosetta-ts-client]，并提供生成新的私钥/账户地
-址和执行转账的高层函数接口。
+用于调用 Rosetta API 的 JavaScript 库，并提供高层函数接口用于生成新的私钥/账户地
+址、执行转账。
 
 ## Usage
 
@@ -70,11 +70,12 @@ address = address_from_hex(address_to_hex(address));
 ```javascript
 let { Session } = require("@dfinity/rosetta-client");
 
-// A Session is a subclass of RosettaClient, and you can use methods of
-// RosettaClient to invoke the Rosetta API.
+// A Session implements the interface of RosettaClient as specified in
+// https://www.npmjs.com/package/@lunarhq/rosetta-ts-client, and you can use
+// methods of RosettaClient to invoke the Rosetta API.
 //
-// Session 是 RosettaClient 的子类，可以调用 RosettaClient 的方法使用 Rosetta
-// API。
+// Session 实现了 https://www.npmjs.com/package/@lunarhq/rosetta-ts-client 描述
+// 的 RosettaClient 类接口，可以调用 RosettaClient 的方法使用 Rosetta API。
 let session = new Session({ baseUrl: "http://localhost:8080" });
 
 // The network_identifier value used in requests.
@@ -107,6 +108,23 @@ console.log(await session.suggested_fee);
 // 划入账户将收到指定金额，划出账户则将额外扣除交易费用。
 let submit_result = await session.transfer(src_private_key, dest_addr, 123n);
 console.log(submit_result);
+```
+
+### Querying a transaction given a transaction hash
+
+```javascript
+// Call the /search/transactions endpoint and search for an on-chain transaction
+// given its hash. Other query conditions of /search/transactions are not
+// implemented yet.
+//
+// 调用 /search/transactions 接口，通过事务 hash 值检索其是否上链。
+// /search/transactions 接口的其他检索条件目前暂未实现。
+let transactions_result = await session.transactions({
+  network_identifier: await session.network_identifier,
+  transaction_identifier: submit_result.transaction_identifier,
+});
+
+console.log(transactions_result.transactions[0]);
 ```
 
 ### Performing transfers while keeping the private keys in an isolated environment
