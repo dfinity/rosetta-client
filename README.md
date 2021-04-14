@@ -154,6 +154,36 @@ let combine_result = transfer_combine(src_private_key, payloads_result);
 submit_result = await session.transfer_post_combine(combine_result);
 ```
 
+### Submitting a transaction in a configurable time period
+
+```javascript
+// The transfer()/transfer_pre_combine() functions take two extra optional
+// parameters. One is max_fee, another is an object for additional metadata in
+// the /construction/payloads request.
+//
+// It's possible to specify ingress_start/ingress_end in the metadata, so that
+// you can generate and sign a transaction earlier, but postpone the submission
+// later. The submission period must be within the next 24 hours.
+// ingress_start/ingress_end are BigInt values specifying nanoseconds since unix
+// epoch, and you can specify only single one of it.
+//
+// transfer()/transfer_pre_combine() 函数还有两个可选参数，一个是 max_fee，另一
+// 个是作为 /construction/payloads 请求的额外 metadata 的对象。
+//
+// 可以在 metadata 中指定 ingress_start/ingress_end，从而提前生成并签名一条事
+// 务，但将事务的提交推迟到之后的时间。提交时间必须不晚于事务生成后的 24 小时。
+// ingress_start/ingress_end 是纳秒单位 Unix 时间戳的 BigInt 值，可以全部指定也
+// 可以只指定一个。
+
+payloads_result = await session.transfer_pre_combine(
+  src_public_key,
+  dest_addr,
+  123n,
+  undefined,
+  { ingress_start, ingress_end }
+);
+```
+
 ### Decoding a signed transaction
 
 ```javascript
