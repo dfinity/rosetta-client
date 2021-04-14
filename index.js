@@ -1,3 +1,4 @@
+require("./lib/nodejs-10");
 const { blobFromHex, blobToHex } = require("@dfinity/agent");
 
 // Use specific export syntax to allow bundlers and IDEs to properly load dependencies.
