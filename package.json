@@ -19,11 +19,13 @@
   },
   "homepage": "https://github.com/dfinity/rosetta-client",
   "scripts": {
-    "build": "webpack --entry ./index.js --mode production --no-optimization-minimize --no-output-iife --output-library-type commonjs --progress --target node"
+    "build": "webpack --entry ./index.js --mode production --no-optimization-minimize --no-output-iife --output-library-type commonjs --progress --target node",
+    "postinstall": "patch-package"
   },
   "files": [
     "autogen",
     "lib",
+    "patches",
     "index.js"
   ],
   "dependencies": {
@@ -38,6 +40,7 @@
   },
   "devDependencies": {
     "node-inspect-extracted": "^1.0.5",
+    "patch-package": "^6.4.7",
     "webpack": "^5.32.0",
     "webpack-cli": "^4.6.0"
   }

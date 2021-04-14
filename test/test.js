@@ -17,6 +17,8 @@ const { blobFromHex, address_from_hex, Session } = require("../dist/main");
       1000000n
     );
 
+    await new Promise((resolve) => setTimeout(resolve, 10000));
+
     let tx_res = await session.transactions({
       network_identifier: await session.network_identifier,
       transaction_identifier: submit_res.transaction_identifier,
