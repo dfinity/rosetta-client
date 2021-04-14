@@ -232,11 +232,6 @@ console.log(tx.last_height);
 //
 // 转出账户公钥的 Buffer 值。
 console.log(tx.sender_pubkey);
-
-// The ingress_expiry value as a BigInt, as nanoseconds since the unix epoch.
-//
-// ingress_expiry 的 BigInt 值，纳秒为单位的 unix 时间戳。
-console.log(tx.ingress_expiry);
 ```
 
 ### Creating & using a JS bundle
