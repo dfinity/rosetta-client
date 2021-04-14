@@ -2,11 +2,11 @@
 
 [![GitHub Actions](https://github.com/dfinity/rosetta-client/workflows/integration-test/badge.svg?branch=master)](https://github.com/dfinity/rosetta-client/actions?query=branch%3Amaster)
 
-Based on [`@lunarhq/rosetta-ts-client`][rosetta-ts-client], with additional
-helper functions to derive keys/accounts and perform transfers.
+A JavaScript package to call Rosetta API, with additional helper functions to
+derive credentials and perform transfers.
 
-基于 [`@lunarhq/rosetta-ts-client`][rosetta-ts-client]，并提供生成新的私钥/账户地
-址和执行转账的高层函数接口。
+用于调用 Rosetta API 的 JavaScript 库，并提供高层函数接口用于生成新的私钥/账户地
+址、执行转账。
 
 ## Usage
 
@@ -70,11 +70,12 @@ address = address_from_hex(address_to_hex(address));
 ```javascript
 let { Session } = require("@dfinity/rosetta-client");
 
-// A Session is a subclass of RosettaClient, and you can use methods of
-// RosettaClient to invoke the Rosetta API.
+// A Session implements the interface of RosettaClient as specified in
+// https://www.npmjs.com/package/@lunarhq/rosetta-ts-client, and you can use
+// methods of RosettaClient to invoke the Rosetta API.
 //
-// Session 是 RosettaClient 的子类，可以调用 RosettaClient 的方法使用 Rosetta
-// API。
+// Session 实现了 https://www.npmjs.com/package/@lunarhq/rosetta-ts-client 描述
+// 的 RosettaClient 类接口，可以调用 RosettaClient 的方法使用 Rosetta API。
 let session = new Session({ baseUrl: "http://localhost:8080" });
 
 // The network_identifier value used in requests.
@@ -109,6 +110,23 @@ let submit_result = await session.transfer(src_private_key, dest_addr, 123n);
 console.log(submit_result);
 ```
 
+### Querying a transaction given a transaction hash
+
+```javascript
+// Call the /search/transactions endpoint and search for an on-chain transaction
+// given its hash. Other query conditions of /search/transactions are not
+// implemented yet.
+//
+// 调用 /search/transactions 接口，通过事务 hash 值检索其是否上链。
+// /search/transactions 接口的其他检索条件目前暂未实现。
+let transactions_result = await session.transactions({
+  network_identifier: await session.network_identifier,
+  transaction_identifier: submit_result.transaction_identifier,
+});
+
+console.log(transactions_result.transactions[0]);
+```
+
 ### Performing transfers while keeping the private keys in an isolated environment
 
 ```javascript
@@ -134,6 +152,36 @@ let payloads_result = await session.transfer_pre_combine(
 let combine_result = transfer_combine(src_private_key, payloads_result);
 
 submit_result = await session.transfer_post_combine(combine_result);
+```
+
+### Submitting a transaction in a configurable time period
+
+```javascript
+// The transfer()/transfer_pre_combine() functions take two extra optional
+// parameters. One is max_fee, another is an object for additional metadata in
+// the /construction/payloads request.
+//
+// It's possible to specify ingress_start/ingress_end in the metadata, so that
+// you can generate and sign a transaction earlier, but postpone the submission
+// later. The submission period must be within the next 24 hours.
+// ingress_start/ingress_end are BigInt values specifying nanoseconds since unix
+// epoch, and you can specify only single one of it.
+//
+// transfer()/transfer_pre_combine() 函数还有两个可选参数，一个是 max_fee，另一
+// 个是作为 /construction/payloads 请求的额外 metadata 的对象。
+//
+// 可以在 metadata 中指定 ingress_start/ingress_end，从而提前生成并签名一条事
+// 务，但将事务的提交推迟到之后的时间。提交时间必须不晚于事务生成后的 24 小时。
+// ingress_start/ingress_end 是纳秒单位 Unix 时间戳的 BigInt 值，可以全部指定也
+// 可以只指定一个。
+
+payloads_result = await session.transfer_pre_combine(
+  src_public_key,
+  dest_addr,
+  123n,
+  undefined,
+  { ingress_start, ingress_end }
+);
 ```
 
 ### Decoding a signed transaction
@@ -184,11 +232,6 @@ console.log(tx.last_height);
 //
 // 转出账户公钥的 Buffer 值。
 console.log(tx.sender_pubkey);
-
-// The ingress_expiry value as a BigInt, as nanoseconds since the unix epoch.
-//
-// ingress_expiry 的 BigInt 值，纳秒为单位的 unix 时间戳。
-console.log(tx.ingress_expiry);
 ```
 
 ### Creating & using a JS bundle
