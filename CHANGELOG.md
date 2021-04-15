@@ -1,3 +1,14 @@
+# `0.4.0`
+
+- Add support for flexible ingress expiry. (#27)
+- Remove `ingress_expiry`/`memo` fields from result of
+  `signed_transaction_decode`, since they are incompatible with flexible ingress
+  expiry. (#27)
+- Add example of calling `/search/transactions`. (#27)
+- Remove `chain`/`stats` modules, since we no longer need to poll for latest
+  blocks to check if a transaction hit the chain. (#27)
+- Add NodeJS v10 support. (#27)
+
 # `0.3.0`
 
 - Update address logic to match upstream. Breaking change. (#14)
