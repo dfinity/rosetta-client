@@ -1,6 +1,6 @@
 {
   "name": "@dfinity/rosetta-client",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "main": "./index.js",
   "type": "commonjs",
   "license": "Apache-2.0",
@@ -29,7 +29,7 @@
     "index.js"
   ],
   "dependencies": {
-    "@dfinity/agent": "^0.8.1",
+    "@dfinity/agent": "^0.8.3",
     "axios": "^0.21.1",
     "cbor": "^7.0.4",
     "crc": "^3.8.0",
