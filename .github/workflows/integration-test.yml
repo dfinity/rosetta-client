@@ -34,8 +34,8 @@ jobs:
       - name: cache
         uses: actions/cache@v2
         with:
-          key: cargo-cache-${{ github.run_id }}
-          restore-keys: cargo-cache-
+          key: 0-cargo-cache-${{ github.run_id }}
+          restore-keys: 0-cargo-cache-
           path: |
             ~/.cargo
             dfinity/rs/target
@@ -69,7 +69,7 @@ jobs:
           - 12
           - 10
         sdk_ver:
-          - 0.7.0-beta.2
+          - 0.7.0-beta.3
     steps:
 
       - name: checkout
@@ -96,8 +96,8 @@ jobs:
       - name: cache
         uses: actions/cache@v2
         with:
-          key: cargo-cache-${{ github.run_id }}
-          restore-keys: cargo-cache-
+          key: 0-cargo-cache-${{ github.run_id }}
+          restore-keys: 0-cargo-cache-
           path: |
             ~/.cargo
             dfinity/rs/target
@@ -122,7 +122,7 @@ jobs:
             --host 127.0.0.1:8000
 
           dfx deploy \
-            --argument "record { minting_account = \"807077e900000000000000000000000000000000000000000000000000000000\"; initial_values = vec { record { \"ea7161aa15fd1f1ab8ead80c5f2556a449b42eeadbb7be94d450df1ec1ecf0cd\"; record { doms = 18446744073709551615 } } }; archive_canister = null; max_message_size_bytes = null}" \
+            --argument "record { minting_account = \"807077e900000000000000000000000000000000000000000000000000000000\"; initial_values = vec { record { \"ea7161aa15fd1f1ab8ead80c5f2556a449b42eeadbb7be94d450df1ec1ecf0cd\"; record { e8s = 18446744073709551615 } } }; archive_canister = null; max_message_size_bytes = null}" \
             --network=local \
             ledger
 
