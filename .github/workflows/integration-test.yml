@@ -34,8 +34,8 @@ jobs:
       - name: cache
         uses: actions/cache@v2
         with:
-          key: cargo-cache-${{ github.run_id }}
-          restore-keys: cargo-cache-
+          key: 0-cargo-cache-${{ github.run_id }}
+          restore-keys: 0-cargo-cache-
           path: |
             ~/.cargo
             dfinity/rs/target
@@ -96,8 +96,8 @@ jobs:
       - name: cache
         uses: actions/cache@v2
         with:
-          key: cargo-cache-${{ github.run_id }}
-          restore-keys: cargo-cache-
+          key: 0-cargo-cache-${{ github.run_id }}
+          restore-keys: 0-cargo-cache-
           path: |
             ~/.cargo
             dfinity/rs/target
