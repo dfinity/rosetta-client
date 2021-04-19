@@ -29,6 +29,7 @@ jobs:
       - name: setup-protoc
         run: |
           nix-channel --add https://nixos.org/channels/nixpkgs-unstable
+          nix-channel --update
           nix-env -iA nixpkgs.protobuf3_13
 
       - name: check
