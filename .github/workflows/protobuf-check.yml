@@ -25,13 +25,10 @@ jobs:
 
       - name: setup-nix
         uses: cachix/install-nix-action@v13
-        with:
-          nix_path: nixpkgs=channel:nixpkgs-unstable
 
       - name: setup-protoc
         run: |
-          nix-channel --list
-          nix-channel --update
+          nix-channel --add https://nixos.org/channels/nixpkgs-unstable
           nix-env -iA nixpkgs.protobuf3_13
 
       - name: check
