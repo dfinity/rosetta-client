@@ -254,8 +254,48 @@ The bundled JS file is also available as the `dist` artifact on CI.
 
 ## Supported Node.js versions
 
-This package is tested against latest versions of Node.js v12/v13/v14/v15.
+This package is tested against latest versions of Node.js v10/v12/v13/v14/v15.
 
+## Common traps and pitfalls
+
+### Working with BigInt
+
+Because of JavaScript number type's [limit][js-max-safe-int] in integer
+precision, we use `BigInt`s everywhere (amounts, fee, timestamps, etc) to
+represent integers. There are things to watch out when using `BigInt`s with this
+package:
+
+由于 JavaScript 数字类型表示整数时的精度[限制][js-max-safe-int]，我们在本库中凡
+是涉及整数的部分均使用 `BigInt` 类型（如转账金额、交易费用、时间戳等）。使用
+`BigInt` 时需要留意的要点：
+
+```javascript
+// Don't do this! Precision loss!
+// 不要这样，会有精度损失！
+let timestamp = BigInt(Date.now() * 1000000);
+
+// Do this instead!
+// 这样才对！
+let timestamp = BigInt(Date.now()) * 1000000n;
+```
+
+Also, JavaScript's builtin `JSON` encoder/decoder won't work with the
+input/output data of this package. We use [`json-bigint`][json-bigint] for JSON
+encoding/decoding in this package, and if you need to work with JSON too, you
+also need `json-bigint`.
+
+另外，JavaScript 内置的 `JSON` 序列化函数不能用于本库输入/输出的数据。我们使用
+[`json-bigint`][json-bigint] 库用于 JSON 序列化，如果您也需要处理 JSON 数据，您
+也应当使用 `json-bigint`.
+
+```javascript
+const JSONbig = require("json-bigint")({ strict: true, useNativeBigInt: true });
+JSONbig.parse(); // Use this instead of JSON.parse()
+JSONbig.stringify(); // Use this instead of JSON.stringify()
+```
+
+[json-bigint]: https://www.npmjs.com/package/json-bigint
+[js-max-safe-int]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 [rosetta-ts-client]: https://github.com/lunarhq/rosetta-ts-client
 
 <!--
