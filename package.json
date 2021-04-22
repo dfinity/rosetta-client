@@ -39,6 +39,7 @@
     "tweetnacl": "^1.0.3"
   },
   "devDependencies": {
+    "0x": "^4.10.2",
     "node-inspect-extracted": "^1.0.5",
     "patch-package": "^6.4.7",
     "webpack": "^5.33.2",
