@@ -13,6 +13,7 @@ derive credentials and perform transfers.
 ### Working with ED25519 keys
 
 ```javascript
+let { randomBytes } = require("crypto");
 let { key_new, key_to_pub_key } = require("@dfinity/rosetta-client");
 
 // Derive an ED25519 private key from a system random seed. The private key's
@@ -28,7 +29,7 @@ let privateKey = key_new();
 // 从用户指定的 32 字节随机数种子生成一个 ED25519 私钥。我们推荐使用本方式生成私
 // 钥，因为可以存储随机数种子，且该种子可用于在其他 ED25519 实现中生成同一个私
 // 钥。
-let seed = Buffer.allocUnsafe(32);
+let seed = randomBytes(32);
 privateKey = key_new(seed);
 
 // Use key_to_pub_key() to derive a public key from a private key. The public
