@@ -10,7 +10,7 @@ const {
   signed_transaction_decode,
   transfer_combine,
   Session,
-} = require("../index");
+} = require("../dist/main");
 
 function nanos_since_unix_epoch() {
   return (
