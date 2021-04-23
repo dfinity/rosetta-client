@@ -247,7 +247,7 @@ The bundled JS file is also available as the `dist` artifact on CI.
 
 ## Supported Node.js versions
 
-This package is tested against latest versions of Node.js v10/v12/v13/v14/v15.
+This package is tested against latest versions of Node.js v10/v12/v13/v14/v15/v16.
 
 ## Common traps and pitfalls
 
