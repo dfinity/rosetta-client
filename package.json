@@ -1,6 +1,6 @@
 {
   "name": "@dfinity/rosetta-client",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "main": "./index.js",
   "type": "commonjs",
   "license": "Apache-2.0",
@@ -19,8 +19,7 @@
   },
   "homepage": "https://github.com/dfinity/rosetta-client",
   "scripts": {
-    "build": "webpack --entry ./index.js --mode production --no-optimization-minimize --no-output-iife --output-library-type commonjs --progress --target node",
-    "prepare": "patch-package"
+    "build": "patch-package && webpack --entry ./index.js --mode production --no-optimization-minimize --no-output-iife --output-library-type commonjs --progress --target node"
   },
   "files": [
     "autogen",
