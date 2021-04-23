@@ -222,13 +222,6 @@ console.log(tx.amount);
 // 额外的交易费用的 BigInt 值。
 console.log(tx.fee);
 
-// The block height when the transaction was created as a BigInt. It's returned
-// by /construction/metadata and a part of the /construction/payloads call.
-//
-// 事务创建时最新的区块高度的 BigInt 值。该值由 /construction/metadata 返回，并作为
-// /construction/payloads 调用的一部分。
-console.log(tx.last_height);
-
 // The source account's public key as a Buffer.
 //
 // 转出账户公钥的 Buffer 值。
