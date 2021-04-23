@@ -20,7 +20,7 @@
   "homepage": "https://github.com/dfinity/rosetta-client",
   "scripts": {
     "build": "webpack --entry ./index.js --mode production --no-optimization-minimize --no-output-iife --output-library-type commonjs --progress --target node",
-    "prepare": "patch-package"
+    "post-install": "patch-package"
   },
   "files": [
     "autogen",
