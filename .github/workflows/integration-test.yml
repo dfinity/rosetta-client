@@ -190,6 +190,7 @@ jobs:
 
       - name: test
         run: |
+          mkdir -p ~/.local/bin
           export PATH=~/.local/bin:$PATH
 
           cp dfinity/rs/target/release/ic-rosetta-api ~/.local/bin
