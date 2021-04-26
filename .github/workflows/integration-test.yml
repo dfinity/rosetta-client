@@ -148,7 +148,7 @@ jobs:
           path: dist
 
   integration-test-exchanges:
-    name: integration-test-exchanges-node-${{ matrix.node }}-sdk-${{ matrix.sdk_ver }}
+    name: integration-test-exchanges-node-${{ matrix.node }}
     needs: cargo-build
     runs-on: ubuntu-latest
     strategy:
@@ -161,8 +161,6 @@ jobs:
           - 13
           - 12
           - 10
-        sdk_ver:
-          - 0.7.0-beta.4
     steps:
 
       - name: checkout
@@ -181,12 +179,6 @@ jobs:
           node-version: ${{ matrix.node }}
           check-latest: true
 
-      - name: setup-dfx
-        run: |
-          mkdir -p ~/.local/bin
-          echo ~/.local/bin >> $GITHUB_PATH
-          curl -L https://sdk.dfinity.org/downloads/dfx/${{ matrix.sdk_ver }}/x86_64-linux/dfx-${{ matrix.sdk_ver }}.tar.gz | tar xz --strip-components 1 -C ~/.local/bin
-
       - name: cache
         uses: actions/cache@v2
         with:
@@ -198,6 +190,8 @@ jobs:
 
       - name: test
         run: |
+          export PATH=~/.local/bin:$PATH
+
           cp dfinity/rs/target/release/ic-rosetta-api ~/.local/bin
           cp \
             dfinity/rs/rosetta-api/log_config.yml \
