@@ -52,7 +52,7 @@ function nanos_since_unix_epoch() {
 
     const submit_res = await session.transfer_post_combine(combine_res);
 
-    await new Promise((resolve) => setTimeout(resolve, 10000));
+    await new Promise((resolve) => setTimeout(resolve, 5 * 60 * 1000));
 
     let tx_res = await session.transactions({
       network_identifier: await session.network_identifier,
