@@ -34,7 +34,7 @@ jobs:
 
       - name: check
         run: |
-          pushd dfinity/rs/rosetta-api/canister
+          pushd dfinity/rs/rosetta-api/ledger_canister
 
           protoc \
             --js_out \
