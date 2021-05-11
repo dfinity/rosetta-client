@@ -70,7 +70,7 @@ jobs:
           - 12
           - 10
         sdk_ver:
-          - 0.7.0-beta.5
+          - 0.7.0-beta.7
     steps:
 
       - name: checkout
