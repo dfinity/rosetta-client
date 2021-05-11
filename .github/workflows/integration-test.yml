@@ -34,8 +34,8 @@ jobs:
       - name: cache
         uses: actions/cache@v2
         with:
-          key: 0-cargo-cache-${{ github.run_id }}
-          restore-keys: 0-cargo-cache-
+          key: 1-cargo-cache-${{ github.run_id }}
+          restore-keys: 1-cargo-cache-
           path: |
             ~/.cargo
             dfinity/rs/target
@@ -98,8 +98,8 @@ jobs:
       - name: cache
         uses: actions/cache@v2
         with:
-          key: 0-cargo-cache-${{ github.run_id }}
-          restore-keys: 0-cargo-cache-
+          key: 1-cargo-cache-${{ github.run_id }}
+          restore-keys: 1-cargo-cache-
           path: |
             ~/.cargo
             dfinity/rs/target
@@ -182,8 +182,8 @@ jobs:
       - name: cache
         uses: actions/cache@v2
         with:
-          key: 0-cargo-cache-${{ github.run_id }}
-          restore-keys: 0-cargo-cache-
+          key: 1-cargo-cache-${{ github.run_id }}
+          restore-keys: 1-cargo-cache-
           path: |
             ~/.cargo
             dfinity/rs/target
