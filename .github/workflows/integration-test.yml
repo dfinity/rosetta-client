@@ -34,8 +34,8 @@ jobs:
       - name: cache
         uses: actions/cache@v2
         with:
-          key: 0-cargo-cache-${{ github.run_id }}
-          restore-keys: 0-cargo-cache-
+          key: 1-cargo-cache-${{ github.run_id }}
+          restore-keys: 1-cargo-cache-
           path: |
             ~/.cargo
             dfinity/rs/target
@@ -70,7 +70,7 @@ jobs:
           - 12
           - 10
         sdk_ver:
-          - 0.7.0-beta.5
+          - 0.7.0-beta.7
     steps:
 
       - name: checkout
@@ -98,8 +98,8 @@ jobs:
       - name: cache
         uses: actions/cache@v2
         with:
-          key: 0-cargo-cache-${{ github.run_id }}
-          restore-keys: 0-cargo-cache-
+          key: 1-cargo-cache-${{ github.run_id }}
+          restore-keys: 1-cargo-cache-
           path: |
             ~/.cargo
             dfinity/rs/target
@@ -122,7 +122,7 @@ jobs:
             --host 127.0.0.1:8000
 
           dfx deploy \
-            --argument "record { minting_account = \"807077e900000000000000000000000000000000000000000000000000000000\"; initial_values = vec { record { \"ea7161aa15fd1f1ab8ead80c5f2556a449b42eeadbb7be94d450df1ec1ecf0cd\"; record { e8s = 18446744073709551615 } } }; archive_canister = null; max_message_size_bytes = null; send_whitelist = vec {}}" \
+            --argument "record { minting_account = \"807077e900000000000000000000000000000000000000000000000000000000\"; initial_values = vec { record { \"ea7161aa15fd1f1ab8ead80c5f2556a449b42eeadbb7be94d450df1ec1ecf0cd\"; record { e8s = 18446744073709551615 } } }; max_message_size_bytes = null; transaction_window = null; archive_options = null; send_whitelist = vec {}}" \
             --network=local \
             ledger
 
@@ -146,68 +146,3 @@ jobs:
         with:
           name: dist
           path: dist
-
-  integration-test-exchanges:
-    name: integration-test-exchanges-node-${{ matrix.node }}
-    needs: cargo-build
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        node:
-          - 16
-          - 15
-          - 14
-          - 13
-          - 12
-          - 10
-    steps:
-
-      - name: checkout
-        uses: actions/checkout@v2
-
-      - name: checkout-dfinity
-        uses: actions/checkout@v2
-        with:
-          repository: dfinity-lab/dfinity
-          token: ${{ secrets.GH_TOKEN }}
-          path: dfinity
-
-      - name: setup-node
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node }}
-          check-latest: true
-
-      - name: cache
-        uses: actions/cache@v2
-        with:
-          key: 0-cargo-cache-${{ github.run_id }}
-          restore-keys: 0-cargo-cache-
-          path: |
-            ~/.cargo
-            dfinity/rs/target
-
-      - name: test
-        run: |
-          mkdir -p ~/.local/bin
-          export PATH=~/.local/bin:$PATH
-
-          cp dfinity/rs/target/release/ic-rosetta-api ~/.local/bin
-          cp \
-            dfinity/rs/rosetta-api/log_config.yml \
-            ${{ runner.temp }}
-
-          pushd ${{ runner.temp }}
-
-          ic-rosetta-api \
-            --address 127.0.0.1 \
-            --port 8080 &
-
-          popd
-
-          sleep 10
-
-          npm install
-          npm run-script build
-          node --unhandled-rejections=strict ./test/test-exchanges.js
