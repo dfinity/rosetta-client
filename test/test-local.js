@@ -28,7 +28,9 @@ function nanos_since_unix_epoch() {
     );
     const src_pub_key = key_to_pub_key(src_key);
     const src_addr = pub_key_to_address(src_pub_key);
-    const dest_addr = key_new(Buffer.alloc(32));
+    const dest_addr = pub_key_to_address(
+      key_to_pub_key(key_new(Buffer.alloc(32)))
+    );
     const count = 1n;
     const ingress_start = nanos_since_unix_epoch();
     const ingress_end = ingress_start + 48n * 60n * 1000000000n;
