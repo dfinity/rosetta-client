@@ -1,12 +1,13 @@
 const JSONbig = require("json-bigint")({ strict: true, useNativeBigInt: true });
 const assert = require("assert").strict;
+const fs = require("fs");
 const { performance } = require("perf_hooks");
 const { inspect } = require("util");
 const {
-  address_from_hex,
-  blobFromHex,
+  key_new,
   key_to_pub_key,
   pub_key_to_address,
+  seed_from_pem,
   signed_transaction_decode,
   transfer_combine,
   Session,
@@ -22,13 +23,13 @@ function nanos_since_unix_epoch() {
   const session = new Session({ baseUrl: "http://localhost:8080" });
 
   try {
-    const src_key = blobFromHex(
-      "093c3e2191be336f246259769041dd75b326143746b2ca97cb0f66273a366ba5ae7c3e96d49d7e5b1f74ce1e8ff640957c3ba4d7199f463a9fcff4c68b19f5e3"
+    const src_key = key_new(
+      seed_from_pem(fs.readFileSync("identity/initial/identity.pem"))
     );
     const src_pub_key = key_to_pub_key(src_key);
     const src_addr = pub_key_to_address(src_pub_key);
-    const dest_addr = address_from_hex(
-      "1e1838071cb875e59c1da64af5e04951bb3c1e94c1285bf9ff7480a645e1aa56"
+    const dest_addr = pub_key_to_address(
+      key_to_pub_key(key_new(Buffer.alloc(32)))
     );
     const count = 1n;
     const ingress_start = nanos_since_unix_epoch();
