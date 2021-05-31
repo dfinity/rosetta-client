@@ -122,7 +122,7 @@ jobs:
             --host 127.0.0.1:8000
 
           dfx deploy \
-            --argument "record { minting_account = \"807077e900000000000000000000000000000000000000000000000000000000\"; initial_values = vec { record { \"ea7161aa15fd1f1ab8ead80c5f2556a449b42eeadbb7be94d450df1ec1ecf0cd\"; record { e8s = 18446744073709551615 } } }; max_message_size_bytes = null; transaction_window = null; archive_options = null; send_whitelist = vec {}}" \
+            --argument "record { minting_account = \"ea2d973e67dcbcb00f1cfb36d05d600eef68c7513c18dac8ef52d165c1d38c36\"; initial_values = vec { record { \"a8a3746fca2b69ee144224ab735b0c0f1977d3aa44a97c75240da7ab05becea4\"; record { e8s = 18446744073709551615 } } }; max_message_size_bytes = null; transaction_window = null; archive_options = null; send_whitelist = vec {}}" \
             --network=local \
             ledger
 
