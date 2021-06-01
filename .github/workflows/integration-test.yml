@@ -56,8 +56,8 @@ jobs:
           wasm-opt \
             -Oz \
             --strip-debug \
-            ../target/wasm32-unknown-unknown/release/ledger-canister.wasm \
-            -o ../target/wasm32-unknown-unknown/release/ledger-canister.wasm
+            target/wasm32-unknown-unknown/release/ledger-canister.wasm \
+            -o target/wasm32-unknown-unknown/release/ledger-canister.wasm
 
           popd
 
