@@ -23,6 +23,12 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
           path: dfinity
 
+      - name: patch-dfinity
+        run: |
+          pushd dfinity
+          git apply ../patches/dfinity.patch
+          popd
+
       - name: setup-binaryen
         run: |
           curl \
@@ -42,7 +48,7 @@ jobs:
 
       - name: build
         run: |
-          pushd dfinity/rs/rosetta-api
+          pushd dfinity/rs
 
           rustup target add wasm32-unknown-unknown
           cargo build --release --package ic-rosetta-api --bin ic-rosetta-api
@@ -50,8 +56,8 @@ jobs:
           wasm-opt \
             -Oz \
             --strip-debug \
-            ../target/wasm32-unknown-unknown/release/ledger-canister.wasm \
-            -o ../target/wasm32-unknown-unknown/release/ledger-canister.wasm
+            target/wasm32-unknown-unknown/release/ledger-canister.wasm \
+            -o target/wasm32-unknown-unknown/release/ledger-canister.wasm
 
           popd
 
