@@ -42,7 +42,7 @@ jobs:
 
       - name: build
         run: |
-          pushd dfinity/rs/rosetta-api
+          pushd dfinity/rs
 
           rustup target add wasm32-unknown-unknown
           cargo build --release --package ic-rosetta-api --bin ic-rosetta-api
