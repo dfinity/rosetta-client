@@ -132,7 +132,8 @@ jobs:
             --canister-id $(jq -r .ledger.local .dfx/local/canister_ids.json) \
             --ic-url http://127.0.0.1:8000 \
             --address 127.0.0.1 \
-            --port 8080 &
+            --port 8080 \
+            --store-type in-memory &
 
           popd
 
