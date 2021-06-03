@@ -1,3 +1,17 @@
+# `0.5.2`
+
+- Add `seed_from_pem` to support loading a private key from a PEM file generated
+  by `dfx identity` command. (#42)
+
+# `0.5.1`
+
+- Fix `signed_transaction_decode` to work with upstream changes. (#34)
+
+# `0.5.0`
+
+- Fix a quadratic slowdown in offline combine implementation. (#33)
+- Misc documentation fixes. (#33)
+
 # `0.4.0`
 
 - Add support for flexible ingress expiry. (#27)
