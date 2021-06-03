@@ -70,7 +70,7 @@ jobs:
           - 12
           - 10
         sdk_ver:
-          - 0.7.0
+          - 0.7.1
     steps:
 
       - name: checkout
@@ -119,18 +119,21 @@ jobs:
           dfx start \
             --background \
             --clean \
-            --host 127.0.0.1:8000
+            --host 127.0.0.1:8000 \
+            --no-artificial-delay
 
           dfx deploy \
             --argument "record { minting_account = \"ea2d973e67dcbcb00f1cfb36d05d600eef68c7513c18dac8ef52d165c1d38c36\"; initial_values = vec { record { \"a8a3746fca2b69ee144224ab735b0c0f1977d3aa44a97c75240da7ab05becea4\"; record { e8s = 18446744073709551615 } } }; max_message_size_bytes = null; transaction_window = null; archive_options = null; send_whitelist = vec {}}" \
             --network=local \
+            --no-wallet \
             ledger
 
           ic-rosetta-api \
             --canister-id $(jq -r .ledger.local .dfx/local/canister_ids.json) \
             --ic-url http://127.0.0.1:8000 \
             --address 127.0.0.1 \
-            --port 8080 &
+            --port 8080 \
+            --store-type in-memory &
 
           popd
 
