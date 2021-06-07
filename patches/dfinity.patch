@@ -1,0 +1,12 @@
+diff --git a/rs/canister_client/src/http_client.rs b/rs/canister_client/src/http_client.rs
+index 0aee382ccf..4874b0331d 100644
+--- a/rs/canister_client/src/http_client.rs
++++ b/rs/canister_client/src/http_client.rs
+@@ -28,7 +28,6 @@ impl HttpClient {
+         let hyper = HyperClient::builder()
+             .pool_idle_timeout(Some(Duration::from_secs(600)))
+             .pool_max_idle_per_host(1)
+-            .http2_only(true)
+             .build::<_, hyper::Body>(https_connector);
+ 
+         Self { hyper }
