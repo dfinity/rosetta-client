@@ -33,7 +33,7 @@ function nanos_since_unix_epoch() {
     );
     const count = 1n;
     const ingress_start = nanos_since_unix_epoch();
-    const ingress_end = ingress_start + 48n * 60n * 1000000000n;
+    const ingress_end = ingress_start + 45n * 60n * 1000000000n;
 
     const payloads_res = await session.transfer_pre_combine(
       src_pub_key,
