@@ -28,7 +28,7 @@
     "index.js"
   ],
   "dependencies": {
-    "@dfinity/agent": "^0.8.9",
+    "@dfinity/agent": "^0.9.1",
     "axios": "^0.21.1",
     "cbor": "^7.0.5",
     "crc": "^3.8.0",
