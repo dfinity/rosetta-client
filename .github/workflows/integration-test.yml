@@ -23,12 +23,6 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
           path: dfinity
 
-      - name: patch-dfinity
-        run: |
-          pushd dfinity
-          git apply ../patches/dfinity.patch
-          popd
-
       - name: setup-binaryen
         run: |
           curl \
