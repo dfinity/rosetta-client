@@ -114,10 +114,10 @@ jobs:
         run: |
           cp dfinity/rs/target/release/ic-rosetta-api ~/.local/bin
           cp \
-            dfinity/rs/rosetta-api/docker/dfx.json \
             dfinity/rs/rosetta-api/ledger.did \
             dfinity/rs/rosetta-api/log_config.yml \
             dfinity/rs/target/wasm32-unknown-unknown/release/ledger-canister.wasm \
+            dfx.json \
             ${{ runner.temp }}
 
           pushd ${{ runner.temp }}
@@ -139,7 +139,7 @@ jobs:
             --ic-url http://127.0.0.1:8000 \
             --address 127.0.0.1 \
             --port 8080 \
-            --store-type in-memory &
+            --store-type sqlite-in-memory &
 
           popd
 
