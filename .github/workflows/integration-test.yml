@@ -117,8 +117,8 @@ jobs:
             dfinity/rs/rosetta-api/ledger.did \
             dfinity/rs/rosetta-api/log_config.yml \
             dfinity/rs/target/wasm32-unknown-unknown/release/ledger-canister.wasm \
+            dfx.json \
             ${{ runner.temp }}
-          echo "{}" > ${{ runner.temp }}/dfx.json
 
           pushd ${{ runner.temp }}
 
