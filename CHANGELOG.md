@@ -1,3 +1,11 @@
+# `0.6.0`
+
+- BREAKING CHANGE: this version of the client switches to the new
+  encoding of transactions introduced in the recent rosetta-node
+  update (#47, #54).  The `transfer` method won't work with older
+  versions of rosetta-node (docker images dfinity/rosetta-api:20210526
+  and below).
+
 # `0.5.2`
 
 - Add `seed_from_pem` to support loading a private key from a PEM file generated
