@@ -1,0 +1,32 @@
+name: NPM publish CD workflow
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    environment: NPM Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: setup-node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          check-latest: true
+
+      - run: npm install -g npm
+      - run: npm ci
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub CD bot"
+          git config --global user.email "npm@dfinity.org"
+
+      - run: npm config set '//registry.npmjs.org/:_authToken' "$NPM_TOKEN"
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Publish the Package
+        run: npm publish --access public
