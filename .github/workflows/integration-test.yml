@@ -39,6 +39,7 @@ jobs:
       - name: ic-artifacts
         run: |
           sudo apt install -y \
+            nghttp2-proxy \
             rclone
 
           pushd ${{ runner.temp }}/ic
@@ -97,9 +98,13 @@ jobs:
             --no-wallet \
             ledger
 
+          nghttpx \
+            --backend 127.0.0.1,8000 \
+            --frontend '127.0.0.1,2053;no-tls' &
+
           ic-rosetta-api \
             --canister-id $(jq -r .ledger.local .dfx/local/canister_ids.json) \
-            --ic-url http://127.0.0.1:8000 \
+            --ic-url http://127.0.0.1:2053 \
             --address 127.0.0.1 \
             --port 8080 \
             --store-type sqlite-in-memory &
