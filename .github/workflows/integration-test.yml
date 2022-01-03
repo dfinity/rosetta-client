@@ -38,6 +38,9 @@ jobs:
 
       - name: ic-artifacts
         run: |
+          sudo apt install -y \
+            rclone
+
           pushd ${{ runner.temp }}/ic
 
           pip3 install --user -r gitlab-ci/src/requirements.txt
