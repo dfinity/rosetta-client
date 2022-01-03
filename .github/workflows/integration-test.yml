@@ -39,7 +39,6 @@ jobs:
       - name: ic-artifacts
         run: |
           sudo apt install -y \
-            nghttp2-proxy \
             rclone
 
           pushd ${{ runner.temp }}/ic
@@ -74,6 +73,13 @@ jobs:
       - name: setup-dfx
         run: |
           curl -L https://sdk.dfinity.org/downloads/dfx/${{ matrix.sdk_ver }}/x86_64-linux/dfx-${{ matrix.sdk_ver }}.tar.gz | tar xz --strip-components 1 -C ~/.local/bin
+
+      - name: setup-nix
+        uses: cachix/install-nix-action@v16
+
+      - name: setup-nghttpx
+        run: |
+          nix profile install nixpkgs#nghttp2
 
       - name: test
         run: |
@@ -119,7 +125,7 @@ jobs:
 
       - name: artifact-upload
         uses: actions/upload-artifact@v2
-        if: ${{ matrix.node == 16 }}
+        if: ${{ matrix.node == 14 }}
         with:
           name: dist
           path: dist
