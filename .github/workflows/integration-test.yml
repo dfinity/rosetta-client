@@ -89,7 +89,7 @@ jobs:
           dfx start \
             --background \
             --clean \
-            --host localhost:8000
+            --host 127.0.0.1:8000
 
           dfx deploy \
             --argument "record { minting_account = \"ea2d973e67dcbcb00f1cfb36d05d600eef68c7513c18dac8ef52d165c1d38c36\"; initial_values = vec { record { \"db0bd98f8268213b0b74b238c1611848830f47a5c416ae27ae4b80cde7216c57\"; record { e8s = 18446744073709551615 } } }; max_message_size_bytes = null; transaction_window = null; archive_options = null; send_whitelist = vec {}}" \
@@ -99,8 +99,8 @@ jobs:
 
           ic-rosetta-api \
             --canister-id $(jq -r .ledger.local .dfx/local/canister_ids.json) \
-            --ic-url http://localhost:8000 \
-            --address localhost \
+            --ic-url http://127.0.0.1:8000 \
+            --address 127.0.0.1 \
             --port 8080 \
             --store-type sqlite-in-memory &
 
