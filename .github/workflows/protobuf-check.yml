@@ -16,15 +16,15 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
-      - name: checkout-dfinity
-        uses: actions/checkout@v2
-        with:
-          repository: dfinity-lab/dfinity
-          token: ${{ secrets.GH_TOKEN }}
-          path: dfinity
+      - name: checkout-ic
+        run: |
+          pushd ${{ runner.temp }}
+          curl --header "PRIVATE-TOKEN: ${{ secrets.GITLAB_TOKEN }}" https://gitlab.com/dfinity-lab/public/ic/-/archive/master/ic-master.tar.gz | tar xz
+          mv ic-master ic
+          popd
 
       - name: setup-nix
-        uses: cachix/install-nix-action@v13
+        uses: cachix/install-nix-action@v16
 
       - name: setup-protoc
         run: |
@@ -34,7 +34,7 @@ jobs:
 
       - name: check
         run: |
-          pushd dfinity/rs/rosetta-api/ledger_canister
+          pushd ${{ runner.temp }}/ic/rs/rosetta-api/ledger_canister
 
           protoc \
             --js_out \
