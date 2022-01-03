@@ -86,7 +86,7 @@ let { Session } = require("@dfinity/rosetta-client");
 //
 // Session 实现了 https://www.npmjs.com/package/@lunarhq/rosetta-ts-client 描述
 // 的 RosettaClient 类接口，可以调用 RosettaClient 的方法使用 Rosetta API。
-let session = new Session({ baseUrl: "http://localhost:8080" });
+let session = new Session({ baseUrl: "http://127.0.0.1:8080" });
 
 // The network_identifier value used in requests.
 //
