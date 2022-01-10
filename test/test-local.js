@@ -21,7 +21,7 @@ function nanos_since_unix_epoch() {
 }
 
 (async () => {
-  const session = new Session({ baseUrl: "http://localhost:8080" });
+  const session = new Session({ baseUrl: "http://127.0.0.1:8080" });
 
   // a valid hex
   address_from_hex("674c4e1c52807c912316c97e127cd4583883dbc4040922e4cc19ce8ce6ab0101");

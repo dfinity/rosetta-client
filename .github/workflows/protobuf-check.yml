@@ -16,25 +16,23 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
-      - name: checkout-dfinity
-        uses: actions/checkout@v2
-        with:
-          repository: dfinity-lab/dfinity
-          token: ${{ secrets.GH_TOKEN }}
-          path: dfinity
+      - name: checkout-ic
+        run: |
+          pushd ${{ runner.temp }}
+          curl -L https://github.com/dfinity/ic/archive/refs/heads/master.tar.gz | tar xz
+          mv ic-master ic
+          popd
 
       - name: setup-nix
-        uses: cachix/install-nix-action@v13
+        uses: cachix/install-nix-action@v16
 
       - name: setup-protoc
         run: |
-          nix-channel --add https://nixos.org/channels/nixpkgs-unstable
-          nix-channel --update
-          nix-env -iA nixpkgs.protobuf3_13
+          nix profile install nixpkgs#protobuf3_13
 
       - name: check
         run: |
-          pushd dfinity/rs/rosetta-api/ledger_canister
+          pushd ${{ runner.temp }}/ic/rs/rosetta-api/ledger_canister
 
           protoc \
             --js_out \

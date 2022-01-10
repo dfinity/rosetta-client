@@ -8,67 +8,14 @@ on:
 
 jobs:
 
-  cargo-build:
-    name: cargo-build
-    runs-on: ubuntu-latest
-    steps:
-
-      - name: checkout
-        uses: actions/checkout@v2
-
-      - name: checkout-dfinity
-        uses: actions/checkout@v2
-        with:
-          repository: dfinity-lab/dfinity
-          token: ${{ secrets.GH_TOKEN }}
-          path: dfinity
-
-      - name: patch-dfinity
-        run: |
-          pushd dfinity
-          git apply ../patches/dfinity.patch
-          popd
-
-      - name: setup-binaryen
-        run: |
-          curl \
-            -o ${{ runner.temp }}/binaryen.deb \
-            http://archive.ubuntu.com/ubuntu/pool/universe/b/binaryen/binaryen_99-3_amd64.deb
-          sudo dpkg -i ${{ runner.temp }}/binaryen.deb
-          rm ${{ runner.temp }}/binaryen.deb
-
-      - name: cache
-        uses: actions/cache@v2
-        with:
-          key: 1-cargo-cache-${{ github.run_id }}
-          restore-keys: 1-cargo-cache-
-          path: |
-            ~/.cargo
-            dfinity/rs/target
-
-      - name: build
-        run: |
-          pushd dfinity/rs
-
-          rustup target add wasm32-unknown-unknown
-          cargo build --release --package ic-rosetta-api --bin ic-rosetta-api
-          cargo build --target wasm32-unknown-unknown --release --package ledger-canister --bin ledger-canister
-          wasm-opt \
-            -Oz \
-            --strip-debug \
-            target/wasm32-unknown-unknown/release/ledger-canister.wasm \
-            -o target/wasm32-unknown-unknown/release/ledger-canister.wasm
-
-          popd
-
   integration-test-local:
     name: integration-test-local-node-${{ matrix.node }}-sdk-${{ matrix.sdk_ver }}
-    needs: cargo-build
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         node:
+          - 17
           - 16
           - 15
           - 14
@@ -76,18 +23,45 @@ jobs:
           - 12
           - 10
         sdk_ver:
-          - 0.7.1
+          - 0.8.4
     steps:
 
       - name: checkout
         uses: actions/checkout@v2
 
-      - name: checkout-dfinity
-        uses: actions/checkout@v2
-        with:
-          repository: dfinity-lab/dfinity
-          token: ${{ secrets.GH_TOKEN }}
-          path: dfinity
+      - name: checkout-ic
+        run: |
+          pushd ${{ runner.temp }}
+          git clone https://github.com/dfinity/ic.git
+          popd
+
+      - name: ic-artifacts
+        run: |
+          sudo apt install -y \
+            rclone
+
+          pushd ${{ runner.temp }}/ic
+
+          pip3 install --user -r gitlab-ci/src/requirements.txt
+
+          gitlab-ci/src/artifacts/rclone_download.py \
+            --latest-to \
+            --remote-path=release \
+            --out=artifacts/release
+          gunzip artifacts/release/ic-rosetta-api.gz
+          chmod u+x artifacts/release/ic-rosetta-api
+
+          mkdir -p ~/.local/bin
+          echo ~/.local/bin >> $GITHUB_PATH
+          mv artifacts/release/ic-rosetta-api ~/.local/bin
+
+          gitlab-ci/src/artifacts/rclone_download.py \
+            --latest-to \
+            --remote-path=canisters \
+            --out=artifacts/canisters
+          gunzip artifacts/canisters/ledger-canister.wasm.gz
+
+          popd
 
       - name: setup-node
         uses: actions/setup-node@v2
@@ -97,53 +71,52 @@ jobs:
 
       - name: setup-dfx
         run: |
-          mkdir -p ~/.local/bin
-          echo ~/.local/bin >> $GITHUB_PATH
           curl -L https://sdk.dfinity.org/downloads/dfx/${{ matrix.sdk_ver }}/x86_64-linux/dfx-${{ matrix.sdk_ver }}.tar.gz | tar xz --strip-components 1 -C ~/.local/bin
 
-      - name: cache
-        uses: actions/cache@v2
-        with:
-          key: 1-cargo-cache-${{ github.run_id }}
-          restore-keys: 1-cargo-cache-
-          path: |
-            ~/.cargo
-            dfinity/rs/target
+      - name: setup-nix
+        uses: cachix/install-nix-action@v16
+
+      - name: setup-nghttpx
+        run: |
+          nix profile install nixpkgs#nghttp2
 
       - name: test
         run: |
-          cp dfinity/rs/target/release/ic-rosetta-api ~/.local/bin
+          mkdir ${{ runner.temp }}/test
           cp \
-            dfinity/rs/rosetta-api/ledger.did \
-            dfinity/rs/rosetta-api/log_config.yml \
-            dfinity/rs/target/wasm32-unknown-unknown/release/ledger-canister.wasm \
+            ${{ runner.temp }}/ic/rs/rosetta-api/ledger.did \
+            ${{ runner.temp }}/ic/rs/rosetta-api/log_config.yml \
+            ${{ runner.temp }}/ic/artifacts/canisters/ledger-canister.wasm \
             dfx.json \
-            ${{ runner.temp }}
+            ${{ runner.temp }}/test
 
-          pushd ${{ runner.temp }}
+          pushd ${{ runner.temp }}/test
 
           dfx start \
             --background \
             --clean \
-            --host 127.0.0.1:8000 \
-            --no-artificial-delay
+            --host 127.0.0.1:8000
 
           dfx deploy \
-            --argument "record { minting_account = \"ea2d973e67dcbcb00f1cfb36d05d600eef68c7513c18dac8ef52d165c1d38c36\"; initial_values = vec { record { \"a8a3746fca2b69ee144224ab735b0c0f1977d3aa44a97c75240da7ab05becea4\"; record { e8s = 18446744073709551615 } } }; max_message_size_bytes = null; transaction_window = null; archive_options = null; send_whitelist = vec {}}" \
+            --argument "record { minting_account = \"ea2d973e67dcbcb00f1cfb36d05d600eef68c7513c18dac8ef52d165c1d38c36\"; initial_values = vec { record { \"db0bd98f8268213b0b74b238c1611848830f47a5c416ae27ae4b80cde7216c57\"; record { e8s = 18446744073709551615 } } }; max_message_size_bytes = null; transaction_window = null; archive_options = null; send_whitelist = vec {}}" \
             --network=local \
             --no-wallet \
             ledger
 
+          nghttpx \
+            --backend 127.0.0.1,8000 \
+            --frontend '127.0.0.1,2053;no-tls' &
+
           ic-rosetta-api \
             --canister-id $(jq -r .ledger.local .dfx/local/canister_ids.json) \
-            --ic-url http://127.0.0.1:8000 \
+            --ic-url http://127.0.0.1:2053 \
             --address 127.0.0.1 \
             --port 8080 \
             --store-type sqlite-in-memory &
 
           popd
 
-          sleep 10
+          sleep 60
 
           npm install
           npm run-script build
@@ -151,7 +124,7 @@ jobs:
 
       - name: artifact-upload
         uses: actions/upload-artifact@v2
-        if: ${{ matrix.node == 16 }}
+        if: ${{ matrix.node == 14 }}
         with:
           name: dist
           path: dist
