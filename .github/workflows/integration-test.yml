@@ -10,7 +10,6 @@ jobs:
 
   integration-test-local:
     name: integration-test-local-node-${{ matrix.node }}-sdk-${{ matrix.sdk_ver }}
-    environment: GitLab
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
