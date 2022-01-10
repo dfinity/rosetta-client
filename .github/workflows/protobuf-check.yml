@@ -10,7 +10,6 @@ jobs:
 
   protobuf-check:
     name: protobuf-check
-    environment: GitLab
     runs-on: ubuntu-latest
     steps:
 
@@ -20,7 +19,7 @@ jobs:
       - name: checkout-ic
         run: |
           pushd ${{ runner.temp }}
-          curl --header "PRIVATE-TOKEN: ${{ secrets.GITLAB_TOKEN }}" https://gitlab.com/dfinity-lab/public/ic/-/archive/master/ic-master.tar.gz | tar xz
+          curl -L https://github.com/dfinity/ic/archive/refs/heads/master.tar.gz | tar xz
           mv ic-master ic
           popd
 

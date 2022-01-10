@@ -33,7 +33,7 @@ jobs:
       - name: checkout-ic
         run: |
           pushd ${{ runner.temp }}
-          git clone https://gitlab-ci-token:${{ secrets.GITLAB_TOKEN }}@gitlab.com/dfinity-lab/public/ic.git
+          git clone https://github.com/dfinity/ic.git
           popd
 
       - name: ic-artifacts
