@@ -1,10 +1,6 @@
-require("./lib/nodejs-10");
-const { blobFromHex, blobToHex } = require("@dfinity/candid");
-
 // Use specific export syntax to allow bundlers and IDEs to properly load dependencies.
 module.exports = {
-  blobFromHex: blobFromHex,
-  blobToHex: blobToHex,
+  ...require("./lib/blob"),
   ...require("./lib/construction_combine"),
   ...require("./lib/key"),
   ...require("./lib/session"),
