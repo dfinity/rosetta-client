@@ -1,5 +1,4 @@
-const { key_new, seed_from_pem, key_to_pub_key, sign_payloads, transfer_combine, Session } = require("./index");
-const { blobFromHex, blobToHex } = require("@dfinity/candid");
+const { key_new, seed_from_pem, key_to_pub_key, sign_payloads, transfer_combine, Session, blobFromHex, blobToHex } = require("./index");
 const fs = require("fs");
 
 const identity_pem = process.argv[2];
@@ -93,7 +92,6 @@ const identity_pem = process.argv[2];
 
     const signed = sign_payloads(private_key, payloads);
     const combined = await session.combine(Object.assign(signed, { network_identifier: net_id }));
-    const combined = transfer_combine(private_key, payloads);
 
     await session.submit(Object.assign(combined, { network_identifier: net_id }));
 })();
