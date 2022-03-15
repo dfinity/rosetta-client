@@ -94,6 +94,7 @@ jobs:
             --no-wallet \
             ledger
 
+          sudo rm /etc/nghttpx/nghttpx.conf
           nghttpx \
             --backend 127.0.0.1,8000 \
             --frontend '127.0.0.1,2053;no-tls' &
