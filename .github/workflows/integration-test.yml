@@ -20,11 +20,20 @@ jobs:
           - 14
           - 12
         sdk_ver:
-          - 0.9.2
+          - 0.9.3
     steps:
 
-      - name: checkout
-        uses: actions/checkout@v2
+      - name: setup-dfx
+        run: |
+          mkdir -p ~/.local/bin
+          echo ~/.local/bin >> $GITHUB_PATH
+          curl -L https://sdk.dfinity.org/downloads/dfx/${{ matrix.sdk_ver }}/x86_64-linux/dfx-${{ matrix.sdk_ver }}.tar.gz | tar xz --strip-components 1 -C ~/.local/bin
+
+      - name: start-ic
+        run: |
+          pushd ${{ runner.temp }}
+          dfx replica --port 2053 &
+          popd
 
       - name: checkout-ic
         run: |
@@ -32,10 +41,9 @@ jobs:
           git clone https://github.com/dfinity/ic.git
           popd
 
-      - name: ic-artifacts
+      - name: extract-ic
         run: |
           sudo apt install -y \
-            nghttp2-proxy \
             rclone
 
           pushd ${{ runner.temp }}/ic
@@ -46,20 +54,37 @@ jobs:
             --latest-to \
             --remote-path=release \
             --out=artifacts/release
-          gunzip artifacts/release/ic-rosetta-api.gz
-          chmod u+x artifacts/release/ic-rosetta-api
-
-          mkdir -p ~/.local/bin
-          echo ~/.local/bin >> $GITHUB_PATH
-          mv artifacts/release/ic-rosetta-api ~/.local/bin
-
           gitlab-ci/src/artifacts/rclone_download.py \
             --latest-to \
             --remote-path=canisters \
             --out=artifacts/canisters
-          gunzip artifacts/canisters/ledger-canister.wasm.gz
+
+          for f in artifacts/release/*.gz; do
+            gunzip $f
+            chmod +x artifacts/release/$(basename $f .gz)
+          done
+          for f in artifacts/canisters/*.gz; do
+            gunzip $f
+          done
 
           popd
+
+      - name: start-rosetta
+        run: |
+          pushd ${{ runner.temp }}/ic/rs/rosetta-api
+          ${{ runner.temp }}/ic/artifacts/release/ic-rosetta-api \
+            --ic-url http://127.0.0.1:2053 \
+            --address 127.0.0.1 \
+            --port 8080 \
+            --store-type sqlite-in-memory &
+          popd
+
+      - name: init-ic
+        run: |
+          ${{ runner.temp }}/ic/artifacts/release/ic-nns-init \
+            --initialize-ledger-with-test-accounts db0bd98f8268213b0b74b238c1611848830f47a5c416ae27ae4b80cde7216c57 \
+            --url http://127.0.0.1:2053 \
+            --wasm-dir ${{ runner.temp }}/ic/artifacts/canisters
 
       - name: setup-node
         uses: actions/setup-node@v2
@@ -67,51 +92,16 @@ jobs:
           node-version: ${{ matrix.node }}
           check-latest: true
 
-      - name: setup-dfx
-        run: |
-          curl -L https://sdk.dfinity.org/downloads/dfx/${{ matrix.sdk_ver }}/x86_64-linux/dfx-${{ matrix.sdk_ver }}.tar.gz | tar xz --strip-components 1 -C ~/.local/bin
+      - name: checkout
+        uses: actions/checkout@v2
 
       - name: test
         run: |
-          mkdir ${{ runner.temp }}/test
-          cp \
-            ${{ runner.temp }}/ic/rs/rosetta-api/ledger.did \
-            ${{ runner.temp }}/ic/rs/rosetta-api/log_config.yml \
-            ${{ runner.temp }}/ic/artifacts/canisters/ledger-canister.wasm \
-            dfx.json \
-            ${{ runner.temp }}/test
-
-          pushd ${{ runner.temp }}/test
-
-          dfx start \
-            --background \
-            --clean \
-            --host 127.0.0.1:8000
-
-          dfx deploy \
-            --argument "record { minting_account = \"ea2d973e67dcbcb00f1cfb36d05d600eef68c7513c18dac8ef52d165c1d38c36\"; initial_values = vec { record { \"db0bd98f8268213b0b74b238c1611848830f47a5c416ae27ae4b80cde7216c57\"; record { e8s = 18446744073709551615 } } }; max_message_size_bytes = null; transaction_window = null; archive_options = null; send_whitelist = vec {}}" \
-            --network=local \
-            --no-wallet \
-            ledger
-
-          sudo rm /etc/nghttpx/nghttpx.conf
-          nghttpx \
-            --backend 127.0.0.1,8000 \
-            --frontend '127.0.0.1,2053;no-tls' &
-
-          ic-rosetta-api \
-            --canister-id $(jq -r .ledger.local .dfx/local/canister_ids.json) \
-            --ic-url http://127.0.0.1:2053 \
-            --address 127.0.0.1 \
-            --port 8080 \
-            --store-type sqlite-in-memory &
-
-          popd
-
-          sleep 60
-
           npm install
-          npm run-script build
+          npm run build
+
+          sleep 10
+
           node --unhandled-rejections=strict ./test/test-local.js
 
       - name: artifact-upload
