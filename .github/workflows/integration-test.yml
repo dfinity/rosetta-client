@@ -103,6 +103,7 @@ jobs:
           sleep 10
 
           node --unhandled-rejections=strict ./test/test-local.js
+          node --unhandled-rejections=strict ./test/test-staking.js
 
       - name: artifact-upload
         uses: actions/upload-artifact@v2
