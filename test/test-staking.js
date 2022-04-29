@@ -42,6 +42,17 @@ async function sleep(secs) {
     res = await session.neuron_protected_info(src_key, neuron_idx);
     console.log(JSONbig.stringify(res, null, 2));
 
+    const neuron_id = BigInt(res.metadata.operations[0].metadata.neuron_id);
+
+    res = await session.neuron_follow(
+      src_key,
+      neuron_idx,
+      null,
+      [neuron_id],
+      0
+    );
+    console.log(JSONbig.stringify(res, null, 2));
+
     res = await session.neuron_start_dissolving(src_key, neuron_idx);
     console.log(JSONbig.stringify(res, null, 2));
 
