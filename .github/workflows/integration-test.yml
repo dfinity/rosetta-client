@@ -66,6 +66,13 @@ jobs:
             --http-port 2053 \
             --initial-notary-delay-millis 600 &
 
+      - name: init-ic
+        run: |
+          ${{ runner.temp }}/ic/artifacts/release/ic-nns-init \
+            --initialize-ledger-with-test-accounts db0bd98f8268213b0b74b238c1611848830f47a5c416ae27ae4b80cde7216c57 \
+            --url http://127.0.0.1:2053 \
+            --wasm-dir ${{ runner.temp }}/ic/artifacts/canisters
+
       - name: start-rosetta
         run: |
           pushd ${{ runner.temp }}/ic/rs/rosetta-api
@@ -75,13 +82,6 @@ jobs:
             --port 8080 \
             --store-type sqlite-in-memory &
           popd
-
-      - name: init-ic
-        run: |
-          ${{ runner.temp }}/ic/artifacts/release/ic-nns-init \
-            --initialize-ledger-with-test-accounts db0bd98f8268213b0b74b238c1611848830f47a5c416ae27ae4b80cde7216c57 \
-            --url http://127.0.0.1:2053 \
-            --wasm-dir ${{ runner.temp }}/ic/artifacts/canisters
 
       - name: setup-node
         uses: actions/setup-node@v2
