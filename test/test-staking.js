@@ -68,6 +68,6 @@ async function sleep(secs) {
     console.log(JSONbig.stringify(res, null, 2));
   } catch (err) {
     console.error(JSONbig.stringify(err.response.data, null, 2));
-    throw err;
+    throw new Error();
   }
 })();
