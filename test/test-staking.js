@@ -67,7 +67,7 @@ async function sleep(secs) {
     res = await session.neuron_protected_info(src_key, neuron_idx);
     console.log(JSONbig.stringify(res, null, 2));
 
-    res = await session.neuron_disburse(src_key, neuron_idx);
+    res = await session.neuron_disburse(src_key, neuron_idx, null, 1n);
     console.log(JSONbig.stringify(res, null, 2));
 
     res = await session.neuron_protected_info(src_key, neuron_idx);

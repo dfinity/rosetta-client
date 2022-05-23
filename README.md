@@ -237,6 +237,90 @@ console.log(tx.fee);
 console.log(tx.sender_pubkey);
 ```
 
+### Staking
+
+See [neuron
+lifecycle](https://github.com/dfinity/ic/blob/master/rs/rosetta-api/docs/modules/rosetta-api/pages/neuron-lifecycle.adoc)
+and [staking
+support](https://github.com/dfinity/ic/blob/master/rs/rosetta-api/docs/modules/rosetta-api/pages/staking-support.adoc)
+for more information about staking.
+
+```javascript
+// The main way to identify a neuron is the combination of
+// controller+index. Here, we assume `src_key` is the controller's
+// private key, `neuron_idx` is the neuron index, a 64-bit BigInt.
+//
+// Neuron index values need to be unique within the same controller's
+// scope, but may overlap for different controllers.
+const neuron_idx = 1919810n;
+
+// Perform a transfer to top-up the neuron. The minimum amount is 1ICP
+// for staking.
+await session.neuron_charge(src_key, neuron_idx, 100000000n);
+
+// Then do a STAKE operation, which notifies the governance canister
+// and starts the neuron's lifecycle.
+await session.neuron_stake(src_key, neuron_idx);
+
+// Set the neuron's dissolve timestamp. The unit is seconds since unix
+// epoch.
+await session.neuron_set_dissolve_timestamp(
+  src_key,
+  neuron_idx,
+  seconds_since_unix_epoch() + 86400n
+);
+
+// Start dissolving the neuron.
+await session.neuron_start_dissolving(src_key, neuron_idx);
+
+// Stop dissolving the neuron.
+await session.neuron_stop_dissolving(src_key, neuron_idx);
+
+// Disburse the neuron. Transfer some of the staked ICPs to a ledger
+// address. dest_addr is optional, and defaults to controller's
+// address; amount is optional, defaults to all staked ICPs.
+await session.neuron_disburse(src_key, neuron_idx, dest_addr, 1n);
+
+// Merge the neuron's maturity, increasing its stake. The percentage
+// needs to be an integer between 1 and 100, defaults to 100 when
+// absent.
+await session.neuron_merge(src_key, neuron_idx, 50);
+
+// Spawn the neuron's maturity to another new neuron's staked amount.
+// The spawned neuron's controller public key is optional, and
+// defaults to the original controller.
+await session.neuron_spawn(
+  src_key,
+  neuron_idx,
+  spawned_neuron_pub_key,
+  spawned_neuron_idx
+);
+
+// Add a hot key for a neuron. Hot keys can be used instead of the
+// controller's private key for a few operations. We assume hot_key is
+// the hot key's private key, and hot_pub_key is the derived public
+// key.
+await session.neuron_add_hotkey(src_key, neuron_idx, hot_pub_key);
+
+// Remove a previously added hot key.
+await session.neuron_remove_hotkey(src_key, neuron_idx, hot_pub_key);
+
+// Get a neuron's public info. This only requires the controller's
+// public key.
+await session.neuron_public_info(src_pub_key, neuron_idx);
+
+// Get a neuron's protected info. This can be done with a hot key;
+// when src_pub_key is not present, we assume there's no hot key
+// involved and the first argument is the controller's private key.
+await session.neuron_protected_info(hot_key, neuron_idx, src_pub_key);
+
+// Make a neuron follow other neurons to automatically vote on a
+// certain topic. Likewise, can be done with a hot key optionally. See
+// the staking support documentation about the semantics of followees
+// and topic.
+await session.neuron_follow(hot_key, neuron_idx, src_pub_key, followees, topic);
+```
+
 ### Creating & using a JS bundle
 
 You can bundle this package and its dependencies into a single JS file, and use
