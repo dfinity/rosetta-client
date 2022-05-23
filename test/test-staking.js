@@ -1,8 +1,14 @@
 const JSONbig = require("json-bigint")({ strict: true, useNativeBigInt: true });
 const fs = require("fs");
 const { performance } = require("perf_hooks");
-const { key_new, seed_from_pem, Session } = require("../dist/main");
+const {
+  key_new,
+  key_to_pub_key,
+  seed_from_pem,
+  Session,
+} = require("../dist/main");
 const crypto = require("crypto");
+const util = require("util");
 
 function seconds_since_unix_epoch() {
   return BigInt(
@@ -66,8 +72,18 @@ async function sleep(secs) {
 
     res = await session.neuron_protected_info(src_key, neuron_idx);
     console.log(JSONbig.stringify(res, null, 2));
+
+    const hot_pub_key = key_to_pub_key(
+      key_new(await util.promisify(crypto.randomBytes)(32))
+    );
+
+    res = await session.neuron_add_hotkey(src_key, neuron_idx, hot_pub_key);
+    console.log(JSONbig.stringify(res, null, 2));
+
+    res = await session.neuron_remove_hotkey(src_key, neuron_idx, hot_pub_key);
+    console.log(JSONbig.stringify(res, null, 2));
   } catch (err) {
     console.error(JSONbig.stringify(err.response.data, null, 2));
-    throw new Error();
+    throw new Error(err.response.data);
   }
 })();
