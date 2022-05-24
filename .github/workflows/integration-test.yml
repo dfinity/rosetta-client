@@ -9,31 +9,17 @@ on:
 jobs:
 
   integration-test-local:
-    name: integration-test-local-node-${{ matrix.node }}-sdk-${{ matrix.sdk_ver }}
+    name: integration-test-local-node-${{ matrix.node }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         node:
-          - 17
+          - 18
           - 16
           - 14
           - 12
-        sdk_ver:
-          - 0.9.3
     steps:
-
-      - name: setup-dfx
-        run: |
-          mkdir -p ~/.local/bin
-          echo ~/.local/bin >> $GITHUB_PATH
-          curl -L https://sdk.dfinity.org/downloads/dfx/${{ matrix.sdk_ver }}/x86_64-linux/dfx-${{ matrix.sdk_ver }}.tar.gz | tar xz --strip-components 1 -C ~/.local/bin
-
-      - name: start-ic
-        run: |
-          pushd ${{ runner.temp }}
-          dfx replica --port 2053 &
-          popd
 
       - name: checkout-ic
         run: |
@@ -52,22 +38,42 @@ jobs:
 
           gitlab-ci/src/artifacts/rclone_download.py \
             --latest-to \
+            --mark-executable \
+            --out=artifacts/release \
             --remote-path=release \
-            --out=artifacts/release
+            --unpack
           gitlab-ci/src/artifacts/rclone_download.py \
             --latest-to \
+            --out=artifacts/canisters \
             --remote-path=canisters \
-            --out=artifacts/canisters
-
-          for f in artifacts/release/*.gz; do
-            gunzip $f
-            chmod +x artifacts/release/$(basename $f .gz)
-          done
-          for f in artifacts/canisters/*.gz; do
-            gunzip $f
-          done
+            --unpack
 
           popd
+
+      - name: start-ic
+        run: |
+          env \
+            RUST_BACKTRACE=1 \
+            RUST_MIN_STACK=8192000 \
+            ${{ runner.temp }}/ic/artifacts/release/ic-starter \
+            --replica-path ${{ runner.temp }}/ic/artifacts/release/replica \
+            --state-dir "$(mktemp -d)" \
+            --create-funds-whitelist "*" \
+            --consensus-pool-backend rocksdb \
+            --subnet-type system \
+            --http-port 2053 \
+            --initial-notary-delay-millis 600 &
+
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: init-ic
+        run: |
+          ${{ runner.temp }}/ic/artifacts/release/ic-nns-init \
+            --initial-neurons test/neurons.csv \
+            --initialize-ledger-with-test-accounts db0bd98f8268213b0b74b238c1611848830f47a5c416ae27ae4b80cde7216c57 \
+            --url http://127.0.0.1:2053 \
+            --wasm-dir ${{ runner.temp }}/ic/artifacts/canisters
 
       - name: start-rosetta
         run: |
@@ -79,21 +85,11 @@ jobs:
             --store-type sqlite-in-memory &
           popd
 
-      - name: init-ic
-        run: |
-          ${{ runner.temp }}/ic/artifacts/release/ic-nns-init \
-            --initialize-ledger-with-test-accounts db0bd98f8268213b0b74b238c1611848830f47a5c416ae27ae4b80cde7216c57 \
-            --url http://127.0.0.1:2053 \
-            --wasm-dir ${{ runner.temp }}/ic/artifacts/canisters
-
       - name: setup-node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
           check-latest: true
-
-      - name: checkout
-        uses: actions/checkout@v2
 
       - name: test
         run: |
@@ -103,9 +99,11 @@ jobs:
           sleep 10
 
           node --unhandled-rejections=strict ./test/test-local.js
+          node --unhandled-rejections=strict ./test/test-staking.js
+          node --unhandled-rejections=strict ./test/test-staking-merge-spawn.js
 
       - name: artifact-upload
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: ${{ matrix.node == 14 }}
         with:
           name: dist
