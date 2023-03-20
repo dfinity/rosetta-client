@@ -42,7 +42,7 @@
     "0x": "^5.2.1",
     "node-inspect-extracted": "^1.1.0",
     "patch-package": "^6.4.7",
-    "webpack": "^5.71.0",
+    "webpack": "^5.76.0",
     "webpack-cli": "^4.9.2"
   }
 }
