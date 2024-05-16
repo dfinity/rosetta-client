@@ -1,48 +1,17 @@
 {
-  "name": "@dfinity/rosetta-client",
-  "version": "0.6.2",
-  "main": "./index.js",
-  "type": "commonjs",
-  "license": "Apache-2.0",
-  "author": "DFINITY Stiftung <sdk@dfinity.org>",
-  "keywords": [
-    "rosetta",
-    "dfinity",
-    "internet-computer"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/dfinity/rosetta-client.git"
-  },
-  "bugs": {
-    "url": "https://github.com/dfinity/rosetta-client/issues"
-  },
-  "homepage": "https://github.com/dfinity/rosetta-client",
-  "scripts": {
-    "build": "patch-package && webpack --entry ./index.js --mode production --no-optimization-minimize --no-output-iife --output-library-type commonjs --progress --target node"
-  },
-  "files": [
-    "autogen",
-    "lib",
-    "patches",
-    "index.js"
-  ],
-  "dependencies": {
-    "@dfinity/principal": "^0.10.4",
-    "axios": "^0.26.1",
-    "cbor": "^8.1.0",
-    "crc": "^3.8.0",
-    "google-protobuf": "^3.20.0",
-    "js-sha256": "^0.9.0",
-    "json-bigint": "^1.0.0",
-    "node-forge": "^1.3.1",
-    "tweetnacl": "^1.0.3"
-  },
-  "devDependencies": {
-    "0x": "^5.2.1",
-    "node-inspect-extracted": "^1.1.0",
-    "patch-package": "^6.4.7",
-    "webpack": "^5.76.0",
-    "webpack-cli": "^4.9.2"
-  }
+    "name": "ic-rosetta-client",
+    "license": "MIT",
+    "version": "0.0.1",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsup src/index.ts --format cjs,esm --dts",
+        "lint": "tsc"
+    },
+    "devDependencies": {
+        "@changesets/cli": "^2.27.1",
+        "tsup": "^8.0.2",
+        "typescript": "^5.4.5"
+    }
 }
