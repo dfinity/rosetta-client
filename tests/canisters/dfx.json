@@ -1,0 +1,14 @@
+{
+    "canisters": {
+        "icp_ledger_canister": {
+          "type": "custom",
+          "candid": "candid/icp_ledger_canister.did",
+          "wasm": "wasm/icp_ledger_canister.wasm.gz"
+        },
+        "icrc1_ledger_canister": {
+            "type": "custom",
+            "candid": "candid/icrc1_ledger_canister.did",
+            "wasm": "wasm/icrc1_ledger_canister.wasm.gz"
+          }
+      }
+}
