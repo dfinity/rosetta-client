@@ -30,4 +30,9 @@ describe('ICP Rosetta Endpoints', () => {
     let response = await icpRosettaClient.networkList();
     console.log('network/list response:', response);    
   });
+
+  it('network/options endpoint test', async () => {
+    let response = await icpRosettaClient.networkOptions();
+    console.log('network/options response:', response);    
+  });
 });

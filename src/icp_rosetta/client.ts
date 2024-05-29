@@ -42,5 +42,22 @@ class RosettaClient {
   public async networkList() {
     return this.post("/network/list", { metadata: {} });
   }
+
+  async buildRequest(request: Object) {
+    const networkList = await this.networkList();
+    return {
+      ...request,
+      ...{
+        network_identifier: networkList["network_identifiers"][0],
+      },
+    };
+  }
+
+  public async networkOptions() {
+    return this.post(
+      "/network/options",
+      await this.buildRequest({ metadata: {} }),
+    );
+  }
 }
 export { RosettaClient };
