@@ -50,7 +50,6 @@ export const  startDockerContainer = async () => {
   export const stopDockerContainer = async () => {
     const docker = new Docker();
     // Find the container by name or ID and stop it
-    // You can use container.remove() to remove the container after stopping if needed
     let container_infos: Docker.ContainerInfo[] = await docker.listContainers({all: true});
     for (let containerInfo of container_infos){
       if (containerInfo.Image.includes('dfinity/rosetta-api:latest')){

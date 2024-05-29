@@ -26,7 +26,6 @@ describe('ICP Rosetta Endpoints', () => {
       }
     });
 
-  // The `it` function is used to define individual tests
   it('network/list endpoint test', async () => {
     let response = await icpRosettaClient.networkList();
     console.log('network/list response:', response);    
