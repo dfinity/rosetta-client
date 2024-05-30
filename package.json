@@ -1,6 +1,6 @@
 {
     "name": "ic-rosetta-client",
-    "license": "MIT",
+    "author": "DFINITY Stiftung <fi@dfinity.org>",
     "version": "0.0.1",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
