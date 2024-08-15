@@ -1,3 +1,9 @@
+# 🚨 Deprecated
+
+**This repository is deprecated and is no longer maintained.**
+---
+
+
 # `@dfinity/rosetta-client`
 
 [![GitHub Actions](https://github.com/dfinity/rosetta-client/workflows/integration-test/badge.svg?branch=master)](https://github.com/dfinity/rosetta-client/actions?query=branch%3Amaster)
